@@ -2,7 +2,7 @@
 
 ## Project Description 
 
-"World Leaders" is an online quiz game built to help you memorize the names of world leaders and the countries where they lead. You will be able to pick a global region like Asia or Europe.  During gameplay, you'll see a series of 20 cards (presented individually) representing countries in that region. Below the country title and the official flag, you will see a multiple-choice question with 4 options: the name of the correct world leader and 3 other leaders in the region. After you make a selection, you'll see if your choice was correct or incorrect (if incorrect, you'll also see the correct option).  Users win if they are above 60% correct for the region.
+"World Leaders" is an online quiz game built to help you memorize the names of world leaders and the countries where they lead. You will be able to pick a global region like Asia or Europe.  This game will initially have one region - Europe. During gameplay, you'll see a series of 20 cards (presented individually) representing countries in that region. Below the country title and the official flag, you will see a multiple-choice question with 4 options: the name of the correct world leader and 3 other leaders in the region. After you make a selection, you'll see if your choice was correct or incorrect (if incorrect, you'll also see the correct option).  Users win if they are above 60% correct for the region.
 
 The game is not timed; you can take as long as you want to choose your answers.  This game is built in HTML, CSS, and Javascript.
 
@@ -29,6 +29,7 @@ Country Card centered in the window containing the following:
 Upon making a selection, users will see the correct and incorrect options highlighted in green and red. Users will be able to click the next button to see another card in the stack
 
 **End of Game Detail View**
+
 After all cards have been played, the end-of-game view is triggered.  
 
 - Number and % of correct answers 
