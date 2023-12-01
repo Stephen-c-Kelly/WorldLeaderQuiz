@@ -13,7 +13,7 @@ I'd like to leverage an API or a Google Sheet to more easily update the names of
 
 **Initial Home View**
 
-View of homescreen where users can review instructions, select from 6 regions, and press play.
+View of homescreen where users can review instructions, select one option amoung the available regions, and press play.
 
 **Gameplay - Card Detail View**
 
@@ -131,7 +131,7 @@ The following fields will be added but left blank for MVP
 create a function called nextCard
 -- set an event listener that triggers the following actions when the Next button is clicked:
 ----set the next country card in activeStack to activeCountry
-----
+----runs display card detail view
 
 
 --
