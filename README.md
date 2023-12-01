@@ -62,7 +62,6 @@ As a player...
 
 #### Pseudo Code
 
-
 ```
 // Step 0 - Data Architecture
 
@@ -71,12 +70,12 @@ As a player...
 -- Flag emoji
 -- Region
 -- World Leader
--- Assumed Office Date (unused during MVP)
 
 The following fields will be added but left blank for MVP
+-- Annual GDP (unused during MVP)
+-- Assumed Office Date (unused during MVP)
 -- Country Image (vector image of outline)
 -- Youtube link to how to prounce name (no idea how to set this up, but maybe I can use Bard to search Youtube)
-
 
 // Step 1 - Define the required variables used to track the state of the game
 
@@ -84,7 +83,6 @@ The following fields will be added but left blank for MVP
 - Variable named 'counter' to track final number of correct answers
 - Variable named 'results' to track win/lose. 
 - Variable named 'country' which will look in the data to build a list of countries based on region used in gameplay
-
 
 // Step 2 - Cached element references
 - Variable named 'region' to keep track of the selected region
