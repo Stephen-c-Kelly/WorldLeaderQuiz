@@ -51,7 +51,7 @@ Find all Wireframes here - https://excalidraw.com/#json=MXWTkjL3lbrfMbya_BzEa,S0
 
 As a player...
 - I want to be able to select a region of the world to start the game.
-- I want to see a card with the name of a country and 4 options for the name of the world leader.
+- I want to see a card with the name of a country and 4 options for the name of the country's leader.
 - I want to be able to reset the game if I select the wrong region.
 - I want to be able to make a selection and see if my choice was correct.
 - I want to see the correct choice even if my choice was incorrect.

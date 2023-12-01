@@ -1,4 +1,25 @@
-// // Assuming countries.json is in the same directory as script.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Assuming countries.json is in the same directory as script.js
 
 // // Function to fetch and parse JSON
 // async function fetchCountries() {
@@ -23,3 +44,5 @@ import countriesData from './countries.js';
 
 // Example usage
 console.log(countriesData);
+
+
