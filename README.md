@@ -13,7 +13,7 @@ I'd like to leverage an API or a Google Sheet to more easily update the names of
 
 **Initial Home View**
 
-View of homescreen where users can review instructions, select one option amoung the available regions, and press play.
+View of homescreen where users can review instructions, select one option among the available regions, and press play.
 
 **Gameplay - Card Detail View**
 
@@ -75,12 +75,12 @@ The following fields will be added but left blank for MVP
 -- Annual GDP (unused during MVP)
 -- Assumed Office Date (unused during MVP)
 -- Country Image (vector image of outline)
--- Youtube link to how to prounce name (no idea how to set this up, but maybe I can use Bard to search Youtube)
+-- YouTube link to how to purchase name (no idea how to set this up, but maybe I can use Bard to search YouTube)
 
 // Step 1 - Define the required variables used to track the state of the game
 
-- Variable named 'board' to keep track of the state of the board (Menu view, card detail, end of game detail)
-- Variable named 'counter' to track final number of correct answers
+- Variable named 'board' to keep track of the state of the board (Menu view, card detail, end-of-game detail)
+- Variable named 'counter' to track the final number of correct answers
 - Variable named 'results' to track win/lose. 
 - Variable named 'country' which will look in the data to build a list of countries based on region used in gameplay
 
@@ -100,8 +100,8 @@ The following fields will be added but left blank for MVP
 
 // Step 4 - The state of the menu should be rendered to the user
 -- create 'render' function (will be defined later)
--- create 'updateMenu' which will display the intro copy and menu, and play game button
-*** is this the same as the "set board to menu" step in the init function?
+-- create 'updateMenu' which will display the intro copy and menu, and Play Game button
+**** is this the same as the "set board to menu" step in the init function? ****
 -- create a click event that listens for the user's selection of region and stores the choice
 -- create a click event called play that calls the following functions when the Play Game button is triggered:
 ----activeStack
@@ -119,7 +119,7 @@ The following fields will be added but left blank for MVP
 ---- sets the first card to activeCountry
 
 -- create a function called setChoices:
----- build array with correct choice and incorrect choices n a randomized order 
+---- build array with correct choice and incorrect choices in a randomized order 
 ---- build incorrect choices by selecting 3 random world leaders in the same region
 
 -- create a function called display card detail view
@@ -129,12 +129,12 @@ The following fields will be added but left blank for MVP
 ----show close button
 
 -- create a function called 'close'
-----set an event listener so that the users is taken back to the main menu on click.
+----set an event listener so that the user is taken back to the main menu on click.
 ----render function
 
 --create a function called checkCorrect
-----set an event listener function so that the buttons displaying each choice will change background color (green for correct, red for incorrect) once user makes a selection
-----once button is selected, change the state of all choice buttons to inactive so the user can't make another selecction
+----set an event listener function so that the buttons displaying each choice will change the background color (green for correct, red for incorrect) once the user makes a selection
+----once button is selected, change the state of all choice buttons to inactive so the user can't make another selection
 ----Next button is set to active state and is now clickable
 
 create a function called nextCard
@@ -148,33 +148,24 @@ create a function called seeResults
 
 create a function called resultsDisplay 
 -- if % of correct answers is above 60%, set winner to true
--- display end of game message with "You win" or "You Lose"
+-- display message "You win" or "You Lose"
 -- display number and % of correcct answers.
 -- display Play Again button.
 
 create a playAgain function
--- click event handlenr so that, when user clicks Play again button, the function close is triggered.
+-- click event handler so that, when user clicks Play again button, the function close is triggered.
 -- call init
 
 
-
-
 #### Timeline - Daily Accountability
-Example of a Timeline to keep organized and on task for hitting goals every single day you’re on the sprint for your project.
-
-table created with https://www.tablesgenerator.com/markdown_tables
 
 
-| Day       |   | Task                                                                 |   | Blockers |   | Notes |
-|-----------|---|----------------------------------------------------------------------|---|----------|---|-------|
-| Thursday  |   | Create proposal                                                      |   |          |   |       |
-| Friday    |   | Present Proposal, revise pseudocode, create wireframes               |   |          |   |       |
-| Saturday  |   | Create HTML and style with CSS, create Data Structure                |   |          |   |       |
-| Sunday    |   | Complete styling with CSS,                                           |   |          |   |       |
-| Monday    |   | Create variables and event listeners in Javascript. Create Menu view |   |          |   |       |
-| Tuesday   |   | Create Card Detail View                                              |   |          |   |       |
-| Wednesday |   | Finish Detail View, Create Results View                              |   |          |   |       |
-| Thursday  |   | Stretch Goals                                                        |   |          |   |       |
-| Friday    |   | Presentation                                                         |   |          |   |       |
-|           |   |                                                                      |   |          |   |       |
-|           |   |                                                                      |   |          |   |       |
+| Thursday  |   | Create proposal                                                    
+| Friday    |   | Present Proposal, revise pseudocode, create wireframes             
+| Saturday  |   | Create HTML and style with CSS, create Data Structure              
+| Sunday    |   | Complete styling with CSS,                                         
+| Monday    |   | Create variables and event listeners in Javascript. Create Menu 
+| Tuesday   |   | Create Card Detail View                                            
+| Wednesday |   | Finish Detail View, Create Results View                            
+| Thursday  |   | Stretch Goals                                                      
+| Friday    |   | Presentation       
