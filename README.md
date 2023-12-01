@@ -1,49 +1,59 @@
 # World Leader Quiz
 
-## Project Choice (Tell us which project you're doing!)
-
-- [ ] World Leader Card-based Quiz
-- [ ] Trivia (Self-scoring)
-- [ ] Spaceman
-- [ ] Tower of Hanoi
-- [ ] Simon
-
 ## Project Description 
 
-My app is called Tic Tac Toe. It's a game app for players who want to play Tic Tac Toe online. Two players can join an online game and play a round of Tic Tac Toe, with the score being kept automatically and game results displayed at then end of a round -- whichever player won, or in the case of a draw, a tie between the users. Users will have the option to play again. In the future, I'd like to add a feature where one player can play against the computer. 
+World Leaders is an online quiz game built to help you learn the names of more world leaders.  You will be able to pick a global region, like Asia or Europe, and see a set of 20 of cards representing countries in that region.  Upon clicking a card, users will see the name of the country, the official flag, and a series of multiple choice questions containing the name of the correct world leaders and 3 other leaders in the region. After you make a selection, you'll see if your choice was correct or incorrect (if in correct you'll also see the correct option).
+
+The game is not timed, you can take as long as you want to answer all the cards in the region.  This game is built in HTML, CSS, and Javascript.
+
+I'd like to leverage an API or a Google Sheet to more easily update the names of the leaders after elections and include vector outlines of each country.  I'd also like to integrate a 'hard' option with a  countdown clock.
 
 ## Wire Frames
 
-**Initial Landing View**
+**Initial Home View**
 
-![image](https://media.git.generalassemb.ly/user/21811/files/0f7aee00-c1d9-11ea-9dad-de086a5c91fc)
+View of homescreen where users can read instructions, select a region, and press play.
 
-**Results View**
+**Gameplay - Card Detail View**
 
-![image](https://media.git.generalassemb.ly/user/21811/files/1a358300-c1d9-11ea-95da-6c14aefb0f18)
+Card centered in the screen containing the following:
+- (optional) counter with number of cards remaining
+- namme of country
+- 4 choices
+-- 1 correct option
+-- 3 incorrect options (names taken from the list of leader's names in the region)
+- Next button (inactive on page load)
+- Play Again button (hidden until all cards have been played)
 
-## User Stories
+Upon making a selection, users will see the correct and incorrect options in green and red. Users will be able to click the next button to see another card in the stack
+
+After all cards have been played, the card design is updated to show the number of correct guesses and a play again button.
 
 #### MVP Goals
 
-- As a player, I want my game to recognize three ticks in a row so that I know who won.
-- As a player, I would like to be informed when the game is over due to a tie.
-- As a player, I would like to know whose turn it is so that I don't have to keep track.
-- As a player, I would like to be informed with some indication when I mark a game box so that I know my selection worked.
-- As a player who requires assistive technologies, I would like accessibility features so that I'm not left out of enjoying the game.
-- As a player I would like to be able to restart the game after a win, loss or tie.
+- As a player, I want to be able to select a region of the world to start the game.
+- As a player, I want to see a card with the name of a country and 4 options for the name of the world leader.
+- As a player, I want to be able to reset the game if I selected the wrong region.
+- As a player, I want to be able to make a selection and see if my choice was correcct.
+- As a player, I want to see the correcct choice even if my choice was incorrect.
+- As a player, I want to see how well I did at the end of the game.
+- As a player, I want to reset the game and select another region to play again.
 - As a player, I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.\*\*
 
 #### Stretch Goals
 
-- As a player, I would like a victory animation when I win the game, so that I feel good about my victory!
-- As a player, I would like to hear an audible sound when I mark a game box so that I know my selection worked.
-- As a player, I would like to play this game online so that I don't have to have my challenger sitting next to me.
-- As a player who wants to dominate the battlefield I want to become the ultimate tic tac toe tactician so I can beat all of my opponents
+- I'd like to implement animation to smooth the transition between cards.  
+- I'd like to implement animation to make the correct/incorrect options more interesting/delightful.
+- I'd like to leverage an API or a Google Sheet to more easily update the names of the leaders after elections
+- I'd like to include vector outlines of each country.
+- I'd like to integrate a 'countdown' option with a  countdown clock.
+- I'd like to integrate a 'hard' option to make the 3 incorrect choices more difficult (maybe they can be the names of the countrie's former leader, or they can be other notable figures from that country).
+- I'd like to include links to youtube videos showing how to pronounce each leader's name.
 
-#### Notionboard Template
-Notionboard template for building projects ( You can use this for any project )
-https://www.notion.so/GA-Unit-3-Tunr-Lab-da2c82fafd4e4a7aa654676732db9ee3
+#### Pseudo Code
+
+
+
 
 #### Timeline - Daily Accountability
 Example of a Timeline to keep organized and on task for hitting goals every single day you’re on the sprint for your project.
