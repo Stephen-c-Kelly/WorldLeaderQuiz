@@ -45,6 +45,8 @@ After all cards have been played, the end-of-game view is triggered.
   
 https://imgur.com/a/vM4LRJ1
 
+Find all Wireframes here - https://excalidraw.com/#json=MXWTkjL3lbrfMbya_BzEa,S0ZUIiUWM70UJSmmToyYNg 
+
 #### MVP Goals
 
 As a player...
@@ -55,7 +57,7 @@ As a player...
 - I want to see the correct choice even if my choice was incorrect.
 - I want to see how well I did at the end of the game.
 - I want to reset the game and select another region to play again.
-- I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.\*\*
+- I want the UI to be engaging and out of the way so that I enjoy the experience of playing the game.
 
 #### Stretch Goals
 
@@ -78,6 +80,9 @@ As a player...
 -- Flag emoji
 -- Region
 -- World Leader
+-- Wrong Choice 1 (random leader from the same region)
+-- Wrong Choice 2 (random leader from the same region)
+-- Wrong Choice 3 (random leader from the same region)
 
 The following fields will be added but left blank for MVP
 -- Annual GDP (unused during MVP)
@@ -176,4 +181,10 @@ create a playAgain function
 | Tuesday   |   | Create Card Detail View                                            
 | Wednesday |   | Finish Detail View, Create Results View                            
 | Thursday  |   | Stretch Goals                                                      
-| Friday    |   | Presentation       
+| Friday    |   | Presentation
+
+
+#### Resources
+
+- https://mledoze.github.io/countries/
+- https://restcountries.com/#rest-countries 
