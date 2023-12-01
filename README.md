@@ -31,7 +31,7 @@ Upon making a selection, users will see the correct and incorrect options highli
 **End of Game Detail View**
 After all cards have been played, the end-of-game view is triggered.  
 
-- Final score and a percentage of correct answers
+- Number and % of correct answers 
 - You win / You lose message.  Above 60% is counted as a win
 - Play Again button
   
@@ -64,57 +64,46 @@ As a player...
 
 
 ```
+// Step 0 - Data Architecture
+
+- Share format with chatGPT and ask to generate countries with the following fields
+-- Country Name
+-- Flag emoji
+-- Region
+-- World Leader
+-- Assumed Office Date (unused during MVP)
+
+The following fields will be added but left blank for MVP
+-- Country Image (vector image of outline)
+-- Youtube link to how to prounce name (no idea how to set this up, but maybe I can use Bard to search Youtube)
+
+
 // Step 1 - Define the required variables used to track the state of the game
 
 - Variable named 'board' to keep track of the state of the board (Menu view, card detail, end of game detail)
+- Variable named 'counter' to track final number of correct answers
+- Variable named 'results' to track win/lose. 
+- Variable named 'country' which will look in the data to build a list of countries based on region used in gameplay
+
+
+// Step 2 - Cached element references
 - Variable named 'region' to keep track of the selected region
 - Variable named 'activeCountry' to keep track of the country on display.
 - Variable named 'activeChoices' to display choices for an active country.
-- Variable named 'correctChoice' to track the correct choice
-- Variable named 'country' which will be a class to generate Country Cards with information (name, flag emoji, world leader)
-- Variable named 'counter' to track how many 
--
-  // 1a) Use a variable named `board` to represent the state of the squares on
-  //     the board.
+- Variable named 'correctChoice' to track the correct choice for the active country
 
-  // 1b) Use a variable named `turn` to track whose turn it is.
-
-  // 1c) Use a variable named `winner` to represent if anyone has won yet.
-
-  // 1d) Use a variable named `tie` to represent if the game has ended in a tie.
-
-
-// Step 2 - Store cached element references.
-
-  // 2a) In a constant called `squareEls`, store the nine elements 
-  //    representing the squares on the page.
-
-  // 2b) In a constant called `messageEl`, store the element that displays the 
-  //    game's status on the page.
-
-
-// Step 3 - Upon loading, the game state should be initialized, and a function 
-//          should be called to render this game state.
-
-  // 3a) Create a function called `init`.
-
-  // 3b) Call this `init` function when the app loads.
-  
-  // 3c) Set the `board` variable to an array containing nine `null`s to 
-  //    represent empty squares.
-
-  // 3d) Set the `turn` to `1` - which will represent player X.
-
-  // 3e) Set the `winner` to false.
-
-  // 3f) Set `tie` to false.
-
-  // 3g) Call a function called `render` at the end of the `init` function.
+// Step 3 - Initialize the game state and render
+- init, which will initialize the game
+-- set board to menu
+-- set winner to null
+-- set counter to 0
+-- set results to null
+-- trigger render function
 
 
 // Step 4 - The state of the game should be rendered to the user
-
-  // 4a) Create a function called `render`, then set it aside for now.
+-- create 'render' function (will be defined later)
+-- 
 
   // 4b) Create a function called `updateBoard`.
 
