@@ -109,7 +109,10 @@ The following fields will be added but left blank for MVP
 ----display card detail view
 
 -- create a function called render
-----
+----updateMenu
+----displayCardDetail
+----resultsDisplay
+**** SK Note - I'm unclear how we prevent this from calling all the game states at once. **** 
 
 -- create a function called activeStack:
 ---- Build an array of country cards based on the available data, ordered randomly
@@ -127,6 +130,7 @@ The following fields will be added but left blank for MVP
 
 -- create a function called 'close'
 ----set an event listener so that the users is taken back to the main menu on click.
+----render function
 
 --create a function called checkCorrect
 ----set an event listener function so that the buttons displaying each choice will change background color (green for correct, red for incorrect) once user makes a selection
@@ -136,11 +140,11 @@ The following fields will be added but left blank for MVP
 create a function called nextCard
 -- set an event listener that triggers the following actions when the Next button is clicked:
 ----set the next country card in activeStack to activeCountry
-----runs display card detail view
+----render function
 
 create a function called seeResults
 -- if activeStack has no more items, update the Next button copy to say "See Results"
--- once "see results button is clicked, call resultsDisplay
+-- once See Results button is clicked, call render
 
 create a function called resultsDisplay 
 -- if % of correct answers is above 60%, set winner to true
