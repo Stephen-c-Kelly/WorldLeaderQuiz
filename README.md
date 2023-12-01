@@ -85,7 +85,7 @@ The following fields will be added but left blank for MVP
 - Variable named 'country' which will look in the data to build a list of countries based on region used in gameplay
 
 // Step 2 - Cached element references
-- Variable named 'region' to keep track of the selected region
+- Variable named 'activeRegion' to keep track of the selected region
 - Variable named 'activeCountry' to keep track of the country on display.
 - Variable named 'activeChoices' to display choices for an active country.
 - Variable named 'correctChoice' to track the correct choice for the active country
@@ -93,15 +93,51 @@ The following fields will be added but left blank for MVP
 // Step 3 - Initialize the game state and render
 - init, which will initialize the game
 -- set board to menu
--- set winner to null
+-- set winner to false
 -- set counter to 0
 -- set results to null
 -- trigger render function
 
-
-// Step 4 - The state of the game should be rendered to the user
+// Step 4 - The state of the menu should be rendered to the user
 -- create 'render' function (will be defined later)
+-- create 'updateMenu' which will display the intro copy and menu, and play game button
+*** is this the same as the "set board to menu" step in the init function?
+-- create a click event that listens for the user's selection of region and stores the choice
+-- create a click event called play that calls the following functions when the Play Game button is triggered:
+----activeStack
+----setChoices
+----display card detail view
+
+-- create a function called activeStack:
+---- Build an array of country cards based on the available data, ordered randomly
+---- sets the first card to activeCountry
+
+-- create a function called setChoices:
+---- build array with correct choice and incorrect choices n a randomized order 
+---- build incorrect choices by selecting 3 random world leaders in the same region
+
+-- create a function called display card detail view
+----show active country
+----display each item in the setChoices array in a button
+----show next button (inactive)
+
+
+--create a function called checkCorrect
+----set an event listener function so that the buttons displaying each choice will change background color (green for correct, red for incorrect) once user makes a selection
+----once button is selected, change the state of all choice buttons to inactive so the user can't make another selecction
+----Next button is set to active state and is now clickable
+
+
+create a function called nextCard
+-- set an event listener that triggers the following actions when the Next button is clicked:
+----set the next country card in activeStack to activeCountry
+----
+
+
+--
 -- 
+
+-- create init
 
   // 4b) Create a function called `updateBoard`.
 
