@@ -15,6 +15,8 @@ I'd like to leverage an API or a Google Sheet to more easily update the names of
 
 View of homescreen where users can review instructions, select one option among the available regions, and press play.
 
+https://imgur.com/a/RBaouL2 
+
 **Gameplay - Card Detail View**
 
 Country Card centered in the window containing the following:
@@ -25,8 +27,13 @@ Country Card centered in the window containing the following:
 -- 3 incorrect options (names taken from the list of leader's names in the region)
 - Next button (inactive until the user makes a selection)
 
-
 Upon making a selection, users will see the correct and incorrect options highlighted in green and red. Users will be able to click the next button to see another card in the stack
+
+Wireframe 1
+https://imgur.com/a/J1RKF0k
+
+Wireframe 2
+https://imgur.com/a/i0nBxEX
 
 **End of Game Detail View**
 
@@ -36,7 +43,7 @@ After all cards have been played, the end-of-game view is triggered.
 - You win / You lose message.  Above 60% is counted as a win
 - Play Again button
   
-
+https://imgur.com/a/vM4LRJ1
 
 #### MVP Goals
 
