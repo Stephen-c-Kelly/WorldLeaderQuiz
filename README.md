@@ -80,6 +80,9 @@ As a player...
 -- Flag emoji
 -- Region
 -- World Leader
+-- Wrong Choice 1 (random leader from the same region)
+-- Wrong Choice 2 (random leader from the same region)
+-- Wrong Choice 3 (random leader from the same region)
 
 The following fields will be added but left blank for MVP
 -- Annual GDP (unused during MVP)
@@ -178,4 +181,10 @@ create a playAgain function
 | Tuesday   |   | Create Card Detail View                                            
 | Wednesday |   | Finish Detail View, Create Results View                            
 | Thursday  |   | Stretch Goals                                                      
-| Friday    |   | Presentation       
+| Friday    |   | Presentation
+
+
+#### Resources
+
+- https://mledoze.github.io/countries/
+- https://restcountries.com/#rest-countries 
