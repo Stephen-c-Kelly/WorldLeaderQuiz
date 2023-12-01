@@ -19,6 +19,7 @@
 
 
 
+
 // Assuming countries.json is in the same directory as script.js
 
 // // Function to fetch and parse JSON
