@@ -181,7 +181,7 @@ create a playAgain function
 | Tuesday   |   | Create Card Detail View                                            
 | Wednesday |   | Finish Detail View, Create Results View                            
 | Thursday  |   | Stretch Goals                                                      
-| Friday    |   | Presentation
+| Friday    |   | Presentation       
 
 
 #### Resources
