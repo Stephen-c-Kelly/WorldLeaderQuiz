@@ -15,6 +15,8 @@ I'd like to leverage an API or a Google Sheet to more easily update the names of
 
 View of homescreen where users can review instructions, select one option among the available regions, and press play.
 
+
+
 **Gameplay - Card Detail View**
 
 Country Card centered in the window containing the following:
