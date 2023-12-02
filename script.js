@@ -1,6 +1,6 @@
 // Constant Variables
-
-// - Variable to track of the state of the board (Menu view, card detail, end-of-game detail)
+console.log('test console log')
+// - Variable to track of the state of the board (menu, card, results)
 const board = null
 
 // - Variable to track the final number of correct answers
@@ -35,17 +35,36 @@ let activeCountry = {
 // - Variable named 'correctChoice' to track the correct choice for the active country
 let leader = activeCountry.leader
 
-// // Step 3 - Initialize the game state and render
 
-// - init, which will initialize the game
-// -- set board to menu
-// -- set winner to false
-// -- set counter to 0
-// -- set results to null
-// -- trigger render function
+// Event listeners
+const regionEl = document.querySelector('.region-btn');
+console.log(regionEl)
+
+
+
+
+
+// // Step 3 - Initialize the game state and render
+const init = () => {
+  winner = false
+  counter = 0
+  results = null
+  render(menu)
+}
+
+
 
 // // Step 4 - The state of the menu should be rendered to the user
-// -- create 'render' function (will be defined later)
+// unsure if render needs more...
+const render = (state) => {
+ board = state
+}
+
+const updateMenu = () =>{}
+
+
+
+
 // -- create 'updateMenu' which will display the intro copy and menu, and Play Game button
 // **** is this the same as the "set board to menu" step in the init function? ****
 // -- create a click event that listens for the user's selection of region and stores the choice
@@ -142,10 +161,10 @@ let leader = activeCountry.leader
 // });
 
 
-// Import the JSON data
-import countriesData from './countries.js';
+// // Import the JSON data
+// import countriesData from './countries.js';
 
-// Example usage
-console.log(countriesData);
+// // Example usage
+// console.log(countriesData);
 
 
