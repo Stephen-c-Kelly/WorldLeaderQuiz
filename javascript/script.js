@@ -17,16 +17,6 @@ const testAnswer2 = TEST_COUNTRIES[0].answers[1].text;
 const testAnswer3 = TEST_COUNTRIES[0].answers[2].text;
 const testAnswer4 = TEST_COUNTRIES[0].answers[3].text;
 
-const testFunction = () => {
-  questionEl.textContent = `${testFlag} ${testQuestion} ${testFlag}`;
-  answer1El.textContent = `${testAnswer1}`;
-  answer2El.textContent = `${testAnswer2}`;
-  answer3El.textContent = `${testAnswer3}`;
-  answer4El.textContent = `${testAnswer4}`;
-
-}
-testEls.addEventListener('click', testFunction)
-
 // Constant Variables
 
 // - Variable to track of the state of the board (menu, card, results)
@@ -73,30 +63,58 @@ const hide = (state) => {
   state.style.display = 'none'
 }
 
-const render = (state) => {
-  state === menu
-    ? (hide(card), hide(results))
-  : state === card
-    ? (hide(menu), hide(results))
-    : (hide(menu), hide(card))
+const show = (state) => {
+  state.style.display = 'block'
 }
 
-// // Step 3 - Initialize the game state and render
+const render = (state) => {
+  state === menu
+  ? (show(menu), hide(card), hide(results))
+  : state === card
+  ? (show(card), hide(menu), hide(results)
+    )
+  : state === results
+  ? (show(results), hide(card), hide(menu))
+  : console.log('render function error, wrong paramater input')
+}
+
+
+
+
+
+
+
+// // Step 3 - Initialize the game state and renders the menu
 const init = () => {
   let winner = false
   let counter = 0
-  let results = null
-  render(menu)
+  let region = null
+  // card.style.display = 'none'
+  // results.style.display = 'none'
+  // menu.style.display = 'none'
+  console.log(`init trigger`)
+}
+init()
+//render(menu)
+// play triggers with a click event on play. this reveals the card state and loads in the first question
+
+const playGame = () => {
+  questionEl.textContent = `${testFlag} ${testQuestion} ${testFlag}`;
+  answer1El.textContent = `${testAnswer1}`;
+  answer2El.textContent = `${testAnswer2}`;
+  answer3El.textContent = `${testAnswer3}`;
+  answer4El.textContent = `${testAnswer4}`;
+  // render(card)
+  console.log(`play function trigger`)
 }
 
-init()
-
-const(store region choice)
-
-const showCard = ()
-// triggers with a click event on play. click event is already partly written
+testEls.addEventListener('click', playGame)
 
 
+
+
+
+// 
 
 
 
