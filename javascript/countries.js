@@ -7,7 +7,7 @@ export const TEST_COUNTRIES = [
     answers: [
       { text: "Jay Garrick", isCorrect: false },
       { text: "Barry Allen", isCorrect: false },
-      { text: "I am correct", isCorrect: true },
+      { text: "Correct", isCorrect: true },
       { text: "Wally West", isCorrect: false }
     ],
     countryDetails: {
@@ -28,7 +28,7 @@ export const TEST_COUNTRIES = [
     answers: [
       { text: "Jay Garrick", isCorrect: false },
       { text: "Barry Allen", isCorrect: false },
-      { text: "I am correct", isCorrect: true },
+      { text: "Correct", isCorrect: true },
       { text: "Wally West", isCorrect: false }
     ],
     countryDetails: {

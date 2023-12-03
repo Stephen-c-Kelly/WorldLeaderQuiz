@@ -1,92 +1,8 @@
 import { TEST_COUNTRIES } from './countries.js'
 
+console.log(TEST_COUNTRIES)
 
-console.log(` test country object ${TEST_COUNTRIES}`)
-
-// Constant Variables
-
-// - Variable to track of the state of the board (menu, card, results)
-const board = null
-
-// - Variable to track the final number of correct answers
-const counter = 0
-// - Variable named 'results' to track win/lose. Boolean.  true = win, false = lose.
-const results = null
-
-const region = ['Asia', 'Europe', 'North and Central America', 'South America', 'The Middle East and Africa', 'Oceania']
-
-
-// Cached element references
-
-// - Variable named 'activeRegion' to keep track of the selected region.  when defined, this will call an array like '[region[2]]'.
-let activeRegion = [undefined]
-
-
-//Array named activeStack which will house a set of countries a user will see during the game
-const activeStack = []
-
-// - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
-// 
-let activeCountry = {}
-
-// additional key value pairs can be added here to help enable phase 2 functionality such as GDP (to enable game a high gdp or low gdp game mode), svg images of the country, etc. 
-
-// see active countries in
-
-
-// - Variable named 'correctChoice' to track the correct choice for the active country
-let leader = activeCountry.leader
-
-
-// Event listeners
-const regionEl = document.querySelector('.region-btn');
-//console.log(regionEl)
-
-
-
-
-
-// // Step 3 - Initialize the game state and render
-const init = () => {
-  winner = false
-  counter = 0
-  results = null
-  render(menu)
-}
-
-
-
-// // Step 4 - The state of the menu should be rendered to the user
-// unsure if render needs more...
-const render = (state) => {
- board = state
-}
-
-const updateMenu = () =>{}
-
-const testGermany = {
-  question: "Who is the leader of France?",
-  answers: [
-    { text: "Stefan Löfven", isCorrect: false },
-    { text: "Pedro Sánchez", isCorrect: false },
-    { text: "Emmanuel Macron", isCorrect: true },
-    { text: "Vladimir Putin", isCorrect: false }
-  ],
-  countryDetails: {
-    countryName: "France",
-    leaderName: "Emmanuel Macron",
-    assumedOfficeDate: "May 14, 2017",
-    flag: "🇫🇷",
-    nationalBird: "Gallic Rooster",
-    mostRecentAnnualGDP: "2.8 trillion USD",
-    globalRegion: "Europe",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-};
-
-// console.log(TEST_COUNTRIES) - works, i see the object I imported
-
+// sample country content with test variables  and functions
 const testEls = document.querySelector('.play-btn');
 const questionEl = document.querySelector('.country-name')
 const answer1El = document.querySelector('#btn1')
@@ -101,45 +17,95 @@ const testAnswer2 = TEST_COUNTRIES[0].answers[1].text;
 const testAnswer3 = TEST_COUNTRIES[0].answers[2].text;
 const testAnswer4 = TEST_COUNTRIES[0].answers[3].text;
 
-// console.log(testGermanyFlag)
-
-const testGermanyQ = TEST_COUNTRIES[0].question;
-// works but this is a hardcoded solution.  
-
-//console.log(testGermanyQ)
 const testFunction = () => {
-  console.log(testGermanyQ)
-  // console.log(testGermanyAnswer0)
-  // console.log(testGermanyAnswer1)
-  // console.log(testGermanyAnswer2)
-  // console.log(testGermanyAnswer3)
-  questionEl.textContent = `${testGermanyFlag} ${testGermanyQ} ${testGermanyFlag}`;
-  answer1El.textContent = `${testGermany.answers[0].text}`;
-  answer2El.textContent = `${testGermany.answers[1].text}`;
-  answer3El.textContent = `${testGermany.answers[2].text}`;
-  answer4El.textContent = `${testGermany.answers[3].text}`;
+  questionEl.textContent = `${testFlag} ${testQuestion} ${testFlag}`;
+  answer1El.textContent = `${testAnswer1}`;
+  answer2El.textContent = `${testAnswer2}`;
+  answer3El.textContent = `${testAnswer3}`;
+  answer4El.textContent = `${testAnswer4}`;
 
 }
-
-
-
-
-
-
-
-
-//const testGermanyAnswer1 = TEST_COUNTRIES.answers[0];
-
-
-//console.log(testGermanyQuestion)
-
 testEls.addEventListener('click', testFunction)
 
+// Constant Variables
+
+// - Variable to track of the state of the board (menu, card, results)
+let board = null
+
+// - Variable to track the final number of correct answers
+const counter = 0
+// - Variable named 'winner' to track win/lose. Boolean.  true = win, false = lose.
+let winner = false
+
+// - Variable that defines the 6 regions the game will eventually cover
+const region = ['Asia', 'Europe', 'North and Central America', 'South America', 'The Middle East and Africa', 'Oceania']
+
+//defines the 3 views of the game
+const menu = document.querySelector('.main-menu')
+const card = document.querySelector('.card-view')
+const results = document.querySelector('.results')
+
+
+// Cached element references
+
+// - Variable named 'activeRegion' to keep track of the selected region.  when defined, this will call an array like '[region[2]]'.
+let activeRegion = []
+
+
+//Array named activeStack which will house a set of countries a user will see during the game
+const activeStack = []
+
+// - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
+// 
+let activeCountry = {}
+
+// additional key value pairs can be added here to help enable phase 2 functionality such as GDP (to enable game a high gdp or low gdp game mode), svg images of the country, etc. 
+
+// - Variable named 'correctChoice' to track the correct choice for the active country
+
+let leader = activeCountry.leader
+
+// Event listeners
+const regionEl = document.querySelector('.region-btn');
+
+
+const hide = (state) => {
+  state.style.display = 'none'
+}
+
+const render = (state) => {
+  state === menu
+    ? (hide(card), hide(results))
+  : state === card
+    ? (hide(menu), hide(results))
+    : (hide(menu), hide(card))
+}
+
+// // Step 3 - Initialize the game state and render
+const init = () => {
+  let winner = false
+  let counter = 0
+  let results = null
+  render(menu)
+}
+
+init()
+
+const(store region choice)
+
+const showCard = ()
+// triggers with a click event on play. click event is already partly written
 
 
 
-// -- create 'updateMenu' which will display the intro copy and menu, and Play Game button
-// **** is this the same as the "set board to menu" step in the init function? ****
+
+
+
+
+
+// // Step 4 - The state of the menu should be rendered to the user
+
+
 // -- create a click event that listens for the user's selection of region and stores the choice
 // -- create a click event called play that calls the following functions when the Play Game button is triggered:
 // ----activeStack
