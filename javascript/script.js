@@ -1,5 +1,10 @@
+import { TEST_COUNTRIES } from './countries.js'
+
+
+console.log(` test country object ${TEST_COUNTRIES}`)
+
 // Constant Variables
-console.log('test console log')
+
 // - Variable to track of the state of the board (menu, card, results)
 const board = null
 
@@ -22,15 +27,12 @@ const activeStack = []
 
 // - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
 // 
-let activeCountry = {
-  country: 'value',
-  flag: 'flag emoji',
-  leader: 'first last',
-  wrongLeader1: 'first last',
-  wrongLeader2: 'first last',
-  wrongLeader3: 'first last',
+let activeCountry = {}
+
 // additional key value pairs can be added here to help enable phase 2 functionality such as GDP (to enable game a high gdp or low gdp game mode), svg images of the country, etc. 
-}
+
+// see active countries in
+
 
 // - Variable named 'correctChoice' to track the correct choice for the active country
 let leader = activeCountry.leader
@@ -38,7 +40,7 @@ let leader = activeCountry.leader
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
-console.log(regionEl)
+//console.log(regionEl)
 
 
 
@@ -61,6 +63,77 @@ const render = (state) => {
 }
 
 const updateMenu = () =>{}
+
+const testGermany = {
+  question: "Who is the leader of France?",
+  answers: [
+    { text: "Stefan Löfven", isCorrect: false },
+    { text: "Pedro Sánchez", isCorrect: false },
+    { text: "Emmanuel Macron", isCorrect: true },
+    { text: "Vladimir Putin", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "France",
+    leaderName: "Emmanuel Macron",
+    assumedOfficeDate: "May 14, 2017",
+    flag: "🇫🇷",
+    nationalBird: "Gallic Rooster",
+    mostRecentAnnualGDP: "2.8 trillion USD",
+    globalRegion: "Europe",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+};
+
+// console.log(TEST_COUNTRIES) - works, i see the object I imported
+
+const testEls = document.querySelector('.play-btn');
+const questionEl = document.querySelector('.country-name')
+const answer1El = document.querySelector('#btn1')
+const answer2El = document.querySelector('#btn2')
+const answer3El = document.querySelector('#btn3')
+const answer4El = document.querySelector('#btn4')
+
+const testFlag = TEST_COUNTRIES[0].countryDetails.flag
+const testQuestion = TEST_COUNTRIES[0].question;
+const testAnswer1 = TEST_COUNTRIES[0].answers[0].text;
+const testAnswer2 = TEST_COUNTRIES[0].answers[1].text;
+const testAnswer3 = TEST_COUNTRIES[0].answers[2].text;
+const testAnswer4 = TEST_COUNTRIES[0].answers[3].text;
+
+// console.log(testGermanyFlag)
+
+const testGermanyQ = TEST_COUNTRIES[0].question;
+// works but this is a hardcoded solution.  
+
+//console.log(testGermanyQ)
+const testFunction = () => {
+  console.log(testGermanyQ)
+  // console.log(testGermanyAnswer0)
+  // console.log(testGermanyAnswer1)
+  // console.log(testGermanyAnswer2)
+  // console.log(testGermanyAnswer3)
+  questionEl.textContent = `${testGermanyFlag} ${testGermanyQ} ${testGermanyFlag}`;
+  answer1El.textContent = `${testGermany.answers[0].text}`;
+  answer2El.textContent = `${testGermany.answers[1].text}`;
+  answer3El.textContent = `${testGermany.answers[2].text}`;
+  answer4El.textContent = `${testGermany.answers[3].text}`;
+
+}
+
+
+
+
+
+
+
+
+//const testGermanyAnswer1 = TEST_COUNTRIES.answers[0];
+
+
+//console.log(testGermanyQuestion)
+
+testEls.addEventListener('click', testFunction)
 
 
 
