@@ -26,10 +26,10 @@ export const TEST_COUNTRIES = [
 {
     question: "Who is the leader of Test country #2?",
     answers: [
-      { text: "Jay Garrick", isCorrect: false },
-      { text: "Barry Allen", isCorrect: false },
+      { text: "Alan Scott", isCorrect: false },
+      { text: "Carol Ferris", isCorrect: false },
       { text: "Correct", isCorrect: true },
-      { text: "Wally West", isCorrect: false }
+      { text: "Jessica Cruz", isCorrect: false }
     ],
     countryDetails: {
       countryName: "France",

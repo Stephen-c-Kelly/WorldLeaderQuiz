@@ -1,7 +1,21 @@
+use global colors
+
 .main-menu {
   
 }
 
 .card-view, .results {
   display: none;
+}
+
+.answer:hover {
+  border-color: black;
+}
+
+.answer.correct {
+ background-color: green;
+}
+
+.answer.wrong {
+ background-color: red;
 }

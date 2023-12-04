@@ -1,9 +1,14 @@
+// phase 2 - add shuffle functionality to the answers
+
 import { TEST_COUNTRIES } from './countries.js'
 
-console.log(TEST_COUNTRIES)
+//console.log(TEST_COUNTRIES)
 
-// sample country content with test variables  and functions
-const testEls = document.querySelector('.play-btn');
+
+
+const playEl = document.querySelector('.play-btn');
+const playAgainEl = document.querySelector('.play-again')
+const closeBtnEl = document.querySelector('.close-btn')
 const questionEl = document.querySelector('.country-name')
 const answer1El = document.querySelector('#btn1')
 const answer2El = document.querySelector('#btn2')
@@ -22,10 +27,12 @@ const testAnswer4 = TEST_COUNTRIES[0].answers[3].text;
 // - Variable to track of the state of the board (menu, card, results)
 let board = null
 
+
 // - Variable to track the final number of correct answers
 const counter = 0
 // - Variable named 'winner' to track win/lose. Boolean.  true = win, false = lose.
 let winner = false
+
 
 // - Variable that defines the 6 regions the game will eventually cover
 const region = ['Asia', 'Europe', 'North and Central America', 'South America', 'The Middle East and Africa', 'Oceania']
@@ -41,19 +48,73 @@ const results = document.querySelector('.results')
 // - Variable named 'activeRegion' to keep track of the selected region.  when defined, this will call an array like '[region[2]]'.
 let activeRegion = []
 
+// note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  During build it's set to 2.
+const numQuestions = 2
 
 //Array named activeStack which will house a set of countries a user will see during the game
 const activeStack = []
 
+// function to shuffle the array of the imported region.  this works by randomly finding two items in the array, then swapping their position.  Linear complexity.  Taken from Chat GPT.
+
+const shuffleArray = (array) =>{
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+const buildActiveStack = () => {
+  for (let i = 0; i < numQuestions; i++){
+    activeStack.push(TEST_COUNTRIES[i])
+    // console.log(`build active stack function`)
+  }
+  shuffleArray(activeStack)
+}
+
+
+buildActiveStack()
+
+console.log(activeStack)
+
+
+
 // - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
 // 
-let activeCountry = {}
+let currentCard = activeStack[0]
+let correctChoice = [``]
+
+
+//console.log(currentCard)
+// nested loops in this function.  however each input array will only have 4 choices initially (and it wont ever exceed 10) so the juice is worth the squeeze.
+
+const findCorrect = (card) => {
+  for (let i = 0; i < card.answers.length; i++){
+    if (card.answers[i].isCorrect === true)
+    correctChoice = card.answers[i].text
+    console.log(`correct choice is ${card.answers[i].text}`)
+    console.log(`find correct func loop ${i}`)
+  };
+  }
+console.log(`correct answer to ${currentCard} is ${findCorrect(currentCard)}`)
+
+
+  //console.log(card.answers[2].isCorrect)
+    
+ 
+
+
+
+
+
+
+  
+
 
 // additional key value pairs can be added here to help enable phase 2 functionality such as GDP (to enable game a high gdp or low gdp game mode), svg images of the country, etc. 
 
 // - Variable named 'correctChoice' to track the correct choice for the active country
 
-let leader = activeCountry.leader
+// let question = activeCountry
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
@@ -79,11 +140,6 @@ const render = (state) => {
 }
 
 
-
-
-
-
-
 // // Step 3 - Initialize the game state and renders the menu
 const init = () => {
   let winner = false
@@ -104,20 +160,69 @@ const playGame = () => {
   answer2El.textContent = `${testAnswer2}`;
   answer3El.textContent = `${testAnswer3}`;
   answer4El.textContent = `${testAnswer4}`;
-  // render(card)
+  render(card)
   console.log(`play function trigger`)
 }
 
-testEls.addEventListener('click', playGame)
+const seeMenu = () => {
+  render(menu)
+  console.log('see menu func')
+}
+
+const checkAnswer = (id, str) => {
+  if (correctChoice === str) {
+    id.classList.add('correct')
+  } else {
+    id.classList.add('wrong')
+  }
+  }
+
+
+checkAnswer(answer2El, )
 
 
 
 
+playEl.addEventListener('click', playGame)
+// to simplified  add render(menu) to init
+playAgainEl.addEventListener('click', init )
+playAgainEl.addEventListener('click', seeMenu)
+closeBtnEl.addEventListener('click', init)
+closeBtnEl.addEventListener('click', seeMenu)
+//nextEl.addEventListener('click', nextQuestion)
 
-// 
+// this workks
+// answer1El.classList.add('correct')
+
+answer1El,addEventListener('click', checkAnswer(answer1El, answer1El.textContent))
+answer2El,addEventListener('click', checkAnswer(answer2El,  answer2El.textContent))
+answer3El,addEventListener('click', checkAnswer(answer3El,  answer3El.textContent))
+answer4El,addEventListener('click', checkAnswer(answer4El,  answer4El.textContent))
 
 
 
+// const testQuestion = TEST_COUNTRIES[0].question;
+
+const nextQuestion = () => {
+
+  // for (let index of TEST_COUNTRIES) {
+  //   if (items in active stack of )
+  // }
+}
+
+
+
+const nextBtn = () => {
+}
+
+
+
+const seeResults = () => {
+  render(results)
+}
+// used to test see resuilts
+
+//seeResults()
 
 
 
