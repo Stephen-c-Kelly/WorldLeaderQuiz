@@ -2,22 +2,17 @@
 
 import { TEST_COUNTRIES } from './countries.js'
 
-console.log(TEST_COUNTRIES)
-
-
+// console.log(TEST_COUNTRIES)
 
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
 const closeBtnEl = document.querySelector('.close-btn')
 const questionEl = document.querySelector('.country-name')
-
-
-// const testFlag = TEST_COUNTRIES[0].countryDetails.flag
-// const testQuestion = TEST_COUNTRIES[0].question;
-// const testAnswer1 = TEST_COUNTRIES[0].answers[0].text;
-// const testAnswer2 = TEST_COUNTRIES[0].answers[1].text;
-// const testAnswer3 = TEST_COUNTRIES[0].answers[2].text;
-// const testAnswer4 = TEST_COUNTRIES[0].answers[3].text;
+const nextEl = document.querySelector(`.next`)
+const countCorrectEl = document.querySelector('#count')
+const totalCountEl = document.querySelector('#total')
+const percentageCorrectEl = document.querySelector('#percentage-correct')
+const winLoseEl = document.querySelector('#win-lose')
 
 // Constant Variables
 
@@ -40,12 +35,10 @@ const results = document.querySelector('.results')
 
 // Cached element references
 
-
-
 // note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  During build it's set to 2.
 const numQuestionMax = 10
 
-const numQuestions = 2
+let numQuestions = 2
 
 // something like this, in a function.  if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
 
@@ -74,8 +67,8 @@ const buildActiveStack = () => {
 }
 
 buildActiveStack()
-console.log(`length: ${activeStack.length}`)
-console.log(`${activeStack[0].countryDetails.countryName}, ${activeStack[1].countryDetails.countryName}`)
+// console.log(`length: ${activeStack.length}, first is ${activeStack[0].countryDetails.countryName}, next is ${activeStack[1].countryDetails.countryName}`)
+
 
 // need to write function that grabs the region based on user click and sets current stack and 
 
@@ -100,7 +93,7 @@ const findCorrect = (card) => {
   }
   }
   findCorrect(currentCard)
-  console.log(`current card is ${currentCard.countryDetails.countryName} and correct choice is ${correctChoice}`)
+  //console.log(`current card is ${currentCard.countryDetails.countryName} and correct choice is ${correctChoice}`)
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
@@ -131,26 +124,23 @@ const seeMenu = () => {
   init()
   colorReset()
   console.log('see menu func')
+  console.log(activeStack.length, activeStack[0], activeStack[1])
 }
 
-console.log(currentCard.countryDetails.flag)
+// let currentFlag = currentCard.countryDetails.flag
+// let currentQuestion = currentCard.question
+// let currentAnswer1 = currentCard.answers[0].text
+// let currentAnswer2 = currentCard.answers[1].text
+// let currentAnswer3 = currentCard.answers[2].text
+// let currentAnswer4 = currentCard.answers[3].text
 
-let currentFlag = currentCard.countryDetails.flag
-let currentQuestion = currentCard.question
-let currentAnswer1 = currentCard.answers[0].text
-let currentAnswer2 = currentCard.answers[1].text
-let currentAnswer3 = currentCard.answers[2].text
-let currentAnswer4 = currentCard.answers[3].text
-
-console.log(`set current function. current flag: ${currentFlag}`)
 
 const playGame = () => {
-  questionEl.textContent = `${currentFlag} ${currentQuestion} ${currentFlag}`;
-  answer1El.textContent = `${currentAnswer1}`;
-  answer2El.textContent = `${currentAnswer2}`;
-  answer3El.textContent = `${currentAnswer3}`;
-  answer4El.textContent = `${currentAnswer4}`;
-  
+  questionEl.textContent = `${currentCard.countryDetails.flag} ${currentCard.question} ${currentCard.countryDetails.flag}`;
+  answer1El.textContent = `${currentCard.answers[0].text}`;
+  answer2El.textContent = `${currentCard.answers[1].text}`;
+  answer3El.textContent = `${currentCard.answers[2].text}`;
+  answer4El.textContent = `${currentCard.answers[3].text}`;
   render(card)
   console.log(`play Game func`)
 }
@@ -163,7 +153,7 @@ const answer4El = document.querySelector('#btn4')
 
 const rightAnswer = () => {
   counter += 1
-  console.log(`the count is ${counter}`)
+  //console.log(`the count is ${counter}`)
 }
 
 const changeColor =() =>{
@@ -175,7 +165,7 @@ const changeColor =() =>{
     }
   })
 }
-
+//somehow colorReset is resetting copy and content to the original language
 const colorReset =() => {
   answerBtnEls.forEach((answer) => {
     if (answer.innerHTML===correctChoice) {
@@ -190,10 +180,12 @@ const colorReset =() => {
 const checkAnswer = (btn) => {
   // let btn1 = document.querySelector('#btn1') - could use to troubleshoot.
   let selectedAnswer = btn.target.innerHTML
+  console.log(`checking answer, looking at ${selectedAnswer}`)
   //console.log(btn.target.classList)
   if (selectedAnswer === correctChoice) {
     console.log(`CORRECT - the button equals the correct choice: ${correctChoice}`)
     rightAnswer ()
+    console.log(counter)
   } else {
     console.log(`WRONG - the button doesn't equal correct choice: ${correctChoice}`)
   }
@@ -202,12 +194,53 @@ const checkAnswer = (btn) => {
   //answerBtnEls.disabled = true
 }
 
+console.log(activeStack.length, activeStack[0], activeStack[1])
+
+const nextQuestion = () => {
+  console.log(`current card question is ${currentCard.question} and first answer: ${currentCard.answers[0].text}`)
+ activeStack.shift()
+ if (activeStack.length == 0) {
+  console.log(`stack is empty, go to results`)
+  render(results)
+}
+else {
+ currentCard = activeStack[0]
+ findCorrect(currentCard)
+ //console.log(activeStack[0], activeStack[1])
+//  console.log(`length = ${activeStack.length}`)
+//   console.log(`the new current question is  ${currentCard.question}`)
+console.log(`current card is now ${currentCard.question} and first answer: ${currentCard.answers[0].text}`)
+}
+console.log(`end of nextQuestion function`)
+  
+}
+const seeNext = () => {
+  colorReset()
+  nextQuestion()
+  if (activeStack.length == 0) {
+    console.log(`stack is empty, go to results`)
+    render(results)
+    countCorrectEl.innerHTML = counter
+    totalCountEl.innerHTML = numQuestions
+    percentageCorrectEl.innerHTML = (`${100*(counter/numQuestions)}%`)
+    console.log(percentageCorrectEl.innerHTML)
+    if (parseInt(percentageCorrectEl.innerHTML) > 60){
+      winLoseEl.innerHTML = `You Win!`
+    }
+    else {winLoseEl.innerHTML = `Try Again`}
+    }
+  else {
+  playGame()
+  console.log(`this is the count ${counter}`)
+  }
+}
+
 playEl.addEventListener('click', playGame)
-playAgainEl.addEventListener('click', init )
+// playAgainEl.addEventListener('click', init )
 playAgainEl.addEventListener('click', seeMenu)
 closeBtnEl.addEventListener('click', init)
 closeBtnEl.addEventListener('click', seeMenu)
-//nextEl.addEventListener('click', nextQuestion)
+nextEl.addEventListener('click', seeNext)
 
 
 answer1El.addEventListener('click', checkAnswer)
@@ -215,34 +248,32 @@ answer2El.addEventListener('click', checkAnswer)
 answer3El.addEventListener('click', checkAnswer)
 answer4El.addEventListener('click', checkAnswer)
 
-const nextQuestion = () => {
-  console.log(`starting nextQuestion length: ${activeStack.length}`)
-  console.log(` current card is ${currentCard.question}, current choice is ${correctChoice}`)
- activeStack.shift()
-  console.log(`${activeStack} and length = ${activeStack.length}`)
-  render(card)
 
-  colorReset()
-
-  // colorReset()
-  // render(menu)
-  console.log(`end of nextQuestion function`)
-}
-  // reset colors
-  
+// 
 
 
-console.log(activeStack)
 
-nextQuestion()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const nextBtn = () => {
 }
 
-const seeResults = () => {
-  render(results)
-}
+// do io need this?  i can just say render results
+// const seeResults = () => {
+//   render(results)
+// }
 // used to test see resuilts
 
 //seeResults()

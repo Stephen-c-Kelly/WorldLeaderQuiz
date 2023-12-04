@@ -5,7 +5,7 @@ export const TEST_COUNTRIES = [
   {
     question: "Who is the leader of Test country #1?",
     answers: [
-      { text: "Jay Garrick", isCorrect: false },
+      { text: "Jay Garrick 1", isCorrect: false },
       { text: "Barry Allen", isCorrect: false },
       { text: "First Last", isCorrect: true },
       { text: "Wally West", isCorrect: false }
@@ -26,7 +26,7 @@ export const TEST_COUNTRIES = [
 {
     question: "Who is the leader of Test country #2?",
     answers: [
-      { text: "Alan Scott", isCorrect: false },
+      { text: "Alan Scott 2", isCorrect: false },
       { text: "First Correct Last", isCorrect: true },
       { text: "Carol Ferris", isCorrect: false },
       { text: "Jessica Cruz", isCorrect: false }
