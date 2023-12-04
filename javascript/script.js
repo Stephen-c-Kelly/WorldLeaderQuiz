@@ -47,9 +47,10 @@ let activeRegion = []
 
 // note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  During build it's set to 2.
 const numQuestionMax = 10
-const numQuestions = 2
-// if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
 
+const numQuestions = 2
+
+// something like this, in a function.  if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
 
 //Array named activeStack which will house a set of countries a user will see during the game
 const activeStack = []
@@ -80,6 +81,7 @@ console.log(activeStack)
 // 
 let currentCard = activeStack[0]
 let correctChoice = [``]
+
 
 //console.log(currentCard)
 // nested loops in this function.  however each input array will only have 4 choices initially (and it wont ever exceed 10) so the juice is worth the squeeze.
@@ -133,22 +135,34 @@ const init = () => {
 }
 init()
 
+const seeMenu = () => { 
+  render(menu)
+  console.log('see menu func')
+}
+
 // play triggers with a click event on play. this reveals the card state and loads in the first question
 
+
+// need to write function that grabs the region based on user click and sets current stack and 
+
+
 const playGame = () => {
-  questionEl.textContent = `${testFlag} ${testQuestion} ${testFlag}`;
-  answer1El.textContent = `${testAnswer1}`;
-  answer2El.textContent = `${testAnswer2}`;
-  answer3El.textContent = `${testAnswer3}`;
-  answer4El.textContent = `${testAnswer4}`;
+  questionEl.textContent = `${currentFlag} ${currentQuestion} ${currentFlag}`;
+  answer1El.textContent = `${currentAnswer1}`;
+  answer2El.textContent = `${currentAnswer2}`;
+  answer3El.textContent = `${currentAnswer3}`;
+  answer4El.textContent = `${currentAnswer4}`;
   
   render(card)
   console.log(`play function trigger`)
 }
 
-
-// here's the problem.  I need to rewrite the play game funciton so it grabs content from the currenyStack i put together
-
+let currentFlag = currentCard.countryDetails.flag
+let currentQuestion = currentCard.question
+let currentAnswer1 = currentCard.answers[0].text
+let currentAnswer2 = currentCard.answers[1].text
+let currentAnswer3 = currentCard.answers[2].text
+let currentAnswer4 = currentCard.answers[3].text
 
 
 const answer1El = document.querySelector('#btn1')
@@ -157,21 +171,61 @@ const answer3El = document.querySelector('#btn3')
 const answer4El = document.querySelector('#btn4')
 
 
-console.log(testAnswer1)
-console.log(answer1El.textContent)
+// const answer1ElText = answer1El.innerHTML
+
+// console.log(answer1ElText)
+
+
+ // console.log(answer1El)
+// console.log(answer1El.textContent)
 // these should be the same result but they are not.
-
-
-const seeMenu = () => {
-  render(menu)
-  console.log('see menu func')
-}
 
 // works, changes color to blue answer1El.classList.add(`correct`)
 
+playGame()
+
+const rightAnswer = () => {}
+
+const wrongAnswer = () => {}
+
+
 const checkAnswer = (btn) => {
+  // let btn1 = document.querySelector('#btn1')
+  // let btn2 = document.querySelector('#btn2')
+  // let btn3 = document.querySelector('#btn3')
+  // let btn4 = document.querySelector('#btn4')
+  //const button = document.querySelector(btn)
+  let selectedAnswer = btn.target.innerHTML
+
+  console.log(`selected answer: ${selectedAnswer} .  correct choice: ${correctChoice}`)
+
+  if (selectedAnswer === correctChoice) {
+    console.log(`CORRECT - the button equals the correct choice: ${correctChoice}`)
+    rightAnswer ()
+  } else {
+    console.log(`WRONG - the button doesn't equal correct choice: ${correctChoice}`)
+    wrongAnswer ()
+  }
+
+
+  // console.log(btn1.textContent)
+  // console.log(btn2.textContent)
+  // console.log(btn3.textContent)
+  // console.log(btn4.textContent)
+
+  // if ()
+
+
+ // console.log(answer1ElText)
+// console.log(`should be name of button ${btn.target.attributes.innerHTML}`)
+// let button = document.getElementById(btn)
+//console.log(btn.innerHTML)
+
+//console.log(button.innerHTML)
+
 //   let selectedAnswer = btn.textContent
-// console.log(`selected answer is ${selectedAnswer} and hopefully it's also ${btn.textContent}`)
+//   console.log(selectedAnswer)
+// console.log(`selected answer: ${selectedAnswer} .  correct choice: ${correctChoice}`)
 
 //   if (selectedAnswer === correctChoice) {
 //     console.log(`the text of the button equals the correct choice, which is ${correctChoice}`)
@@ -192,7 +246,6 @@ const checkAnswer = (btn) => {
   // }
 
 
-//  checkAnswer(answer2El)
 
 
 
@@ -208,10 +261,10 @@ closeBtnEl.addEventListener('click', seeMenu)
 // this workks
 // answer1El.classList.add('correct')
 
-answer1El,addEventListener('click', checkAnswer(answer1El, answer1El.textContent))
-answer2El,addEventListener('click', checkAnswer(answer2El,  answer2El.textContent))
-answer3El,addEventListener('click', checkAnswer(answer3El,  answer3El.textContent))
-answer4El,addEventListener('click', checkAnswer(answer4El,  answer4El.textContent))
+answer1El.addEventListener('click', checkAnswer)
+answer2El.addEventListener('click', checkAnswer)
+answer3El.addEventListener('click', checkAnswer)
+answer4El.addEventListener('click', checkAnswer)
 
 
 
