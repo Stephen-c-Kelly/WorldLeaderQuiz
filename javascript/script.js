@@ -10,10 +10,7 @@ const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
 const closeBtnEl = document.querySelector('.close-btn')
 const questionEl = document.querySelector('.country-name')
-const answer1El = document.querySelector('#btn1')
-const answer2El = document.querySelector('#btn2')
-const answer3El = document.querySelector('#btn3')
-const answer4El = document.querySelector('#btn4')
+
 
 const testFlag = TEST_COUNTRIES[0].countryDetails.flag
 const testQuestion = TEST_COUNTRIES[0].question;
@@ -49,7 +46,10 @@ const results = document.querySelector('.results')
 let activeRegion = []
 
 // note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  During build it's set to 2.
+const numQuestionMax = 10
 const numQuestions = 2
+// if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
+
 
 //Array named activeStack which will house a set of countries a user will see during the game
 const activeStack = []
@@ -71,11 +71,9 @@ const buildActiveStack = () => {
   shuffleArray(activeStack)
 }
 
-
 buildActiveStack()
 
 console.log(activeStack)
-
 
 
 // - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
@@ -83,42 +81,25 @@ console.log(activeStack)
 let currentCard = activeStack[0]
 let correctChoice = [``]
 
-
 //console.log(currentCard)
 // nested loops in this function.  however each input array will only have 4 choices initially (and it wont ever exceed 10) so the juice is worth the squeeze.
 
 const findCorrect = (card) => {
   for (let i = 0; i < card.answers.length; i++){
-    if (card.answers[i].isCorrect === true)
-    correctChoice = card.answers[i].text
-    console.log(`correct choice is ${card.answers[i].text}`)
-    console.log(`find correct func loop ${i}`)
-  };
+    if (card.answers[i].isCorrect === false) {
+    //console.log(`loop ${i}: ${card.answers[i].text}`)
+    } else if (card.answers[i].isCorrect === true) {
+    //console.log(`loop ${i}: ${card.answers[i].text} is correct`)
+    return correctChoice = card.answers[i].text
+    }
   }
-console.log(`correct answer to ${currentCard} is ${findCorrect(currentCard)}`)
+  }
 
-
-  //console.log(card.answers[2].isCorrect)
-    
- 
-
-
-
-
-
-
-  
-
-
-// additional key value pairs can be added here to help enable phase 2 functionality such as GDP (to enable game a high gdp or low gdp game mode), svg images of the country, etc. 
-
-// - Variable named 'correctChoice' to track the correct choice for the active country
-
-// let question = activeCountry
+  findCorrect(currentCard)
+ // console.log(`checking find correct function - correct - ${correctChoice}`)
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
-
 
 const hide = (state) => {
   state.style.display = 'none'
@@ -151,7 +132,7 @@ const init = () => {
   console.log(`init trigger`)
 }
 init()
-//render(menu)
+
 // play triggers with a click event on play. this reveals the card state and loads in the first question
 
 const playGame = () => {
@@ -160,25 +141,58 @@ const playGame = () => {
   answer2El.textContent = `${testAnswer2}`;
   answer3El.textContent = `${testAnswer3}`;
   answer4El.textContent = `${testAnswer4}`;
+  
   render(card)
   console.log(`play function trigger`)
 }
+
+
+// here's the problem.  I need to rewrite the play game funciton so it grabs content from the currenyStack i put together
+
+
+
+const answer1El = document.querySelector('#btn1')
+const answer2El = document.querySelector('#btn2')
+const answer3El = document.querySelector('#btn3')
+const answer4El = document.querySelector('#btn4')
+
+
+console.log(testAnswer1)
+console.log(answer1El.textContent)
+// these should be the same result but they are not.
+
 
 const seeMenu = () => {
   render(menu)
   console.log('see menu func')
 }
 
-const checkAnswer = (id, str) => {
-  if (correctChoice === str) {
-    id.classList.add('correct')
-  } else {
-    id.classList.add('wrong')
-  }
+// works, changes color to blue answer1El.classList.add(`correct`)
+
+const checkAnswer = (btn) => {
+//   let selectedAnswer = btn.textContent
+// console.log(`selected answer is ${selectedAnswer} and hopefully it's also ${btn.textContent}`)
+
+//   if (selectedAnswer === correctChoice) {
+//     console.log(`the text of the button equals the correct choice, which is ${correctChoice}`)
   }
 
 
-checkAnswer(answer2El, )
+  // original correcy choice functoin
+ //  if (correctChoice === str) {
+  //   console.log(`correcct choice is ${correctChoice}, user selected ${str}`)
+  //   btn.classList.add('correct')
+  //   counter += 1
+  //   console.log(`${correctChoice} matches ${str}, yay`)
+    
+  // } else {
+  //   //btn.classList.add('wrong')
+  //   console.log(`no match, wrong choice`)
+  // }
+  // }
+
+
+//  checkAnswer(answer2El)
 
 
 
@@ -201,7 +215,6 @@ answer4El,addEventListener('click', checkAnswer(answer4El,  answer4El.textConten
 
 
 
-// const testQuestion = TEST_COUNTRIES[0].question;
 
 const nextQuestion = () => {
 
@@ -210,12 +223,8 @@ const nextQuestion = () => {
   // }
 }
 
-
-
 const nextBtn = () => {
 }
-
-
 
 const seeResults = () => {
   render(results)
