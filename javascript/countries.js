@@ -11,7 +11,7 @@ export const TEST_COUNTRIES = [
       { text: "Wally West", isCorrect: false }
     ],
     countryDetails: {
-      countryName: "France",
+      countryName: "scotland",
       leaderName: "Emmanuel Macron",
       assumedOfficeDate: "May 14, 2017",
       flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
@@ -27,12 +27,12 @@ export const TEST_COUNTRIES = [
     question: "Who is the leader of Test country #2?",
     answers: [
       { text: "Alan Scott", isCorrect: false },
-      { text: "First Last", isCorrect: true },
+      { text: "First Correct Last", isCorrect: true },
       { text: "Carol Ferris", isCorrect: false },
       { text: "Jessica Cruz", isCorrect: false }
     ],
     countryDetails: {
-      countryName: "France",
+      countryName: "wales",
       leaderName: "Emmanuel Macron",
       assumedOfficeDate: "May 14, 2017",
       flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
