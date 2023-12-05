@@ -92,22 +92,22 @@ shuffleArray(activeStack);
 console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
 
 let currentCard = activeStack[0];
-console.log(`current card is ${currentCard.question}`)
+console.log(`current card is ${currentCard.answers.length}`)
 let correctChoice = [''];
 findCorrect(currentCard);
-console.log(`the correct choice of  is supposed to be ${correctChoice}`)
 
+return correctChoice
+console.log(`the correct choice of  is supposed to be ${correctChoice}`)
 };
 
 const findCorrect = (card) => {
+  let correctChoice = ''
   for (let i = 0; i < card.answers.length; i++){
-    if (card.answers[i].isCorrect === false) {
-    //console.log(`loop ${i}: ${card.answers[i].text}`)
-    } else if (card.answers[i].isCorrect === true) {
-    //console.log(`loop ${i}: ${card.answers[i].text} is correct`)
-    return correctChoice = card.answers[i].text
+    if (card.answers[i].isCorrect === true) {
+    correctChoice = card.answers[i].text
     }
   }
+  console.log(`end of find correct loop, answer: ${correctChoice}`)
   }
   
   //console.log(`current card is ${currentCard.countryDetails.countryName} and correct choice is ${correctChoice}`)
