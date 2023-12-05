@@ -72,12 +72,23 @@ const shuffleArray = (array) =>{
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-
 // const buildActiveStack = () => {
 //   for (let i = 0; i < numQuestions; i++) {
 //     // console.log(`Checking country: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
 //     // console.log(`Active region: ${activeRegion}`);
   
+let currentCard = []
+let correctChoice = []
+
+const findCorrect = (card) => {
+  for (let i = 0; i < card.answers.length; i++){
+    if (card.answers[i].isCorrect === true) {
+    correctChoice = card.answers[i].text
+    }
+  }
+  console.log(`end of find correct loop, answer: ${correctChoice}`)
+  return {correctChoice}
+  }
 
 
 const buildActiveStack = () => {
@@ -85,32 +96,19 @@ const buildActiveStack = () => {
     if (TEST_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
     activeStack.push(TEST_COUNTRIES[i]);
     //console.log(`Pushed one item into active stack: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
-  }
-  //console.log(`Active stack after loop is:`, activeStack);
-};
-shuffleArray(activeStack);
-console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
-
-let currentCard = activeStack[0];
-console.log(`current card is ${currentCard.answers.length}`)
-let correctChoice = [''];
-findCorrect(currentCard);
-
-return correctChoice
-console.log(`the correct choice of  is supposed to be ${correctChoice}`)
-};
-
-const findCorrect = (card) => {
-  let correctChoice = ''
-  for (let i = 0; i < card.answers.length; i++){
-    if (card.answers[i].isCorrect === true) {
-    correctChoice = card.answers[i].text
     }
-  }
-  console.log(`end of find correct loop, answer: ${correctChoice}`)
-  }
-  
-  //console.log(`current card is ${currentCard.countryDetails.countryName} and correct choice is ${correctChoice}`)
+    //console.log(`Active stack after loop is:`, activeStack);
+  };
+    shuffleArray(activeStack);
+    console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
+
+    currentCard = activeStack[0];
+    findCorrect(currentCard);
+    console.log(`the correct choice is supposed to be ${correctChoice}`);
+    return {currentCard, correctChoice }
+}
+
+
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
@@ -142,7 +140,7 @@ const seeMenu = () => {
   init()
   colorReset()
   console.log('see menu func')
-  console.log(activeStack.length, activeStack[0], activeStack[1])
+  //console.log(activeStack.length, activeStack[0], activeStack[1])
 }
 
 const playGame = () => {
@@ -224,7 +222,6 @@ else {
 console.log(`current card is now ${currentCard.question} and first answer: ${currentCard.answers[0].text}`)
 }
 console.log(`end of nextQuestion function`)
-  
 }
 const seeNext = () => {
   colorReset()
