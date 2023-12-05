@@ -8,6 +8,7 @@
   --greyscale: #0D0D0D;
   --wrong-color: #F6423C;
   --correct-color: #1DC9A4;
+  --green-color: #50c878;
   /* colors borrowed from The Economist Design System - https://design-system.economist.com/foundations/colour/palettes#accent-primary */
 }
 
@@ -17,6 +18,7 @@ body {
   height: 100vh;
   margin-left: 60px;
   margin-right: 60px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,14 +57,37 @@ p {
   height: 60px;
   display: flex;
   margin: 0 auto;
+  align-items: center;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer; 
+  transition: 0.2s all; 
 }
+  .region-btn:active { 
+    transform: scale(0.98); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);  
+    background-color: var(--green-color);
+} 
+
+.clicked {
+  background-color: var(--green-color);
+  transform: scale(0.98); 
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24)
+}
+
 
 .play-btn {
   font-size: 20px;
   width: 100px;
-  height: 40px;
-  justify-self: center; /* Center the play button within the grid */
+  height: 60px;
+  margin-left: 43%;
+  margin-right: 50%;
+  color: white;
+  background-color: var(--green-color);
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer; 
+  transition: 0.2s all
 }
+
 
 
 

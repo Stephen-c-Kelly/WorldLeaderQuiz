@@ -3,7 +3,7 @@
 
 export const TEST_COUNTRIES = [
   {
-    question: "Who is the leader of Test country #1?",
+    question: "Europe Who is the leader of Test country #1?",
     answers: [
       { text: "Jay Garrick 1", isCorrect: false },
       { text: "Barry Allen", isCorrect: false },
@@ -24,7 +24,7 @@ export const TEST_COUNTRIES = [
   },
 
 {
-    question: "Who is the leader of Test country #2?",
+    question: "Europe Who is the leader of Test country #2?",
     answers: [
       { text: "Alan Scott 2", isCorrect: false },
       { text: "First Correct Last", isCorrect: true },
@@ -39,6 +39,46 @@ export const TEST_COUNTRIES = [
       nationalBird: "Gallic Rooster",
       mostRecentAnnualGDP: "2.8 trillion USD",
       globalRegion: "Europe",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
+  {
+    question: "Asia  Who is the leader of Test country #1?",
+    answers: [
+      { text: "Jay Garrick 1", isCorrect: false },
+      { text: "Barry Allen", isCorrect: false },
+      { text: "First Last", isCorrect: true },
+      { text: "Wally West", isCorrect: false }
+    ],
+    countryDetails: {
+      countryName: "scotland",
+      leaderName: "Emmanuel Macron",
+      assumedOfficeDate: "May 14, 2017",
+      flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      nationalBird: "Gallic Rooster",
+      mostRecentAnnualGDP: "2.8 trillion USD",
+      globalRegion: "Asia",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
+{
+    question: "Asia Who is the leader of Test country #2?",
+    answers: [
+      { text: "Alan Scott 2", isCorrect: false },
+      { text: "First Correct Last", isCorrect: true },
+      { text: "Carol Ferris", isCorrect: false },
+      { text: "Jessica Cruz", isCorrect: false }
+    ],
+    countryDetails: {
+      countryName: "wales",
+      leaderName: "Emmanuel Macron",
+      assumedOfficeDate: "May 14, 2017",
+      flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      nationalBird: "Gallic Rooster",
+      mostRecentAnnualGDP: "2.8 trillion USD",
+      globalRegion: "Asia",
       countryImage: "",
       pronunciationLink: ""
     }

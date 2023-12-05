@@ -2,7 +2,7 @@
 
 import { TEST_COUNTRIES } from './countries.js'
 
-// console.log(TEST_COUNTRIES)
+console.log(TEST_COUNTRIES)
 
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
@@ -13,6 +13,7 @@ const countCorrectEl = document.querySelector('#count')
 const totalCountEl = document.querySelector('#total')
 const percentageCorrectEl = document.querySelector('#percentage-correct')
 const winLoseEl = document.querySelector('#win-lose')
+const regionBtnEls = document.querySelectorAll('.region-btn')
 
 // Constant Variables
 
@@ -24,8 +25,31 @@ let counter = 0
 // - Variable named 'winner' to track win/lose. Boolean.  true = win, false = lose.
 let winner = false
 
-// - Variable that defines the 6 regions the game will eventually cover
-const region = ['Asia', 'Europe', 'North and Central America', 'South America', 'The Middle East and Africa', 'Oceania']
+// - Variable named 'activeRegion' to keep track of the selected region.  Waiting for user selection
+let activeRegion = []
+//Array named activeStack which will house a set of countries a user will see during the game.  generated in click region function
+
+let activeStack = []
+
+
+const clickRegion = (btn) => {
+  //should rename clickRegion function.
+  //console.log(`start of click region func`)
+
+  regionBtnEls.forEach((el) => {
+    el.classList.remove('clicked');
+    activeRegion = ['']
+    // i tried this but it added one to the active stack activeStack = ['']
+
+    //console.log(`active region reset`)
+  });
+  btn.classList.add('clicked');
+  activeRegion = [btn.textContent];
+  console.log(`active region is ${activeRegion}`)
+  // console.log(`num questions is ${numQuestions}
+  // start buildActiveStreak`)
+  buildActiveStack()  
+};
 
 //defines the 3 views of the game
 const menu = document.querySelector('.main-menu')
@@ -35,21 +59,13 @@ const results = document.querySelector('.results')
 
 // Cached element references
 
-// note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  During build it's set to 2.
+// note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  
 const numQuestionMax = 10
 
-let numQuestions = 2
-
+let numQuestions = 4
 // something like this, in a function.  if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
 
-// - Variable named 'activeRegion' to keep track of the selected region.  when defined, this will call an array like '[region[2]]'.
-let activeRegion = []
-
-//Array named activeStack which will house a set of countries a user will see during the game
-const activeStack = []
-
 // function to shuffle the array of the imported region.  this works by randomly finding two items in the array, then swapping their position.  Linear complexity.  Taken from Chat GPT.
-
 const shuffleArray = (array) =>{
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -57,30 +73,31 @@ const shuffleArray = (array) =>{
   }
 }
 
+// const buildActiveStack = () => {
+//   for (let i = 0; i < numQuestions; i++) {
+//     // console.log(`Checking country: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
+//     // console.log(`Active region: ${activeRegion}`);
+  
+
+
 const buildActiveStack = () => {
-  for (let i = 0; i < numQuestions; i++){
-    activeStack.push(TEST_COUNTRIES[i])
-    // console.log(`build active stack loop`)
+  for (let i = 0; i < numQuestions; i++) {
+    if (TEST_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
+    activeStack.push(TEST_COUNTRIES[i]);
+    //console.log(`Pushed one item into active stack: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
   }
-  shuffleArray(activeStack)
-  console.log(`build stack + shuffle function`)
-}
+  //console.log(`Active stack after loop is:`, activeStack);
+};
+shuffleArray(activeStack);
+console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
 
-buildActiveStack()
-// console.log(`length: ${activeStack.length}, first is ${activeStack[0].countryDetails.countryName}, next is ${activeStack[1].countryDetails.countryName}`)
+let currentCard = activeStack[0];
+console.log(`current card is ${currentCard.question}`)
+let correctChoice = [''];
+findCorrect(currentCard);
+console.log(`the correct choice of  is supposed to be ${correctChoice}`)
 
-
-// need to write function that grabs the region based on user click and sets current stack and 
-
-
-// - Object named 'activeCountry' which will look in the Array ActiveStack  to select a country and find it in the database.  This will and the wrong choices associated with that country based on the region selected by the user
-// 
-let currentCard = activeStack[0]
-//console.log(`current card is ${currentCard.countryDetails.countryName}`)
-let correctChoice = [``]
-
-//console.log(currentCard)
-// nested loops in this function.  however each input array will only have 4 choices initially (and it wont ever exceed 10) so the juice is worth the squeeze.
+};
 
 const findCorrect = (card) => {
   for (let i = 0; i < card.answers.length; i++){
@@ -92,7 +109,7 @@ const findCorrect = (card) => {
     }
   }
   }
-  findCorrect(currentCard)
+  
   //console.log(`current card is ${currentCard.countryDetails.countryName} and correct choice is ${correctChoice}`)
 
 // Event listeners
@@ -115,6 +132,7 @@ const init = () => {
   let winner = false
   let counter = 0
   let region = null
+  
   console.log(`init func`)
 }
 init()
@@ -126,14 +144,6 @@ const seeMenu = () => {
   console.log('see menu func')
   console.log(activeStack.length, activeStack[0], activeStack[1])
 }
-
-// let currentFlag = currentCard.countryDetails.flag
-// let currentQuestion = currentCard.question
-// let currentAnswer1 = currentCard.answers[0].text
-// let currentAnswer2 = currentCard.answers[1].text
-// let currentAnswer3 = currentCard.answers[2].text
-// let currentAnswer4 = currentCard.answers[3].text
-
 
 const playGame = () => {
   questionEl.textContent = `${currentCard.countryDetails.flag} ${currentCard.question} ${currentCard.countryDetails.flag}`;
@@ -165,7 +175,8 @@ const changeColor =() =>{
     }
   })
 }
-//somehow colorReset is resetting copy and content to the original language
+
+
 const colorReset =() => {
   answerBtnEls.forEach((answer) => {
     if (answer.innerHTML===correctChoice) {
@@ -175,7 +186,8 @@ const colorReset =() => {
     }
   })
   console.log(`color reset func`)
-}
+} 
+
 
 const checkAnswer = (btn) => {
   // let btn1 = document.querySelector('#btn1') - could use to troubleshoot.
@@ -194,7 +206,7 @@ const checkAnswer = (btn) => {
   //answerBtnEls.disabled = true
 }
 
-console.log(activeStack.length, activeStack[0], activeStack[1])
+//console.log(activeStack.length, activeStack[0], activeStack[1])
 
 const nextQuestion = () => {
   console.log(`current card question is ${currentCard.question} and first answer: ${currentCard.answers[0].text}`)
@@ -243,115 +255,14 @@ closeBtnEl.addEventListener('click', seeMenu)
 nextEl.addEventListener('click', seeNext)
 
 
+regionBtnEls.forEach((btn) => {
+  btn.addEventListener('click', () => clickRegion(btn));
+});
+
 answer1El.addEventListener('click', checkAnswer)
 answer2El.addEventListener('click', checkAnswer)
 answer3El.addEventListener('click', checkAnswer)
 answer4El.addEventListener('click', checkAnswer)
-
-
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const nextBtn = () => {
-}
-
-// do io need this?  i can just say render results
-// const seeResults = () => {
-//   render(results)
-// }
-// used to test see resuilts
-
-//seeResults()
-
-
-
-// // Step 4 - The state of the menu should be rendered to the user
-
-
-// -- create a click event that listens for the user's selection of region and stores the choice
-// -- create a click event called play that calls the following functions when the Play Game button is triggered:
-// ----activeStack
-// ----setChoices
-// ----display card detail view
-
-// -- create a function called render
-// ----updateMenu
-// ----displayCardDetail
-// ----resultsDisplay
-// **** SK Note - I'm unclear how we prevent this from calling all the game states at once. **** 
-
-// -- create a function called activeStack:
-// ---- Build an array of country cards based on the available data, ordered randomly
-// ---- sets the first card to activeCountry
-
-// -- create a function called setChoices:
-// ---- build array with correct choice and incorrect choices in a randomized order 
-// ---- build incorrect choices by selecting 3 random world leaders in the same region
-
-// -- create a function called display card detail view
-// ----show active country
-// ----display each item in the setChoices array in a button
-// ----show next button (inactive)
-// ----show close button
-
-// -- create a function called 'close'
-// ----set an event listener so that the user is taken back to the main menu on click.
-// ----render function
-
-// --create a function called checkCorrect
-// ----set an event listener function so that the buttons displaying each choice will change the background color (green for correct, red for incorrect) once the user makes a selection
-// ----once button is selected, change the state of all choice buttons to inactive so the user can't make another selection
-// ----Next button is set to active state and is now clickable
-
-// create a function called nextCard
-// -- set an event listener that triggers the following actions when the Next button is clicked:
-// ----set the next country card in activeStack to activeCountry
-// ----render function
-
-// create a function called seeResults
-// -- if activeStack has no more items, update the Next button copy to say "See Results"
-// -- once See Results button is clicked, call render
-
-// create a function called resultsDisplay 
-// -- if % of correct answers is above 60%, set winner to true
-// -- display message "You win" or "You Lose"
-// -- display number and % of correcct answers.
-// -- display Play Again button.
-
-// create a playAgain function
-// -- click event handler so that, when user clicks Play again button, the function close is triggered.
-// -- call init 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
