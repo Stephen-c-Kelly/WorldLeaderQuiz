@@ -1,4 +1,71 @@
 
+:root{
+  --brand-color: #E3120B;
+  --blue-accent1: #141F52;
+  --blue-accent2: #2E45B8;
+  --blue-accent3: #475ED1;
+  --orange: #F97A1F;
+  --greyscale: #0D0D0D;
+  --wrong-color: #F6423C;
+  --correct-color: #1DC9A4;
+  /* colors borrowed from The Economist Design System - https://design-system.economist.com/foundations/colour/palettes#accent-primary */
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  margin-left: 60px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2, h3, p, button {
+  font-family: 'Merriweather Sans', sans-serif;
+  
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.intro-paragraph {
+  text-align: left;
+  margin: end;
+}
+
+.region-buttons {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.region-btn {
+  font-size: 20px;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.play-btn {
+  font-size: 20px;
+  width: 100px;
+  height: 40px;
+  justify-self: center; /* Center the play button within the grid */
+}
+
+
+
 .card-view, .results {
   display: none;
 }

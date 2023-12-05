@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
   <script src="/javascript/script.js" type="module"></script>
   <script src="/javascript/countries.js" type="module"></script>
   <!-- <script src="data/parseAPI_data.js" type="module"></script> -->
   <link rel="stylesheet" href="/styles/styles.css">
   
-  <title>Document</title>
+  <title>World Leader Quiz by Stephen Kelly</title>
 </head>
 <body> 
-
-
-
-
-
-    
   <div class="main-menu">
-      <h1>World Leader Quiz</h1>
-      <p>Welcome to World Leader Quiz! Do you know them all? <br> Select a region and click <strong>Play</strong> to start the game</p>
+      <h1>🌎 World Leader Quiz 🌎</h1>
+      <div class="intro-paragraph">
+      <p id="p1">Welcome to World Leader Quiz! Do you know them all? </p>
+      <p id="p2">Select a region and click <strong>Play</strong> to start the game</p>
+      </div>
+    <div class="main-menu region-buttons">
       <button class = "region-btn" id = "asia">Asia</button>
       <button class = "region-btn" id = "europe">Europe</button>
-      <button class = "region-btn" id = "north-america">North and Central America</button>
+      <button class = "region-btn" id = "north-america">North & Central America</button>
       <button class = "region-btn" id = "south-america">South America</button>
-      <button class = "region-btn" id = "middle-east-africa">Middle East and Africa</button>
+      <button class = "region-btn" id = "middle-east-africa">Middle East & Africa</button>
       <button class = "region-btn" id = "oceania">Oceania</button>
+    </div>
       </br>
       </br>
-      <button class = "play-btn">Play</button>
+    <div class="div-play"> <button class = "play-btn">Play</button></div>
   </div>
 
   <div class="card-view">
