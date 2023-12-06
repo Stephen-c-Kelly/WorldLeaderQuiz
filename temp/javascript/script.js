@@ -1,8 +1,23 @@
+// bug - when you restart game you see the last gameplay's region selection
+// task - connect more regions and test (reformat data)
+// task - styling
+// task - clean up code
+// task - optimize code
+
+
+
+
+
+
 // phase 2 - add shuffle functionality to the answers
 
-import { TEST_COUNTRIES } from './countries.js'
+// import { ALL_COUNTRIES } from './countries-v3'
 
-console.log(TEST_COUNTRIES)
+// no longer useing this file - im seeing error when trying to import the countries js "Already included file name '/Users/stephenkelly/code/seb/unit-projects/worldLeaderQuiz/Javascript/countries-v2.js' differs from file name '/Users/stephenkelly/code/seb/unit-projects/worldLeaderQuiz/javascript/countries-v2.js' only in casing.
+
+import { ALL_COUNTRIES } from './countries-v2.js'
+
+console.log(ALL_COUNTRIES)
 
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
@@ -14,6 +29,7 @@ const totalCountEl = document.querySelector('#total')
 const percentageCorrectEl = document.querySelector('#percentage-correct')
 const winLoseEl = document.querySelector('#win-lose')
 const regionBtnEls = document.querySelectorAll('.region-btn')
+const errorMsgEl = document.querySelector(`.error-message`)
 
 // Constant Variables
 
@@ -48,6 +64,7 @@ const clickRegion = (btn) => {
   console.log(`active region is ${activeRegion}`)
   // console.log(`num questions is ${numQuestions}
   // start buildActiveStreak`)
+  errorMsgEl.style.display = 'none'
   buildActiveStack()  
 };
 
@@ -63,7 +80,7 @@ const results = document.querySelector('.results')
 const numQuestionMax = 10
 
 let numQuestions = 4
-// something like this, in a function.  if (TEST_Countries.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = TEST_Countries.length}
+// something like this, in a function.  if (ALL_COUNTRIES.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = ALL_COUNTRIES.length}
 
 // function to shuffle the array of the imported region.  this works by randomly finding two items in the array, then swapping their position.  Linear complexity.  Taken from Chat GPT.
 const shuffleArray = (array) =>{
@@ -72,11 +89,6 @@ const shuffleArray = (array) =>{
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-// const buildActiveStack = () => {
-//   for (let i = 0; i < numQuestions; i++) {
-//     // console.log(`Checking country: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
-//     // console.log(`Active region: ${activeRegion}`);
-  
 let currentCard = []
 let correctChoice = []
 
@@ -90,25 +102,25 @@ const findCorrect = (card) => {
   return {correctChoice}
   }
 
-
 const buildActiveStack = () => {
-  for (let i = 0; i < numQuestions; i++) {
-    if (TEST_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
-    activeStack.push(TEST_COUNTRIES[i]);
-    //console.log(`Pushed one item into active stack: ${TEST_COUNTRIES[i].countryDetails.globalRegion}`);
+  //This will iterate up to the length of ALL_COUNTRIES if it's longer than numQuestions, or numQuestions otherwise
+  for (let i = 0; i < ( numQuestions
+    || ALL_COUNTRIES.length ); i++) {
+    if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
+    activeStack.push(ALL_COUNTRIES[i]);
+    //console.log(`Pushed one item into active stack: ${ALL_COUNTRIES[i].countryDetails.globalRegion}`);
     }
     //console.log(`Active stack after loop is:`, activeStack);
   };
     shuffleArray(activeStack);
     console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
+    numQuestions = activeStack.length
 
     currentCard = activeStack[0];
     findCorrect(currentCard);
     console.log(`the correct choice is supposed to be ${correctChoice}`);
     return {currentCard, correctChoice }
 }
-
-
 
 // Event listeners
 const regionEl = document.querySelector('.region-btn');
@@ -144,6 +156,10 @@ const seeMenu = () => {
 }
 
 const playGame = () => {
+  if (activeRegion.length == 0){
+    errorMsgEl.style.display = 'block'
+  }
+  else {
   questionEl.textContent = `${currentCard.countryDetails.flag} ${currentCard.question} ${currentCard.countryDetails.flag}`;
   answer1El.textContent = `${currentCard.answers[0].text}`;
   answer2El.textContent = `${currentCard.answers[1].text}`;
@@ -152,7 +168,7 @@ const playGame = () => {
   render(card)
   console.log(`play Game func`)
 }
-
+}
 const answerBtnEls = document.querySelectorAll('.answers button');
 const answer1El = document.querySelector('#btn1')
 const answer2El = document.querySelector('#btn2')
@@ -234,8 +250,7 @@ const seeNext = () => {
     percentageCorrectEl.innerHTML = (`${100*(counter/numQuestions)}%`)
     console.log(percentageCorrectEl.innerHTML)
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
-      winLoseEl.innerHTML = `You Win!`
-    }
+      winLoseEl.innerHTML = `You Win!`    }
     else {winLoseEl.innerHTML = `Try Again`}
     }
   else {
@@ -262,31 +277,3 @@ answer3El.addEventListener('click', checkAnswer)
 answer4El.addEventListener('click', checkAnswer)
 
 
-
-
-
-// Assuming countries.json is in the same directory as script.js
-
-// // Function to fetch and parse JSON
-// async function fetchCountries() {
-//   try {
-//     const response = await fetch('countries.json');
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.error('Error fetching countries:', error);
-//   }
-// }
-
-// // Example usage
-// fetchCountries().then(countries => {
-//   // Do something with the countries data
-//   console.log(countries);
-// });
-
-
-// // Import the JSON data
-// import countriesData from './countries.js';
-
-// // Example usage
-// console.log(countriesData);

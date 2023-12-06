@@ -2,6 +2,7 @@
 
 
 export const TEST_COUNTRIES = [
+  // #1 europe test country
   {
     question: "Europe Who is the leader of Test country #1?",
     answers: [
@@ -22,7 +23,7 @@ export const TEST_COUNTRIES = [
       pronunciationLink: ""
     }
   },
-
+// #2 europe test country
 {
     question: "Europe Who is the leader of Test country #2?",
     answers: [
@@ -43,6 +44,7 @@ export const TEST_COUNTRIES = [
       pronunciationLink: ""
     }
   },
+  // #1 test asia country
   {
     question: "Asia  Who is the leader of Test country #1?",
     answers: [
@@ -63,6 +65,7 @@ export const TEST_COUNTRIES = [
       pronunciationLink: ""
     }
   },
+   // #2 test asia country
 {
     question: "Asia Who is the leader of Test country #2?",
     answers: [
@@ -85,97 +88,99 @@ export const TEST_COUNTRIES = [
   }
 ]
 
+// export const EUROPE_COUNTRIES = [ I need to set this u but first i need to reformat the data
 
-// 2. France
-const franceQuiz = {
-  question: "Who is the leader of France?",
-  answers: [
-    { text: "Stefan Löfven", isCorrect: false },
-    { text: "Pedro Sánchez", isCorrect: false },
-    { text: "Emmanuel Macron", isCorrect: true },
-    { text: "Vladimir Putin", isCorrect: false }
-  ],
-  countryDetails: {
-    countryName: "France",
-    leaderName: "Emmanuel Macron",
-    assumedOfficeDate: "May 14, 2017",
-    flag: "🇫🇷",
-    nationalBird: "Gallic Rooster",
-    mostRecentAnnualGDP: "2.8 trillion USD",
-    globalRegion: "Europe",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-};
-
-// 3. United Kingdom
-const ukQuiz = {
-  question: "Who is the leader of the United Kingdom?",
-  answers: [
-    { text: "Olaf Scholz", isCorrect: false },
-    { text: "Mark Rutte", isCorrect: false },
-    { text: "Boris Johnson", isCorrect: true },
-    { text: "Mario Draghi", isCorrect: false }
-  ],
-  countryDetails: {
-    countryName: "United Kingdom",
-    leaderName: "Boris Johnson",
-    assumedOfficeDate: "July 24, 2019",
-    flag: "🇬🇧",
-    nationalBird: "European Robin",
-    mostRecentAnnualGDP: "2.9 trillion USD",
-    globalRegion: "Europe",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-};
-
-// 4. Italy
-const italyQuiz = {
-  question: "Who is the leader of Italy?",
-  answers: [
-    { text: "Boris Johnson", isCorrect: false },
-    { text: "Angela Merkel", isCorrect: false },
-    { text: "Emmanuel Macron", isCorrect: false },
-    { text: "Mario Draghi", isCorrect: true }
-  ],
-  countryDetails: {
-    countryName: "Italy",
-    leaderName: "Mario Draghi",
-    assumedOfficeDate: "February 13, 2021",
-    flag: "🇮🇹",
-    nationalBird: "Italian Sparrow",
-    mostRecentAnnualGDP: "2.2 trillion USD",
-    globalRegion: "Europe",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-};
-
-// 5. Spain
-const spainQuiz = {
-  question: "Who is the leader of Spain?",
-  answers: [
-    { text: "Guy Parmelin", isCorrect: false },
-    { text: "Stefan Löfven", isCorrect: false },
-    { text: "Angela Merkel", isCorrect: false },
-    { text: "Pedro Sánchez", isCorrect: true }
-  ],
-  countryDetails: {
-    countryName: "Spain",
-    leaderName: "Pedro Sánchez",
-    assumedOfficeDate: "June 2, 2018",
-    flag: "🇪🇸",
-    nationalBird: "Spanish Imperial Eagle",
-    mostRecentAnnualGDP: "1.4 trillion USD",
-    globalRegion: "Europe",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-};
+export const ALL_COUNTRIES = [
+  // 2. France
+  {
+    question: "Who is the leader of France?",
+    answers: [
+      { text: "Stefan Löfven", isCorrect: false },
+      { text: "Pedro Sánchez", isCorrect: false },
+      { text: "Emmanuel Macron", isCorrect: true },
+      { text: "Vladimir Putin", isCorrect: false }
+    ],
+    countryDetails: {
+      countryName: "France",
+      leaderName: "Emmanuel Macron",
+      assumedOfficeDate: "May 14, 2017",
+      flag: "🇫🇷",
+      nationalBird: "Gallic Rooster",
+      mostRecentAnnualGDP: "2.8 trillion USD",
+      globalRegion: "Europe",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
+  
+  // 3. United Kingdom
+  {
+    question: "Who is the leader of the United Kingdom?",
+    answers: [
+      { text: "Olaf Scholz", isCorrect: false },
+      { text: "Mark Rutte", isCorrect: false },
+      { text: "Boris Johnson", isCorrect: true },
+      { text: "Mario Draghi", isCorrect: false }
+    ],
+    countryDetails: {
+      countryName: "United Kingdom",
+      leaderName: "Boris Johnson",
+      assumedOfficeDate: "July 24, 2019",
+      flag: "🇬🇧",
+      nationalBird: "European Robin",
+      mostRecentAnnualGDP: "2.9 trillion USD",
+      globalRegion: "Europe",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
+  
+  // 4. Italy
+  {
+    question: "Who is the leader of Italy?",
+    answers: [
+      { text: "Boris Johnson", isCorrect: false },
+      { text: "Angela Merkel", isCorrect: false },
+      { text: "Emmanuel Macron", isCorrect: false },
+      { text: "Mario Draghi", isCorrect: true }
+    ],
+    countryDetails: {
+      countryName: "Italy",
+      leaderName: "Mario Draghi",
+      assumedOfficeDate: "February 13, 2021",
+      flag: "🇮🇹",
+      nationalBird: "Italian Sparrow",
+      mostRecentAnnualGDP: "2.2 trillion USD",
+      globalRegion: "Europe",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
+  
+  // 5. Spain
+  {
+    question: "Who is the leader of Spain?",
+    answers: [
+      { text: "Guy Parmelin", isCorrect: false },
+      { text: "Stefan Löfven", isCorrect: false },
+      { text: "Angela Merkel", isCorrect: false },
+      { text: "Pedro Sánchez", isCorrect: true }
+    ],
+    countryDetails: {
+      countryName: "Spain",
+      leaderName: "Pedro Sánchez",
+      assumedOfficeDate: "June 2, 2018",
+      flag: "🇪🇸",
+      nationalBird: "Spanish Imperial Eagle",
+      mostRecentAnnualGDP: "1.4 trillion USD",
+      globalRegion: "Europe",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
 
 // 6. Russia
-const russiaQuiz = {
+{
   question: "Who is the leader of Russia?",
   answers: [
     { text: "Emmanuel Macron", isCorrect: false },
@@ -194,10 +199,10 @@ const russiaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 7. Netherlands
-const netherlandsQuiz = {
+{
   question: "Who is the leader of the Netherlands?",
   answers: [
     { text: "Boris Johnson", isCorrect: false },
@@ -216,10 +221,10 @@ const netherlandsQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 8. Switzerland
-const switzerlandQuiz = {
+{
   question: "Who is the leader of Switzerland?",
   answers: [
     { text: "Mario Draghi", isCorrect: false },
@@ -238,10 +243,10 @@ const switzerlandQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 9. Sweden
-const swedenQuiz = {
+{
   question: "Who is the leader of Sweden?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
@@ -260,10 +265,10 @@ const swedenQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 10. Poland
-const polandQuiz = {
+{
   question: "Who is the leader of Poland?",
   answers: [
     { text: "Olaf Scholz", isCorrect: false },
@@ -282,10 +287,10 @@ const polandQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 11. Greece
-const greeceQuiz = {
+{
   question: "Who is the leader of Greece?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
@@ -304,10 +309,10 @@ const greeceQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 12. Portugal
-const portugalQuiz = {
+{
   question: "Who is the leader of Portugal?",
   answers: [
     { text: "Boris Johnson", isCorrect: false },
@@ -326,10 +331,10 @@ const portugalQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 13. Norway
-const norwayQuiz = {
+{
   question: "Who is the leader of Norway?",
   answers: [
     { text: "Stefan Löfven", isCorrect: false },
@@ -348,10 +353,10 @@ const norwayQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 14. Denmark
-const denmarkQuiz = {
+{
   question: "Who is the leader of Denmark?",
   answers: [
     { text: "Olaf Scholz", isCorrect: false },
@@ -370,10 +375,10 @@ const denmarkQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 15. Finland
-const finlandQuiz = {
+{
   question: "Who is the leader of Finland?",
   answers: [
     { text: "Mario Draghi", isCorrect: false },
@@ -392,10 +397,10 @@ const finlandQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 16. Austria
-const austriaQuiz = {
+{
   question: "Who is the leader of Austria?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
@@ -414,9 +419,10 @@ const austriaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
+
 // 17. Belgium
-const belgiumQuiz = {
+{
   question: "Who is the leader of Belgium?",
   answers: [
     { text: "Emmanuel Macron", isCorrect: false },
@@ -435,10 +441,10 @@ const belgiumQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 18. Czech Republic
-const czechRepublicQuiz = {
+{
   question: "Who is the leader of the Czech Republic?",
   answers: [
     { text: "Vladimir Putin", isCorrect: false },
@@ -457,10 +463,10 @@ const czechRepublicQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 19. Bulgaria
-const bulgariaQuiz = {
+{
   question: "Who is the leader of Bulgaria?",
   answers: [
     { text: "Mario Draghi", isCorrect: false },
@@ -479,10 +485,10 @@ const bulgariaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 20. Hungary
-const hungaryQuiz = {
+{
   question: "Who is the leader of Hungary?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
@@ -501,10 +507,10 @@ const hungaryQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 21. Belarus
-const belarusQuiz = {
+{
   question: "Who is the leader of Belarus?",
   answers: [
     { text: "Vladimir Putin", isCorrect: true },
@@ -524,10 +530,10 @@ const belarusQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 22. Romania
-const romaniaQuiz = {
+{
   question: "Who is the leader of Romania?",
   answers: [
     { text: "Boris Johnson", isCorrect: false },
@@ -546,10 +552,10 @@ const romaniaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 23. Ireland
-const irelandQuiz = {
+{
   question: "Who is the leader of Ireland?",
   answers: [
     { text: "Emmanuel Macron", isCorrect: false },
@@ -568,10 +574,10 @@ const irelandQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 24. Croatia
-const croatiaQuiz = {
+{
   question: "Who is the leader of Croatia?",
   answers: [
     { text: "Angela Merkel", isCorrect: false },
@@ -590,10 +596,10 @@ const croatiaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 25. Slovakia
-const slovakiaQuiz = {
+{
   question: "Who is the leader of Slovakia?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
@@ -612,10 +618,10 @@ const slovakiaQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
+},
 
 // 26. Ukraine
-const ukraineQuiz = {
+{
   question: "Who is the leader of Ukraine?",
   answers: [
     { text: "Volodymyr Zelensky", isCorrect: true },
@@ -634,5 +640,5 @@ const ukraineQuiz = {
     countryImage: "",
     pronunciationLink: ""
   }
-};
-
+}
+]

@@ -88,7 +88,13 @@ p {
   transition: 0.2s all
 }
 
-
+.error-message {
+  display: none;
+  margin-left: 43%;
+  margin-right: 0%;
+  font-weight:600;
+  color: var(--brand-color);
+}
 
 
 .card-view, .results {
