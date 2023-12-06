@@ -640,5 +640,231 @@ export const ALL_COUNTRIES = [
     countryImage: "",
     pronunciationLink: ""
   }
-}
+},
+
+
+
+// ----------------- Asia -------------------
+
+// 1. China
+{
+  question: "Who is the leader of China?",
+  answers: [
+    { text: "Xi Jinping", isCorrect: true },
+    { text: "Li Keqiang", isCorrect: false },
+    { text: "Wang Qishan", isCorrect: false },
+    { text: "Li Zhanshu", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "China",
+    leaderName: "Xi Jinping",
+    assumedOfficeDate: "March 14, 2013",
+    flag: "🇨🇳",
+    nationalBird: "Red-crowned Crane",
+    mostRecentAnnualGDP: "16.4 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 2. India
+{
+  question: "Who is the leader of India?",
+  answers: [
+    { text: "Narendra Modi", isCorrect: true },
+    { text: "Amit Shah", isCorrect: false },
+    { text: "Rajnath Singh", isCorrect: false },
+    { text: "Ram Nath Kovind", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "India",
+    leaderName: "Narendra Modi",
+    assumedOfficeDate: "May 26, 2014",
+    flag: "🇮🇳",
+    nationalBird: "Indian Peafowl",
+    mostRecentAnnualGDP: "2.9 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 3. Japan
+{
+  question: "Who is the leader of Japan?",
+  answers: [
+    { text: "Yoshihide Suga", isCorrect: true },
+    { text: "Shinzo Abe", isCorrect: false },
+    { text: "Taro Aso", isCorrect: false },
+    { text: "Fumio Kishida", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Japan",
+    leaderName: "Yoshihide Suga",
+    assumedOfficeDate: "September 16, 2020",
+    flag: "🇯🇵",
+    nationalBird: "Green Pheasant",
+    mostRecentAnnualGDP: "5.0 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 4. South Korea
+{
+  question: "Who is the leader of South Korea?",
+  answers: [
+    { text: "Moon Jae-in", isCorrect: true },
+    { text: "Kim Jong-un", isCorrect: false },
+    { text: "Lee Nak-yeon", isCorrect: false },
+    { text: "Hwang Kyo-ahn", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "South Korea",
+    leaderName: "Moon Jae-in",
+    assumedOfficeDate: "May 10, 2017",
+    flag: "🇰🇷",
+    nationalBird: "Korean Magpie",
+    mostRecentAnnualGDP: "1.6 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 5. Thailand
+{
+  question: "Who is the leader of Thailand?",
+  answers: [
+    { text: "Prayuth Chan-o-cha", isCorrect: true },
+    { text: "Somdet Phra Maha Vajiralongkorn", isCorrect: false },
+    { text: "Anutin Charnvirakul", isCorrect: false },
+    { text: "Prawit Wongsuwan", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Thailand",
+    leaderName: "Prayuth Chan-o-cha",
+    assumedOfficeDate: "August 24, 2014",
+    flag: "🇹🇭",
+    nationalBird: "Red-whiskered Bulbul",
+    mostRecentAnnualGDP: "0.5 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 6. Vietnam
+{
+  question: "Who is the leader of Vietnam?",
+  answers: [
+    { text: "Nguyen Phu Trong", isCorrect: true },
+    { text: "Nguyen Xuan Phuc", isCorrect: false },
+    { text: "Tran Dai Quang", isCorrect: false },
+    { text: "Nguyen Tan Dung", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Vietnam",
+    leaderName: "Nguyen Phu Trong",
+    assumedOfficeDate: "October 23, 2018",
+    flag: "🇻🇳",
+    nationalBird: "Red-vented Bulbul",
+    mostRecentAnnualGDP: "0.3 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 7. Indonesia
+{
+  question: "Who is the leader of Indonesia?",
+  answers: [
+    { text: "Joko Widodo", isCorrect: true },
+    { text: "Prabowo Subianto", isCorrect: false },
+    { text: "Susilo Bambang Yudhoyono", isCorrect: false },
+    { text: "Megawati Sukarnoputri", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Indonesia",
+    leaderName: "Joko Widodo",
+    assumedOfficeDate: "October 20, 2014",
+    flag: "🇮🇩",
+    nationalBird: "Javan Hawk-Eagle",
+    mostRecentAnnualGDP: "1.1 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 8. Malaysia
+{
+  question: "Who is the leader of Malaysia?",
+  answers: [
+    { text: "Ismail Sabri Yaakob", isCorrect: true },
+    { text: "Muhyiddin Yassin", isCorrect: false },
+    { text: "Mahathir Mohamad", isCorrect: false },
+    { text: "Abdullah Ahmad Badawi", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Malaysia",
+    leaderName: "Ismail Sabri Yaakob",
+    assumedOfficeDate: "August 21, 2021",
+    flag: "🇲🇾",
+    nationalBird: "Rhinoceros Hornbill",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 9. Pakistan
+{
+  question: "Who is the leader of Pakistan?",
+  answers: [
+    { text: "Imran Khan", isCorrect: true },
+    { text: "Asif Ali Zardari", isCorrect: false },
+    { text: "Nawaz Sharif", isCorrect: false },
+    { text: "Pervez Musharraf", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Pakistan",
+    leaderName: "Imran Khan",
+    assumedOfficeDate: "August 18, 2018",
+    flag: "🇵🇰",
+    nationalBird: "Chukar Partridge",
+    mostRecentAnnualGDP: "0.3 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 10. Philippines
+{
+  question: "Who is the leader of the Philippines?",
+  answers: [
+    { text: "Rodrigo Duterte", isCorrect: true },
+    { text: "Benigno Aquino III", isCorrect: false },
+    { text: "Gloria Macapagal-Arroyo", isCorrect: false },
+    { text: "Joseph Estrada", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Philippines",
+    leaderName: "Rodrigo Duterte",
+    assumedOfficeDate: "June 30, 2016",
+    flag: "🇵🇭",
+    nationalBird: "Philippine Eagle",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Asia",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+
 ]

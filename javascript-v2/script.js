@@ -69,7 +69,7 @@ const results = document.querySelector('.results')
 // note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  
 const numQuestionMax = 10
 
-let numQuestions = 4
+let numQuestions = 10
 // something like this, in a function.  if (ALL_COUNTRIES.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = ALL_COUNTRIES.length}
 
 // function to shuffle the array of the imported region.  this works by randomly finding two items in the array, then swapping their position.  Linear complexity.  Taken from Chat GPT.
