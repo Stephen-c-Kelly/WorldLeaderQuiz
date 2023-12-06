@@ -44,9 +44,9 @@ const card = document.querySelector('.card-view')
 const results = document.querySelector('.results')
 
 // Cached element references
-
-let numQuestions = 10
-// note numQuesrions must be less or equal than the number of datapoints in that region.
+let MaxQuestions = 10
+let numQuestions = 2
+// note numQuestions must be less or equal than the number of datapoints in that region.
 
 // function to shuffle the array of the imported region from Chat GPT.
 const clickRegion = (btn) => {
@@ -62,7 +62,6 @@ const clickRegion = (btn) => {
   // console.log(`num questions is ${numQuestions}
   // start buildActiveStack`)
   errorMsgEl.style.display = 'none'
-  
   buildActiveStack()  
 };
 
@@ -84,9 +83,10 @@ const findCorrect = (card) => {
   }
 
 const buildActiveStack = () => {
-  console.log(`start build active stack func. region is ${activeRegion}`)
+  //console.log(`start build active stack func. region is ${activeRegion}`)
   activeStack = []
 
+  // ALL_COUNTRIES.length
   for (let i = 0; i < ALL_COUNTRIES.length; i++) {
     if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
     activeStack.push(ALL_COUNTRIES[i]);
@@ -94,14 +94,13 @@ const buildActiveStack = () => {
     }
     //console.log(`Active stack after loop is:`, activeStack);
   };
-    shuffleArray(activeStack);
-    console.log(`Length of active stack after build stack + shuffle function: ${activeStack.length}`);
-    numQuestions = activeStack.length
-
-    currentCard = activeStack[0];
-    findCorrect(currentCard);
-    console.log(`the correct choice is supposed to be ${correctChoice}`);
-    return {currentCard, correctChoice }
+  shuffleArray(activeStack);
+  activeStack = activeStack.slice(0,numQuestions)
+  console.log(`Length of active stack after build stack + shuffle + slice: ${activeStack.length}`)
+  currentCard = activeStack[0];
+  findCorrect(currentCard);
+  console.log(activeStack.length)
+  return {currentCard, correctChoice} 
 }
 
 // Event listeners
@@ -121,7 +120,7 @@ const render = (state) => {
 }
 // // Step 3 - Initialize the game state and renders the menu
 const init = () => {
-  let counter = 0
+  counter = 0
   activeRegion = []
   activeStack = []
   currentCard = []
@@ -131,9 +130,16 @@ const init = () => {
 init()
 
 const seeMenu = () => { 
+  // answerBtnEls.style.display
   render(menu)
+  counter = 0
   init()
   colorReset()
+  regionBtnEls.forEach((el) => {
+    el.classList.remove('clicked');
+    activeRegion = []
+    //console.log(`active region reset`)
+  });
   console.log('see menu func')
   //console.log(activeStack.length, activeStack[0], activeStack[1])
 }
@@ -230,8 +236,9 @@ const seeNext = () => {
     render(results)
     countCorrectEl.innerHTML = counter
     totalCountEl.innerHTML = numQuestions
-    percentageCorrectEl.innerHTML = (`${100*(counter/numQuestions)}%`)
-    console.log(percentageCorrectEl.innerHTML)
+    let result = Math.round((counter/numQuestions)*100) 
+    percentageCorrectEl.innerHTML = `${result}%`
+    // console.log(percentageCorrectEl.innerHTML)
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
       winLoseEl.innerHTML = `You Win!`    }
     else {winLoseEl.innerHTML = `Try Again`}
@@ -243,17 +250,13 @@ const seeNext = () => {
 }
 
 playEl.addEventListener('click', playGame)
-// playAgainEl.addEventListener('click', init )
 playAgainEl.addEventListener('click', seeMenu)
 closeBtnEl.addEventListener('click', init)
 closeBtnEl.addEventListener('click', seeMenu)
 nextEl.addEventListener('click', seeNext)
-
-
 regionBtnEls.forEach((btn) => {
   btn.addEventListener('click', () => clickRegion(btn));
 });
-
 answer1El.addEventListener('click', checkAnswer)
 answer2El.addEventListener('click', checkAnswer)
 answer3El.addEventListener('click', checkAnswer)

@@ -865,6 +865,7 @@ export const ALL_COUNTRIES = [
 },
 
 
+
 // ----------------- North & Central America -------------------
 // 1. United States
 {
@@ -1526,5 +1527,446 @@ export const ALL_COUNTRIES = [
     countryImage: "",
     pronunciationLink: ""
   }
+},
+
+// --------------Middle East & Africa -----------------
+
+// 1. Saudi Arabia
+{
+  question: "Who is the leader of Saudi Arabia?",
+  answers: [
+    { text: "Salman bin Abdulaziz Al Saud", isCorrect: true },
+    { text: "Mohammed bin Salman", isCorrect: false },
+    { text: "King Fahd", isCorrect: false },
+    { text: "King Abdullah", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Saudi Arabia",
+    leaderName: "Salman bin Abdulaziz Al Saud",
+    assumedOfficeDate: "January 23, 2015",
+    flag: "🇸🇦",
+    nationalBird: "Falcon",
+    mostRecentAnnualGDP: "0.8 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 2. Iran
+{
+  question: "Who is the leader of Iran?",
+  answers: [
+    { text: "Ebrahim Raisi", isCorrect: true },
+    { text: "Hassan Rouhani", isCorrect: false },
+    { text: "Ali Khamenei", isCorrect: false },
+    { text: "Mahmoud Ahmadinejad", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Iran",
+    leaderName: "Ebrahim Raisi",
+    assumedOfficeDate: "August 5, 2021",
+    flag: "🇮🇷",
+    nationalBird: "Nightingale",
+    mostRecentAnnualGDP: "0.7 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 3. Iraq
+{
+  question: "Who is the leader of Iraq?",
+  answers: [
+    { text: "Barham Salih", isCorrect: true },
+    { text: "Nouri al-Maliki", isCorrect: false },
+    { text: "Jalal Talabani", isCorrect: false },
+    { text: "Saddam Hussein", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Iraq",
+    leaderName: "Barham Salih",
+    assumedOfficeDate: "October 2, 2018",
+    flag: "🇮🇶",
+    nationalBird: "Chukar Partridge",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 4. United Arab Emirates
+{
+  question: "Who is the leader of the United Arab Emirates?",
+  answers: [
+    { text: "Khalifa bin Zayed Al Nahyan", isCorrect: true },
+    { text: "Mohammed bin Rashid Al Maktoum", isCorrect: false },
+    { text: "Sheikh Saud bin Saqr Al Qasimi", isCorrect: false },
+    { text: "Sheikh Nahyan bin Mubarak Al Nahyan", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "United Arab Emirates",
+    leaderName: "Khalifa bin Zayed Al Nahyan",
+    assumedOfficeDate: "November 3, 2004",
+    flag: "🇦🇪",
+    nationalBird: "Peregrine Falcon",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 5. Qatar
+{
+  question: "Who is the leader of Qatar?",
+  answers: [
+    { text: "Tamim bin Hamad Al Thani", isCorrect: true },
+    { text: "Hamad bin Khalifa Al Thani", isCorrect: false },
+    { text: "Jassim bin Hamad Al Thani", isCorrect: false },
+    { text: "Hamad bin Jassim bin Jaber Al Thani", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Qatar",
+    leaderName: "Tamim bin Hamad Al Thani",
+    assumedOfficeDate: "June 25, 2013",
+    flag: "🇶🇦",
+    nationalBird: "Falcon",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 6. Jordan
+{
+  question: "Who is the leader of Jordan?",
+  answers: [
+    { text: "Abdullah II of Jordan", isCorrect: true },
+    { text: "Hussein bin Talal", isCorrect: false },
+    { text: "Abdullah I of Jordan", isCorrect: false },
+    { text: "Talal of Jordan", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Jordan",
+    leaderName: "Abdullah II of Jordan",
+    assumedOfficeDate: "February 7, 1999",
+    flag: "🇯🇴",
+    nationalBird: "Sinai Rosefinch",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 7. Israel
+{
+  question: "Who is the leader of Israel?",
+  answers: [
+    { text: "Naftali Bennett", isCorrect: true },
+    { text: "Benjamin Netanyahu", isCorrect: false },
+    { text: "Ehud Olmert", isCorrect: false },
+    { text: "Ariel Sharon", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Israel",
+    leaderName: "Naftali Bennett",
+    assumedOfficeDate: "June 13, 2021",
+    flag: "🇮🇱",
+    nationalBird: "Hoopoe",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 8. Turkey
+{
+  question: "Who is the leader of Turkey?",
+  answers: [
+    { text: "Recep Tayyip Erdoğan", isCorrect: true },
+    { text: "Abdullah Gül", isCorrect: false },
+    { text: "Ahmet Davutoğlu", isCorrect: false },
+    { text: "Ekrem İmamoğlu", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Turkey",
+    leaderName: "Recep Tayyip Erdoğan",
+    assumedOfficeDate: "August 28, 2014",
+    flag: "🇹🇷",
+    nationalBird: "Redwing",
+    mostRecentAnnualGDP: "0.9 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+// 9. South Africa
+{
+  question: "Who is the leader of South Africa?",
+  answers: [
+    { text: "Cyril Ramaphosa", isCorrect: true },
+    { text: "Jacob Zuma", isCorrect: false },
+    { text: "Thabo Mbeki", isCorrect: false },
+    { text: "Nelson Mandela", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "South Africa",
+    leaderName: "Cyril Ramaphosa",
+    assumedOfficeDate: "February 15, 2018",
+    flag: "🇿🇦",
+    nationalBird: "Blue Crane",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 10. Nigeria
+{
+  question: "Who is the leader of Nigeria?",
+  answers: [
+    { text: "Muhammadu Buhari", isCorrect: true },
+    { text: "Goodluck Jonathan", isCorrect: false },
+    { text: "Olusegun Obasanjo", isCorrect: false },
+    { text: "Yakubu Gowon", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Nigeria",
+    leaderName: "Muhammadu Buhari",
+    assumedOfficeDate: "May 29, 2015",
+    flag: "🇳🇬",
+    nationalBird: "Black Crowned Crane",
+    mostRecentAnnualGDP: "0.5 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 11. Egypt
+{
+  question: "Who is the leader of Egypt?",
+  answers: [
+    { text: "Abdel Fattah el-Sisi", isCorrect: true },
+    { text: "Mohamed Morsi", isCorrect: false },
+    { text: "Hosni Mubarak", isCorrect: false },
+    { text: "Anwar Sadat", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Egypt",
+    leaderName: "Abdel Fattah el-Sisi",
+    assumedOfficeDate: "June 8, 2014",
+    flag: "🇪🇬",
+    nationalBird: "Egyptian Vulture",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 12. Kenya
+{
+  question: "Who is the leader of Kenya?",
+  answers: [
+    { text: "Uhuru Kenyatta", isCorrect: true },
+    { text: "Mwai Kibaki", isCorrect: false },
+    { text: "Daniel arap Moi", isCorrect: false },
+    { text: "Jomo Kenyatta", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Kenya",
+    leaderName: "Uhuru Kenyatta",
+    assumedOfficeDate: "April 9, 2013",
+    flag: "🇰🇪",
+    nationalBird: "African Crowned Eagle",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 13. Morocco
+{
+  question: "Who is the leader of Morocco?",
+  answers: [
+    { text: "Mohammed VI of Morocco", isCorrect: true },
+    { text: "Hassan II of Morocco", isCorrect: false },
+    { text: "Mohammed V of Morocco", isCorrect: false },
+    { text: "Mohammed IV of Morocco", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Morocco",
+    leaderName: "Mohammed VI of Morocco",
+    assumedOfficeDate: "July 23, 1999",
+    flag: "🇲🇦",
+    nationalBird: "Bald Ibis",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 14. Ethiopia
+{
+  question: "Who is the leader of Ethiopia?",
+  answers: [
+    { text: "Abiy Ahmed", isCorrect: true },
+    { text: "Hailemariam Desalegn", isCorrect: false },
+    { text: "Meles Zenawi", isCorrect: false },
+    { text: "Mengistu Haile Mariam", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Ethiopia",
+    leaderName: "Abiy Ahmed",
+    assumedOfficeDate: "April 2, 2018",
+    flag: "🇪🇹",
+    nationalBird: "Wattled Ibis",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 15. Tanzania
+{
+  question: "Who is the leader of Tanzania?",
+  answers: [
+    { text: "Samia Suluhu", isCorrect: true },
+    { text: "John Magufuli", isCorrect: false },
+    { text: "Jakaya Kikwete", isCorrect: false },
+    { text: "Benjamin Mkapa", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Tanzania",
+    leaderName: "Samia Suluhu",
+    assumedOfficeDate: "March 19, 2021",
+    flag: "🇹🇿",
+    nationalBird: "African Fish Eagle",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 16. Algeria
+{
+  question: "Who is the leader of Algeria?",
+  answers: [
+    { text: "Abdelmadjid Tebboune", isCorrect: true },
+    { text: "Abdelaziz Bouteflika", isCorrect: false },
+    { text: "Liamine Zéroual", isCorrect: false },
+    { text: "Chadli Bendjedid", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Algeria",
+    leaderName: "Abdelmadjid Tebboune",
+    assumedOfficeDate: "December 19, 2019",
+    flag: "🇩🇿",
+    nationalBird: "Little Swift",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 17. Uganda
+{
+  question: "Who is the leader of Uganda?",
+  answers: [
+    { text: "Yoweri Museveni", isCorrect: true },
+    { text: "Idi Amin", isCorrect: false },
+    { text: "Milton Obote", isCorrect: false },
+    { text: "Apolo Milton Obote", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Uganda",
+    leaderName: "Yoweri Museveni",
+    assumedOfficeDate: "January 29, 1986",
+    flag: "🇺🇬",
+    nationalBird: "Grey Crowned Crane",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 18. Ghana
+{
+  question: "Who is the leader of Ghana?",
+  answers: [
+    { text: "Nana Akufo-Addo", isCorrect: true },
+    { text: "John Dramani Mahama", isCorrect: false },
+    { text: "John Agyekum Kufuor", isCorrect: false },
+    { text: "Jerry John Rawlings", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Ghana",
+    leaderName: "Nana Akufo-Addo",
+    assumedOfficeDate: "January 7, 2017",
+    flag: "🇬🇭",
+    nationalBird: "Lavender Waxbill",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 19. Angola
+{
+  question: "Who is the leader of Angola?",
+  answers: [
+    { text: "João Lourenço", isCorrect: true },
+    { text: "José Eduardo dos Santos", isCorrect: false },
+    { text: "Eduardo dos Santos", isCorrect: false },
+    { text: "Agostinho Neto", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Angola",
+    leaderName: "João Lourenço",
+    assumedOfficeDate: "September 26, 2017",
+    flag: "🇦🇴",
+    nationalBird: "Red-crested Turaco",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Middle East & Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+// 20. Mozambique
+{
+  question: "Who is the leader of Mozambique?",
+  answers: [
+    { text: "Filipe Nyusi", isCorrect: true },
+    { text: "Armando Guebuza", isCorrect: false },
+    { text: "Joaquim Chissano", isCorrect: false },
+    { text: "Samora Machel", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Mozambique",
+    leaderName: "Filipe Nyusi",
+    assumedOfficeDate: "January 15, 2015",
+    flag: "🇲🇿",
+    nationalBird: "African Fish Eagle",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Middle East and Africa",
+    countryImage: "",
+    pronunciationLink: ""
+  }
 }
+
 ];
