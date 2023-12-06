@@ -85,7 +85,8 @@ p {
   background-color: var(--green-color);
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer; 
-  transition: 0.2s all
+  transition: 0.2s all;
+  pointer-events: auto;
 }
 
 .error-message {

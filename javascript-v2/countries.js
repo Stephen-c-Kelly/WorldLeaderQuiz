@@ -1,6 +1,6 @@
 // 12.2 export data from chatGPT - https://chat.openai.com/share/1dc2e9b7-1cc6-4003-b371-928c6c544f3d
 
-
+// test contries contains 2 objects for 2 different regions. 
 export const TEST_COUNTRIES = [
   // #1 europe test country
   {
@@ -87,8 +87,6 @@ export const TEST_COUNTRIES = [
     }
   }
 ]
-
-// export const EUROPE_COUNTRIES = [ I need to set this u but first i need to reformat the data
 
 export const ALL_COUNTRIES = [
   // 2. France
@@ -867,4 +865,666 @@ export const ALL_COUNTRIES = [
 },
 
 
-]
+// ----------------- North & Central America -------------------
+// 1. United States
+{
+  question: "Who is the leader of the United States?",
+  answers: [
+    { text: "Joe Biden", isCorrect: true },
+    { text: "Jocelyn B. Burdick", isCorrect: false },
+    { text: "John Davis", isCorrect: false },
+    { text: "Alexis Herman", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "United States",
+    leaderName: "Joe Biden",
+    assumedOfficeDate: "January 20, 2021",
+    flag: "🇺🇸",
+    nationalBird: "Bald Eagle",
+    mostRecentAnnualGDP: "21.4 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 2. Canada
+{
+  question: "Who is the leader of Canada?",
+  answers: [
+    { text: "Justin Trudeau", isCorrect: true },
+    { text: "Stephen Harper", isCorrect: false },
+    { text: "Paul Martin", isCorrect: false },
+    { text: "Jean Chrétien", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Canada",
+    leaderName: "Justin Trudeau",
+    assumedOfficeDate: "November 4, 2015",
+    flag: "🇨🇦",
+    nationalBird: "Common Loon",
+    mostRecentAnnualGDP: "1.8 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 3. Mexico
+{
+  question: "Who is the leader of Mexico?",
+  answers: [
+    { text: "Andrés Manuel López Obrador", isCorrect: true },
+    { text: "Enrique Peña Nieto", isCorrect: false },
+    { text: "Felipe Calderón", isCorrect: false },
+    { text: "Vicente Fox", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Mexico",
+    leaderName: "Andrés Manuel López Obrador",
+    assumedOfficeDate: "December 1, 2018",
+    flag: "🇲🇽",
+    nationalBird: "Golden Eagle",
+    mostRecentAnnualGDP: "1.3 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 4. Guatemala
+{
+  question: "Who is the leader of Guatemala?",
+  answers: [
+    { text: "Alejandro Giammattei", isCorrect: true },
+    { text: "Jimmy Morales", isCorrect: false },
+    { text: "Otto Pérez Molina", isCorrect: false },
+    { text: "Alvaro Colom", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Guatemala",
+    leaderName: "Alejandro Giammattei",
+    assumedOfficeDate: "January 14, 2020",
+    flag: "🇬🇹",
+    nationalBird: "Resplendent Quetzal",
+    mostRecentAnnualGDP: "0.8 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 5. Honduras
+{
+  question: "Who is the leader of Honduras?",
+  answers: [
+    { text: "Juan Orlando Hernández", isCorrect: true },
+    { text: "Porfirio Lobo", isCorrect: false },
+    { text: "Manuel Zelaya", isCorrect: false },
+    { text: "Ricardo Maduro", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Honduras",
+    leaderName: "Juan Orlando Hernández",
+    assumedOfficeDate: "January 27, 2014",
+    flag: "🇭🇳",
+    nationalBird: "Scarlet Macaw",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 6. El Salvador
+{
+  question: "Who is the leader of El Salvador?",
+  answers: [
+    { text: "Nayib Bukele", isCorrect: true },
+    { text: "Salvador Sánchez Cerén", isCorrect: false },
+    { text: "Mauricio Funes", isCorrect: false },
+    { text: "Elías Antonio Saca", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "El Salvador",
+    leaderName: "Nayib Bukele",
+    assumedOfficeDate: "June 1, 2019",
+    flag: "🇸🇻",
+    nationalBird: "Torogoz",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 7. Nicaragua
+{
+  question: "Who is the leader of Nicaragua?",
+  answers: [
+    { text: "Daniel Ortega", isCorrect: true },
+    { text: "Enrique Bolaños", isCorrect: false },
+    { text: "Arnoldo Alemán", isCorrect: false },
+    { text: "Violeta Chamorro", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Nicaragua",
+    leaderName: "Daniel Ortega",
+    assumedOfficeDate: "January 10, 2007",
+    flag: "🇳🇮",
+    nationalBird: "Turquoise-browed Motmot",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 8. Costa Rica
+{
+  question: "Who is the leader of Costa Rica?",
+  answers: [
+    { text: "Carlos Alvarado Quesada", isCorrect: true },
+    { text: "Luis Guillermo Solís", isCorrect: false },
+    { text: "Laura Chinchilla", isCorrect: false },
+    { text: "Óscar Arias", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Costa Rica",
+    leaderName: "Carlos Alvarado Quesada",
+    assumedOfficeDate: "May 8, 2018",
+    flag: "🇨🇷",
+    nationalBird: "Clay-colored Thrush",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 9. Panama
+{
+  question: "Who is the leader of Panama?",
+  answers: [
+    { text: "Laurentino Cortizo", isCorrect: true },
+    { text: "Juan Carlos Varela", isCorrect: false },
+    { text: "Ricardo Martinelli", isCorrect: false },
+    { text: "Martín Torrijos", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Panama",
+    leaderName: "Laurentino Cortizo",
+    assumedOfficeDate: "July 1, 2019",
+    flag: "🇵🇦",
+    nationalBird: "Harpy Eagle",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 10. Belize
+{
+  question: "Who is the leader of Belize?",
+  answers: [
+    { text: "Johnny Briceño", isCorrect: true },
+    { text: "Dean Barrow", isCorrect: false },
+    { text: "Said Musa", isCorrect: false },
+    { text: "Manuel Esquivel", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Belize",
+    leaderName: "Johnny Briceño",
+    assumedOfficeDate: "November 11, 2020",
+    flag: "🇧🇿",
+    nationalBird: "Keel-billed Toucan",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "North & Central America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+// ----------------- South America -------------------
+
+// 1. Brazil
+{
+  question: "Who is the leader of Brazil?",
+  answers: [
+    { text: "Jair Bolsonaro", isCorrect: true },
+    { text: "Dilma Rousseff", isCorrect: false },
+    { text: "Michel Temer", isCorrect: false },
+    { text: "Luiz Inácio Lula da Silva", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Brazil",
+    leaderName: "Jair Bolsonaro",
+    assumedOfficeDate: "January 1, 2019",
+    flag: "🇧🇷",
+    nationalBird: "Saffron Finch",
+    mostRecentAnnualGDP: "1.4 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 2. Argentina
+{
+  question: "Who is the leader of Argentina?",
+  answers: [
+    { text: "Alberto Fernández", isCorrect: true },
+    { text: "Mauricio Macri", isCorrect: false },
+    { text: "Cristina Fernández de Kirchner", isCorrect: false },
+    { text: "Néstor Kirchner", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Argentina",
+    leaderName: "Alberto Fernández",
+    assumedOfficeDate: "December 10, 2019",
+    flag: "🇦🇷",
+    nationalBird: "Rufous Hornero",
+    mostRecentAnnualGDP: "0.4 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 3. Colombia
+{
+  question: "Who is the leader of Colombia?",
+  answers: [
+    { text: "Iván Duque Márquez", isCorrect: true },
+    { text: "Juan Manuel Santos", isCorrect: false },
+    { text: "Álvaro Uribe Vélez", isCorrect: false },
+    { text: "Andrés Pastrana Arango", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Colombia",
+    leaderName: "Iván Duque Márquez",
+    assumedOfficeDate: "August 7, 2018",
+    flag: "🇨🇴",
+    nationalBird: "Andean Condor",
+    mostRecentAnnualGDP: "0.3 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 4. Peru
+{
+  question: "Who is the leader of Peru?",
+  answers: [
+    { text: "Pedro Castillo", isCorrect: true },
+    { text: "Francisco Sagasti", isCorrect: false },
+    { text: "Manuel Merino", isCorrect: false },
+    { text: "Martín Vizcarra", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Peru",
+    leaderName: "Pedro Castillo",
+    assumedOfficeDate: "July 28, 2021",
+    flag: "🇵🇪",
+    nationalBird: "Andean Cock-of-the-rock",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 5. Venezuela
+{
+  question: "Who is the leader of Venezuela?",
+  answers: [
+    { text: "Nicolás Maduro", isCorrect: true },
+    { text: "Juan Guaidó", isCorrect: false },
+    { text: "Hugo Chávez", isCorrect: false },
+    { text: "Rafael Caldera", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Venezuela",
+    leaderName: "Nicolás Maduro",
+    assumedOfficeDate: "April 19, 2013",
+    flag: "🇻🇪",
+    nationalBird: "Venezuelan Troupial",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 6. Chile
+{
+  question: "Who is the leader of Chile?",
+  answers: [
+    { text: "Sebastián Piñera", isCorrect: true },
+    { text: "Michelle Bachelet", isCorrect: false },
+    { text: "Sebastián Piñera", isCorrect: false },
+    { text: "Ricardo Lagos", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Chile",
+    leaderName: "Sebastián Piñera",
+    assumedOfficeDate: "March 11, 2018",
+    flag: "🇨🇱",
+    nationalBird: "Andean Condor",
+    mostRecentAnnualGDP: "0.5 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 7. Ecuador
+{
+  question: "Who is the leader of Ecuador?",
+  answers: [
+    { text: "Guillermo Lasso", isCorrect: true },
+    { text: "Lenín Moreno", isCorrect: false },
+    { text: "Rafael Correa", isCorrect: false },
+    { text: "Lucio Gutiérrez", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Ecuador",
+    leaderName: "Guillermo Lasso",
+    assumedOfficeDate: "May 24, 2021",
+    flag: "🇪🇨",
+    nationalBird: "Andean Condor",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 8. Bolivia
+{
+  question: "Who is the leader of Bolivia?",
+  answers: [
+    { text: "Luis Arce", isCorrect: true },
+    { text: "Jeanine Áñez", isCorrect: false },
+    { text: "Evo Morales", isCorrect: false },
+    { text: "Carlos Mesa", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Bolivia",
+    leaderName: "Luis Arce",
+    assumedOfficeDate: "November 8, 2020",
+    flag: "🇧🇴",
+    nationalBird: "Andean Condor",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 9. Paraguay
+{
+  question: "Who is the leader of Paraguay?",
+  answers: [
+    { text: "Mario Abdo Benítez", isCorrect: true },
+    { text: "Horacio Cartes", isCorrect: false },
+    { text: "Fernando Lugo", isCorrect: false },
+    { text: "Nicanor Duarte Frutos", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Paraguay",
+    leaderName: "Mario Abdo Benítez",
+    assumedOfficeDate: "August 15, 2018",
+    flag: "🇵🇾",
+    nationalBird: "Yellow-billed Cardinal",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 10. Uruguay
+{
+  question: "Who is the leader of Uruguay?",
+  answers: [
+    { text: "Luis Lacalle Pou", isCorrect: true },
+    { text: "Tabaré Vázquez", isCorrect: false },
+    { text: "José Mujica", isCorrect: false },
+    { text: "Luis Alberto Lacalle", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Uruguay",
+    leaderName: "Luis Lacalle Pou",
+    assumedOfficeDate: "March 1, 2020",
+    flag: "🇺🇾",
+    nationalBird: "Southern Lapwing",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "South America",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// ----------------- Oceania ------------------
+// 1. Australia
+{
+  question: "Who is the leader of Australia?",
+  answers: [
+    { text: "Scott Morrison", isCorrect: true },
+    { text: "Malcolm Turnbull", isCorrect: false },
+    { text: "Tony Abbott", isCorrect: false },
+    { text: "Kevin Rudd", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Australia",
+    leaderName: "Scott Morrison",
+    assumedOfficeDate: "August 24, 2018",
+    flag: "🇦🇺",
+    nationalBird: "Emu",
+    mostRecentAnnualGDP: "1.4 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 2. New Zealand
+{
+  question: "Who is the leader of New Zealand?",
+  answers: [
+    { text: "Jacinda Ardern", isCorrect: true },
+    { text: "Bill English", isCorrect: false },
+    { text: "John Key", isCorrect: false },
+    { text: "Helen Clark", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "New Zealand",
+    leaderName: "Jacinda Ardern",
+    assumedOfficeDate: "October 26, 2017",
+    flag: "🇳🇿",
+    nationalBird: "Kiwi",
+    mostRecentAnnualGDP: "0.2 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 3. Papua New Guinea
+{
+  question: "Who is the leader of Papua New Guinea?",
+  answers: [
+    { text: "James Marape", isCorrect: true },
+    { text: "Peter O'Neill", isCorrect: false },
+    { text: "Michael Somare", isCorrect: false },
+    { text: "Julius Chan", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Papua New Guinea",
+    leaderName: "James Marape",
+    assumedOfficeDate: "May 30, 2019",
+    flag: "🇵🇬",
+    nationalBird: "Raggiana Bird-of-Paradise",
+    mostRecentAnnualGDP: "0.3 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 4. Fiji
+{
+  question: "Who is the leader of Fiji?",
+  answers: [
+    { text: "Frank Bainimarama", isCorrect: true },
+    { text: "Laisenia Qarase", isCorrect: false },
+    { text: "Mahendra Chaudhry", isCorrect: false },
+    { text: "Sitiveni Rabuka", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Fiji",
+    leaderName: "Frank Bainimarama",
+    assumedOfficeDate: "December 5, 2006",
+    flag: "🇫🇯",
+    nationalBird: "Fiji Wattled Honeyeater",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 5. Solomon Islands
+{
+  question: "Who is the leader of Solomon Islands?",
+  answers: [
+    { text: "Manasseh Sogavare", isCorrect: true },
+    { text: "Rick Houenipwela", isCorrect: false },
+    { text: "Gordon Darcy Lilo", isCorrect: false },
+    { text: "Danny Philip", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Solomon Islands",
+    leaderName: "Manasseh Sogavare",
+    assumedOfficeDate: "April 24, 2019",
+    flag: "🇸🇧",
+    nationalBird: "Collared Kingfisher",
+    mostRecentAnnualGDP: "0.01 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 6. Vanuatu
+{
+  question: "Who is the leader of Vanuatu?",
+  answers: [
+    { text: "Bob Loughman", isCorrect: true },
+    { text: "Charlot Salwai", isCorrect: false },
+    { text: "Joe Natuman", isCorrect: false },
+    { text: "Sato Kilman", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Vanuatu",
+    leaderName: "Bob Loughman",
+    assumedOfficeDate: "April 20, 2020",
+    flag: "🇻🇺",
+    nationalBird: "Vanuatu Kingfisher",
+    mostRecentAnnualGDP: "0.01 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 7. Samoa
+{
+  question: "Who is the leader of Samoa?",
+  answers: [
+    { text: "Fiame Naomi Mata'afa", isCorrect: true },
+    { text: "Tuilaepa Sa'ilele Malielegaoi", isCorrect: false },
+    { text: "Tofilau Eti Alesana", isCorrect: false },
+    { text: "Malietoa Tanumafili II", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Samoa",
+    leaderName: "Fiame Naomi Mata'afa",
+    assumedOfficeDate: "May 24, 2021",
+    flag: "🇼🇸",
+    nationalBird: "Samoa Flycatcher",
+    mostRecentAnnualGDP: "0.1 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 8. Tonga
+{
+  question: "Who is the leader of Tonga?",
+  answers: [
+    { text: "Pohiva Tu'i'onetoa", isCorrect: true },
+    { text: "Akilisi Pohiva", isCorrect: false },
+    { text: "Feleti Sevele", isCorrect: false },
+    { text: "Prince Tu'ipelehake", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Tonga",
+    leaderName: "Pohiva Tu'i'onetoa",
+    assumedOfficeDate: "September 27, 2019",
+    flag: "🇹🇴",
+    nationalBird: "Red-breasted Paradise Kingfisher",
+    mostRecentAnnualGDP: "0.01 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 9. Tuvalu
+{
+  question: "Who is the leader of Tuvalu?",
+  answers: [
+    { text: "Kausea Natano", isCorrect: true },
+    { text: "Enele Sopoaga", isCorrect: false },
+    { text: "Apisai Ielemia", isCorrect: false },
+    { text: "Tomasi Puapua", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Tuvalu",
+    leaderName: "Kausea Natano",
+    assumedOfficeDate: "September 19, 2019",
+    flag: "🇹🇻",
+    nationalBird: "Tuvalu Pigeon",
+    mostRecentAnnualGDP: "0.001 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+},
+
+// 10. Nauru
+{
+  question: "Who is the leader of Nauru?",
+  answers: [
+    { text: "Lionel Aingimea", isCorrect: true },
+    { text: "Baron Waqa", isCorrect: false },
+    { text: "Sprent Dabwido", isCorrect: false },
+    { text: "Marcus Stephen", isCorrect: false }
+  ],
+  countryDetails: {
+    countryName: "Nauru",
+    leaderName: "Lionel Aingimea",
+    assumedOfficeDate: "August 27, 2019",
+    flag: "🇳🇷",
+    nationalBird: "Nauru Reed Warbler",
+    mostRecentAnnualGDP: "0.001 trillion USD",
+    globalRegion: "Oceania",
+    countryImage: "",
+    pronunciationLink: ""
+  }
+}
+];

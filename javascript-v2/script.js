@@ -6,8 +6,7 @@
 // phase 2 - add shuffle functionality to the answers
 
 import { ALL_COUNTRIES } from './countries.js'
-
-console.log(ALL_COUNTRIES)
+console.log(ALL_COUNTRIES.length)
 
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
@@ -36,51 +35,43 @@ let activeRegion = []
 //Array named activeStack which will house a set of countries a user will see during the game.  generated in click region function
 
 let activeStack = []
-
-
-const clickRegion = (btn) => {
-  //should rename clickRegion function.
-  //console.log(`start of click region func`)
-
-  regionBtnEls.forEach((el) => {
-    el.classList.remove('clicked');
-    activeRegion = ['']
-    // i tried this but it added one to the active stack activeStack = ['']
-
-    //console.log(`active region reset`)
-  });
-  btn.classList.add('clicked');
-  activeRegion = [btn.textContent];
-  console.log(`active region is ${activeRegion}`)
-  // console.log(`num questions is ${numQuestions}
-  // start buildActiveStreak`)
-  errorMsgEl.style.display = 'none'
-  buildActiveStack()  
-};
+let currentCard = []
+let correctChoice = []
 
 //defines the 3 views of the game
 const menu = document.querySelector('.main-menu')
 const card = document.querySelector('.card-view')
 const results = document.querySelector('.results')
 
-
 // Cached element references
 
-// note if this number is larger than the number of items in the imported region, you are left with an array containing undefined objects.  
-const numQuestionMax = 10
-
 let numQuestions = 10
-// something like this, in a function.  if (ALL_COUNTRIES.length < numQuestionMax) {return nummQuestions = numQuestionMax} else {return numQuestions = ALL_COUNTRIES.length}
+// note numQuesrions must be less or equal than the number of datapoints in that region.
 
-// function to shuffle the array of the imported region.  this works by randomly finding two items in the array, then swapping their position.  Linear complexity.  Taken from Chat GPT.
+// function to shuffle the array of the imported region from Chat GPT.
+const clickRegion = (btn) => {
+  activeStack = []
+  regionBtnEls.forEach((el) => {
+    el.classList.remove('clicked');
+    activeRegion = []
+    //console.log(`active region reset`)
+  });
+  btn.classList.add('clicked');
+  activeRegion = [btn.textContent];
+  console.log(`active region is ${activeRegion}`)
+  // console.log(`num questions is ${numQuestions}
+  // start buildActiveStack`)
+  errorMsgEl.style.display = 'none'
+  
+  buildActiveStack()  
+};
+
 const shuffleArray = (array) =>{
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
-let currentCard = []
-let correctChoice = []
 
 const findCorrect = (card) => {
   for (let i = 0; i < card.answers.length; i++){
@@ -88,17 +79,18 @@ const findCorrect = (card) => {
     correctChoice = card.answers[i].text
     }
   }
-  console.log(`end of find correct loop, answer: ${correctChoice}`)
+  //console.log(`findCorrect loop end, correct choice answer: ${correctChoice}`)
   return {correctChoice}
   }
 
 const buildActiveStack = () => {
-  //This will iterate up to the length of ALL_COUNTRIES if it's longer than numQuestions, or numQuestions otherwise
-  for (let i = 0; i < ( numQuestions
-    || ALL_COUNTRIES.length ); i++) {
+  console.log(`start build active stack func. region is ${activeRegion}`)
+  activeStack = []
+
+  for (let i = 0; i < ALL_COUNTRIES.length; i++) {
     if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
     activeStack.push(ALL_COUNTRIES[i]);
-    //console.log(`Pushed one item into active stack: ${ALL_COUNTRIES[i].countryDetails.globalRegion}`);
+    console.log(`Pushed one item into active stack: ${ALL_COUNTRIES[i].countryDetails.countryName}`);
     }
     //console.log(`Active stack after loop is:`, activeStack);
   };
@@ -129,10 +121,11 @@ const render = (state) => {
 }
 // // Step 3 - Initialize the game state and renders the menu
 const init = () => {
-  let winner = false
   let counter = 0
-  let region = null
-  
+  activeRegion = []
+  activeStack = []
+  currentCard = []
+  correctChoice = []
   console.log(`init func`)
 }
 init()
@@ -180,7 +173,6 @@ const changeColor =() =>{
   })
 }
 
-
 const colorReset =() => {
   answerBtnEls.forEach((answer) => {
     if (answer.innerHTML===correctChoice) {
@@ -189,6 +181,7 @@ const colorReset =() => {
       answer.classList.remove(`wrong`);
     }
   })
+  
   console.log(`color reset func`)
 } 
 
