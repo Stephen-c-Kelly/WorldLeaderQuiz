@@ -8,6 +8,10 @@
 import { ALL_COUNTRIES } from './countries.js'
 console.log(ALL_COUNTRIES.length)
 
+
+// Event listeners
+const regionEl = document.querySelector('.region-btn');
+// dup of regionBtnEls, consider removing
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
 const closeBtnEl = document.querySelector('.close-btn')
@@ -101,11 +105,8 @@ const buildActiveStack = () => {
   return {currentCard, correctChoice} 
 }
 
-// Event listeners
-const regionEl = document.querySelector('.region-btn');
-
 const hide = (state) => { state.style.display = 'none'}
-const show = (state) => { state.style.display = 'flex'}
+const show = (state) => { state.style.display = 'grid'}
 
 const render = (state) => {
   state === menu
@@ -145,8 +146,7 @@ const seeMenu = () => {
 const playGame = () => {
   if (activeRegion.length == 0){
     errorMsgEl.style.display = 'block'
-  }
-  else {
+  } else {
   questionEl.textContent = `${currentCard.countryDetails.flag} ${currentCard.question} ${currentCard.countryDetails.flag}`;
   answer1El.textContent = `${currentCard.answers[0].text}`;
   answer2El.textContent = `${currentCard.answers[1].text}`;
@@ -156,7 +156,7 @@ const playGame = () => {
   console.log(`play Game func`)
 }
 }
-const answerBtnEls = document.querySelectorAll('.answers button');
+const answerBtnEls = document.querySelectorAll('.answers-grid button');
 const answer1El = document.querySelector('#btn1')
 const answer2El = document.querySelector('#btn2')
 const answer3El = document.querySelector('#btn3')
@@ -238,8 +238,8 @@ const seeNext = () => {
     percentageCorrectEl.innerHTML = `${result}%`
     // console.log(percentageCorrectEl.innerHTML)
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
-      winLoseEl.innerHTML = `You Win!`    }
-    else {winLoseEl.innerHTML = `Try Again`}
+      winLoseEl.innerHTML = `🌎 You Win! 🌎`    }
+    else {winLoseEl.innerHTML = `🌎 Try Again 🌎`}
     }
   else {
   playGame()
