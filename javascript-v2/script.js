@@ -105,7 +105,7 @@ const buildActiveStack = () => {
 const regionEl = document.querySelector('.region-btn');
 
 const hide = (state) => { state.style.display = 'none'}
-const show = (state) => { state.style.display = 'block'}
+const show = (state) => { state.style.display = 'flex'}
 
 const render = (state) => {
   state === menu

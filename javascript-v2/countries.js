@@ -1108,7 +1108,7 @@ export const ALL_COUNTRIES = [
   countryImage: "",
   pronunciationLink: ""
   }
-  }
+  },
 
 // 2. Argentina
 {
@@ -1761,7 +1761,7 @@ export const ALL_COUNTRIES = [
   ],
   countryDetails: {
     countryName: "Egypt",
-    leaderName: "Abdel Fattah el-Sisi",
+    leaderName: "Abdel Fattah el-Sissi",
     assumedOfficeDate: "June 8, 2014",
     flag: "🇪🇬",
     nationalBird: "Egyptian Vulture",
