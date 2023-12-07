@@ -248,6 +248,7 @@ const seeNext = () => {
   if (activeStack.length == 0) {
     console.log(`stack is empty, go to results`)
     render(results)
+    
     countCorrectEl.innerHTML = counter
     totalCountEl.innerHTML = numQuestions
     let result = Math.round((counter/numQuestions)*100) 
@@ -288,5 +289,7 @@ function applyStyles(element, styles) {
   color: 'var(--greyscale)',
   cursor: 'pointer',
   }
+
+  
 
 
