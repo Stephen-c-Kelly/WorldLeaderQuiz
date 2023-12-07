@@ -17,6 +17,7 @@ const playAgainEl = document.querySelector('.play-again')
 const closeBtnEl = document.querySelector('.close-btn')
 const questionEl = document.querySelector('.country-name')
 const nextEl = document.querySelector(`.next`)
+const nextBtnEl = document.querySelector(`.next-btn`)
 const countCorrectEl = document.querySelector('#count')
 const totalCountEl = document.querySelector('#total')
 const percentageCorrectEl = document.querySelector('#percentage-correct')
@@ -61,6 +62,7 @@ const clickRegion = (btn) => {
     //console.log(`active region reset`)
   });
   btn.classList.add('clicked');
+  applyStyles(playEl, customBtnStyles)
   activeRegion = [btn.textContent];
   console.log(`active region is ${activeRegion}`)
   // console.log(`num questions is ${numQuestions}
@@ -132,16 +134,28 @@ const seeMenu = () => {
   // answerBtnEls.style.display
   render(menu)
   counter = 0
+  answerBtnEls.forEach((el) => {
+    el.classList.remove('correct')
+    el.classList.remove('wrong')
+  })
+  // answerBtnEls.classList.remove('correct')
+  // answerBtnEls.classList.remove('wrong')
   init()
   colorReset()
   regionBtnEls.forEach((el) => {
     el.classList.remove('clicked');
+    console.log(`removed clicked from region buttons`)
     activeRegion = []
-    //console.log(`active region reset`)
+    console.log(`active region reset, removed clicked list`)
   });
   console.log('see menu func')
   //console.log(activeStack.length, activeStack[0], activeStack[1])
 }
+
+const resetButtons = () => {
+
+}
+
 
 const playGame = () => {
   if (activeRegion.length == 0){
@@ -167,6 +181,7 @@ const rightAnswer = () => {
   //console.log(`the count is ${counter}`)
 }
 
+// changes color for right and wrong answers
 const changeColor =() =>{
   answerBtnEls.forEach((answer) => {
     if (answer.innerHTML===correctChoice) {
@@ -175,6 +190,7 @@ const changeColor =() =>{
       answer.classList.add(`wrong`);
     }
   })
+  applyStyles(nextBtnEl, customBtnStyles)
 }
 
 const colorReset =() => {
@@ -238,7 +254,7 @@ const seeNext = () => {
     percentageCorrectEl.innerHTML = `${result}%`
     // console.log(percentageCorrectEl.innerHTML)
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
-      winLoseEl.innerHTML = `🌎 You Win! 🌎`    }
+      winLoseEl.innerHTML = `🥳🥳🥳 You Win! 🥳🥳🥳`    }
     else {winLoseEl.innerHTML = `🌎 Try Again 🌎`}
     }
   else {
@@ -259,5 +275,19 @@ answer1El.addEventListener('click', checkAnswer)
 answer2El.addEventListener('click', checkAnswer)
 answer3El.addEventListener('click', checkAnswer)
 answer4El.addEventListener('click', checkAnswer)
+
+function applyStyles(element, styles) {
+  for (const [property, value] of Object.entries(styles)) {
+    element.style[property] = value;
+  }
+}
+
+const customBtnStyles = {
+border: '4px solid var(--green-accent3)',
+borderRadius: '10px',
+backgroundColor: 'var(--green-accent3)',
+color: 'var(--greyscale)',
+cursor: 'pointer',
+}
 
 
