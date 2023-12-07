@@ -241,7 +241,7 @@ else {
 console.log(`current card is now ${currentCard.question} and first answer: ${currentCard.answers[0].text}`)
 }
 console.log(`end of nextQuestion function`)
-}
+} 
 const seeNext = () => {
   colorReset()
   nextQuestion()
@@ -281,13 +281,12 @@ function applyStyles(element, styles) {
     element.style[property] = value;
   }
 }
-
-const customBtnStyles = {
-border: '4px solid var(--green-accent3)',
-borderRadius: '10px',
-backgroundColor: 'var(--green-accent3)',
-color: 'var(--greyscale)',
-cursor: 'pointer',
-}
+  const customBtnStyles = {
+  border: '4px solid var(--green-accent3)',
+  borderRadius: '10px',
+  backgroundColor: 'var(--green-accent3)',
+  color: 'var(--greyscale)',
+  cursor: 'pointer',
+  }
 
 
