@@ -1,18 +1,13 @@
 
 :root{
   --brand-color: #E3120B;
-  --green-accent1: #386641;
-  --green-accent2: #6A994E;
   --green-accent3: #386641;
   --green-accent4:#D6DBF5;
   --off-black: #1A1A1A;
   --greyscale:#F2F2F2;
-  --red-color: #BC4749;
-  --off-red:  #b7696a;
   --green-color: #386641;
   --off-green-color: #3866418a;
 }
-
 body {
   display: flex;
   font-family: 'Merriweather Sans', sans-serif;
@@ -151,20 +146,6 @@ button.clicked {
   font-weight: 600;
   transition: background-color .17s ease,color .17s ease;
 }
-/* 
-border: 4px solid var(--green-accent3);
-border-radius: 10px;
-background-color: var(--green-accent3);
-color: var(--greyscale);
-cursor: pointer;
- */
-
-/* 
-border: 4px solid var(--green-accent2);
-border-radius: 10px;
-background-color: var(--green-accent3);
-cursor: pointer;
- */
 
 .region-buttons {
   display: grid;
@@ -207,6 +188,8 @@ h2 {
 }
 
 .results {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 25%;
   height: 400px;
