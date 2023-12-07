@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   <script src="/javascript-v2/script.js" type="module"></script>
   <script src="/javascript-v2/countries.js" type="module"></script>
@@ -16,9 +16,12 @@
   <title>World Leader Quiz by Stephen Kelly</title>
 </head>
 <body> 
+<main>
   <div class="main-menu">
       <h1>🌎 World Leader Quiz 🌎</h1>
       <div class="intro-paragraph">
+      <p>Welcome to World Leader Quiz! Select a region and click play to start the game</p>
+      </br>
       <p id="p1">Welcome to World Leader Quiz! Select a region and click <strong>Play</strong> to start the game</p>
       </br>
       </div>
@@ -31,10 +34,9 @@
       <button class = "region-btn" id = "oceania">Oceania</button>
     </div>
       </br>
-      </br>
     <div class="div-play"> <button class = "play-btn">Play</button></div>
     <div class="error-message">
-      <p>Please select a region</p>
+      <p>Error: Please select a region</p>
     </div>
 
   </div>
@@ -61,5 +63,6 @@
     <button class="play-again">Play Again</button>
 
   </div>
+</main>
 </body>
 </html>
