@@ -1088,27 +1088,27 @@ export const ALL_COUNTRIES = [
 },
 // ----------------- South America -------------------
 
-// 1. Brazil
+// 1. Brazil with updated leader information
 {
   question: "Who is the leader of Brazil?",
   answers: [
-    { text: "Jair Bolsonaro", isCorrect: true },
-    { text: "Dilma Rousseff", isCorrect: false },
-    { text: "Michel Temer", isCorrect: false },
-    { text: "Luiz Inácio Lula da Silva", isCorrect: false }
+  { text: "Jair Bolsonaro", isCorrect: false },
+  { text: "Dilma Rousseff", isCorrect: false },
+  { text: "Michel Temer", isCorrect: false },
+  { text: "Luiz Inácio Lula da Silva", isCorrect: true }
   ],
   countryDetails: {
-    countryName: "Brazil",
-    leaderName: "Jair Bolsonaro",
-    assumedOfficeDate: "January 1, 2019",
-    flag: "🇧🇷",
-    nationalBird: "Saffron Finch",
-    mostRecentAnnualGDP: "1.4 trillion USD",
-    globalRegion: "South America",
-    countryImage: "",
-    pronunciationLink: ""
+  countryName: "Brazil",
+  leaderName: "Luiz Inácio Lula da Silva",
+  assumedOfficeDate: "January 1, 2023",
+  flag: "🇧🇷",
+  nationalBird: "Saffron Finch",
+  mostRecentAnnualGDP: "1.4 trillion USD",
+  globalRegion: "South America",
+  countryImage: "",
+  pronunciationLink: ""
   }
-},
+  }
 
 // 2. Argentina
 {

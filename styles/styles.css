@@ -16,9 +16,6 @@
 body {
   font-family: 'Merriweather Sans', sans-serif;
   height: 100vh;
-  margin-left: 60px;
-  margin-right: 60px;
-  display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
@@ -27,6 +24,8 @@ body {
 main {
   position: relative;
   width: 800px;
+  margin-left: 60px;
+  margin-right: 60px;
   min-height: auto;
   max-width: 80%;
   background-color: var(--greyscale);
@@ -35,7 +34,7 @@ main {
   border-style: solid;
   border-color: #2E45B8;
   box-shadow: 0 0 5px 2px;
-  top: -34px;
+  margin-top: 40px;
 }
 
 h1 {
@@ -62,7 +61,7 @@ p {
 }
 
 .error-message {
-  display: flex;
+  display: none;
   justify-content: center; 
   align-items: center; 
   font-weight:600;
@@ -99,6 +98,10 @@ button:hover {
   margin: 20px 0;
 }
 
+.region-btn.clicked {
+  background-color: var(--blue-accent1);
+}
+
 .div-play {
   
   display: flex;
@@ -120,6 +123,8 @@ button:hover {
 button:hover {
   background-color: var(--blue-accent1);
 }
+
+
 
 /* 
 button {

@@ -85,8 +85,6 @@ const findCorrect = (card) => {
 const buildActiveStack = () => {
   //console.log(`start build active stack func. region is ${activeRegion}`)
   activeStack = []
-
-  // ALL_COUNTRIES.length
   for (let i = 0; i < ALL_COUNTRIES.length; i++) {
     if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
     activeStack.push(ALL_COUNTRIES[i]);
