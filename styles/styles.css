@@ -47,7 +47,7 @@ h1 {
 
 .intro-paragraph {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   margin-left: 40px;
 }
