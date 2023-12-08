@@ -56,8 +56,6 @@ Find all Wireframes here - https://excalidraw.com/#json=MXWTkjL3lbrfMbya_BzEa,S0
 ![Select a Region](images/Screenshots/main-menu.png)
 
 
-
-
 #### MVP Goals
 
 As a player...
