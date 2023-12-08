@@ -133,7 +133,6 @@ export const ALL_COUNTRIES = [
     pronunciationLink: ""
   }
 },
-
 // 8. Switzerland
 {
   question: "Who is the leader of Switzerland?",
@@ -141,7 +140,7 @@ export const ALL_COUNTRIES = [
     { text: "Mario Draghi", isCorrect: false },
     { text: "Guy Parmelin", isCorrect: true },
     { text: "Boris Johnson", isCorrect: false },
-    { text: "Emmanuel Macron", isCorrect: false },
+    { text: "Emmanuel Macron", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Switzerland",
@@ -161,7 +160,7 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of Sweden?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
-    { text: "Stefan Löfven", isCorrect: true }
+    { text: "Stefan Löfven", isCorrect: true },
     { text: "Vladimir Putin", isCorrect: false },
     { text: "Guy Parmelin", isCorrect: false },
   ],
