@@ -27,7 +27,7 @@ let activeRegion = []
 let activeStack = []
 let currentCard = []
 let correctChoice = []
-let numQuestions = 4
+let numQuestions = 6
 
 const clickRegion = (btn) => {
   activeStack = []
