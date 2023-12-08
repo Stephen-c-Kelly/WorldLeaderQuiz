@@ -1,5 +1,4 @@
 import { ALL_COUNTRIES } from './countries.js'
-console.log(ALL_COUNTRIES.length)
 
 // Event listeners
 const playEl = document.querySelector('.play-btn');
@@ -18,7 +17,6 @@ const menu = document.querySelector('.main-menu')
 const card = document.querySelector('.card-view')
 const results = document.querySelector('.results')
 
-
 // Constant Variables
 let board = null
 let counter = 0
@@ -28,7 +26,9 @@ let activeStack = []
 let currentCard = []
 let correctChoice = []
 let numQuestions = 6
+let currentAnswers = []
 
+// Functions
 const clickRegion = (btn) => {
   activeStack = []
   regionBtnEls.forEach((el) => {
@@ -38,18 +38,19 @@ const clickRegion = (btn) => {
   btn.classList.add('clicked')
   applyStyles(playEl, customBtnStyles)
   activeRegion = [btn.textContent]
-  console.log(`active region is ${activeRegion}`)
   errorMsgEl.style.display = 'none'
   buildActiveStack()  
 };
 
-// Fisher-Yates shuffle 
 const shuffleArray = (array) =>{
+  const shuffledArray = [...array];
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+  return shuffledArray
 }
+
 const findCorrect = (card) => {
   for (let i = 0; i < card.answers.length; i++){
     if (card.answers[i].isCorrect === true) {
@@ -64,13 +65,12 @@ const buildActiveStack = () => {
   for (let i = 0; i < ALL_COUNTRIES.length; i++) {
     if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
     activeStack.push(ALL_COUNTRIES[i]);
-    console.log(`Pushed one item into active stack: ${ALL_COUNTRIES[i].countryDetails.countryName}`);
     }
   };
-  shuffleArray(activeStack);
+  shuffleArray(activeStack)
   activeStack = activeStack.slice(0,numQuestions)
-  currentCard = activeStack[0];
-  findCorrect(currentCard);
+  currentCard = activeStack[0]
+  findCorrect(currentCard)
   return {currentCard, correctChoice} 
 }
 
@@ -114,14 +114,12 @@ const seeMenu = () => {
   });
 }
 
-const resetButtons = () => {
-}
-
 const playGame = () => {
   if (activeRegion.length == 0){
     errorMsgEl.style.display = 'block'
   } else {
   questionEl.innerHTML = `<span class="country-flag">${currentCard.countryDetails.flag}</span>&nbsp;  ${currentCard.question} &nbsp; <span class="country-flag">${currentCard.countryDetails.flag}</span>`;
+
   answer1El.textContent = `${currentCard.answers[0].text}`;
   answer2El.textContent = `${currentCard.answers[1].text}`;
   answer3El.textContent = `${currentCard.answers[2].text}`;
@@ -163,7 +161,6 @@ const checkAnswer = (btn) => {
   let selectedAnswer = btn.target.innerHTML 
   if (selectedAnswer === correctChoice) {
     rightAnswer ()
-    console.log(counter)
   } 
   changeColor()
 }

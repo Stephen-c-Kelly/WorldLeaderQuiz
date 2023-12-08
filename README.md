@@ -17,6 +17,8 @@ Deployed Website: https://world-leader-quiz.netlify.app/
 
 GitHub Repo: https://github.com/Stephen-c-Kelly/WorldLeaderQuiz/blob/main/README.md
 
+
+
 #### How to Play
 Select a Region from the Main Menu
 ![Select a Region](images/Screenshots/1-main-menu.png)
@@ -49,6 +51,11 @@ As a player...
 - I'd like to integrate a 'countdown' option with a  countdown clock.
 - I'd like to integrate a 'hard' option to make the 3 incorrect choices more difficult (maybe they can be the names of the country's former leader, or they can be other notable figures from that country).
 - I'd like to include links to YouTube videos showing how to pronounce each leader's name.
+
+#### Phase 2
+- Update CSS, improve responsive behavior
+- Implement answer randomization
+
 
 
 #### Timeline - Daily Accountability
