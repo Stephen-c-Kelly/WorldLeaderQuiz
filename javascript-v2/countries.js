@@ -1,6 +1,5 @@
 // 12.2 export data from chatGPT - https://chat.openai.com/share/1dc2e9b7-1cc6-4003-b371-928c6c544f3d.  Data was cross referenced with Bard Ai on 12.8
 
-
 export const ALL_COUNTRIES = [
   // 2. France
   {
