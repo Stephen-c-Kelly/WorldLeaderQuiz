@@ -1,3 +1,4 @@
+
 import { ALL_COUNTRIES } from './countries.js'
 
 // Event listeners
@@ -44,6 +45,8 @@ const clickRegion = (btn) => {
   buildActiveStack()  
 };
 
+
+
 const shuffleArray = (array) =>{
   const shuffledArray = [...array];
   for (let i = array.length - 1; i > 0; i--) {
@@ -62,15 +65,7 @@ const findCorrect = (card) => {
   return {correctChoice}
 }
 
-const buildActiveStack = () => {
-  activeStack = []
-  checkRegion()
-  shuffleArray(activeStack)
-  activeStack = activeStack.slice(0,numQuestions)
-  currentCard = activeStack[0]
-  findCorrect(currentCard)
-  return {currentCard, correctChoice} 
-}
+
 
 const checkRegion = () => {
   for (let i = 0; i < ALL_COUNTRIES.length; i++) {
@@ -83,6 +78,7 @@ const checkRegion = () => {
 const hide = (state) => { 
   state.style.display = 'none'
 }
+
 const show = (state) => { 
   state.style.display = 'grid'
 }
@@ -103,7 +99,17 @@ const init = () => {
   activeStack = []
   currentCard = []
   correctChoice = []
-  applyStyles(playEl, customBtnStylesReset)
+  applyStyles(playEl, resetCustomBtnStyles)
+}
+
+const buildActiveStack = () => {
+  activeStack = []
+  checkRegion()
+  shuffleArray(activeStack)
+  activeStack = activeStack.slice(0,numQuestions)
+  currentCard = activeStack[0]
+  findCorrect(currentCard)
+  return {currentCard, correctChoice} 
 }
 
 const playGame = () => {
@@ -135,7 +141,8 @@ const seeMenu = () => {
     el.classList.remove('clicked');
     activeRegion = []
   });
-  applyStyles(customBtnStylesOff)
+  applyStyles(playEl, resetCustomBtnStyles)
+
 }
 
 const changeColor =() =>{
@@ -148,6 +155,8 @@ const changeColor =() =>{
   })
   applyStyles(nextBtnEl, customBtnStyles)
 }
+
+
 
 const colorReset =() => {
   answerBtnEls.forEach((answer) => {
@@ -195,6 +204,7 @@ function applyStyles(element, styles) {
     element.style[property] = value;
   }
 }
+
 const customBtnStyles = {
   border: '4px solid var(--off-black)',
   borderRadius: '10px',
@@ -203,9 +213,12 @@ const customBtnStyles = {
   cursor: 'pointer',
 }
 
-const customBtnStylesReset = {
-  backgroundColor: 'var)--greyscale)',
-  color: 'var(--off-black)',
+const resetCustomBtnStyles = {
+  border: '',
+  borderRadius: '',
+  backgroundColor: '',
+  color: '',
+  cursor: '',
 }
 
 // Click Events
