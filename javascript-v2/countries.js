@@ -155,7 +155,7 @@ export const ALL_COUNTRIES = [
   }
 },
 
-// 9. Sweden
+// 9. Sweeden.
 {
   question: "Who is the leader of Sweden?",
   answers: [
