@@ -53,8 +53,12 @@ https://imgur.com/a/vM4LRJ1
 Find all Wireframes here - https://excalidraw.com/#json=MXWTkjL3lbrfMbya_BzEa,S0ZUIiUWM70UJSmmToyYNg 
 
 #### How to Play
-![Select a Region](images/Screenshots/main-menu.png)
+Main Menu
+![Select a Region](images/Screenshots/1-main-menu.png)
+![Country Card](images/Screenshots/2-country-card.png)
+![Results Screen](images/Screenshots/3-results-screen.png)
 
+Main Menu with Region Selected
 
 #### MVP Goals
 
