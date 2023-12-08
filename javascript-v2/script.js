@@ -1,5 +1,4 @@
 import { ALL_COUNTRIES } from './countries.js'
-console.log(ALL_COUNTRIES.length)
 
 // Event listeners
 const playEl = document.querySelector('.play-btn');
