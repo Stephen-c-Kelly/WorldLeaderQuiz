@@ -186,7 +186,7 @@ const seeNext = () => {
     percentageCorrectEl.innerHTML = `${result}%`
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
       winLoseEl.innerHTML = `🥳🥳🥳&nbsp;You Win!&nbsp; 🥳🥳🥳`}
-    else {winLoseEl.innerHTML = `🌎 &nbsp;Try Again &nbsp;🌎`}
+    else {winLoseEl.innerHTML = `🌎 Try Again 🌎`}
   } else {
     playGame()
   }
