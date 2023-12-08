@@ -760,14 +760,14 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of the Philippines?",
   answers: [
     { text: "Rodrigo Duterte", isCorrect: true },
-    { text: "Benigno Aquino III", isCorrect: false },
+    { text: "Bongbong Marcos", isCorrect: false },
     { text: "Gloria Macapagal-Arroyo", isCorrect: false },
     { text: "Joseph Estrada", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Philippines",
-    leaderName: "Rodrigo Duterte",
-    assumedOfficeDate: "June 30, 2016",
+    leaderName: "Bongbong Marcos",
+    assumedOfficeDate: "June 30, 2022",
     flag: "🇵🇭",
     nationalBird: "Philippine Eagle",
     mostRecentAnnualGDP: "0.4 trillion USD",
