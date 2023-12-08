@@ -16,17 +16,19 @@ const errorMsgEl = document.querySelector(`.error-message`)
 const menu = document.querySelector('.main-menu')
 const card = document.querySelector('.card-view')
 const results = document.querySelector('.results')
+const answerBtnEls = document.querySelectorAll('.answers-grid button');
+const answer1El = document.querySelector('#btn1')
+const answer2El = document.querySelector('#btn2')
+const answer3El = document.querySelector('#btn3')
+const answer4El = document.querySelector('#btn4')
 
 // Constant Variables
-let board = null
 let counter = 0
-let winner = false
 let activeRegion = []
 let activeStack = []
 let currentCard = []
 let correctChoice = []
 let numQuestions = 6
-let currentAnswers = []
 
 // Functions
 const clickRegion = (btn) => {
@@ -62,16 +64,20 @@ const findCorrect = (card) => {
 
 const buildActiveStack = () => {
   activeStack = []
-  for (let i = 0; i < ALL_COUNTRIES.length; i++) {
-    if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
-    activeStack.push(ALL_COUNTRIES[i]);
-    }
-  };
+  checkRegion()
   shuffleArray(activeStack)
   activeStack = activeStack.slice(0,numQuestions)
   currentCard = activeStack[0]
   findCorrect(currentCard)
   return {currentCard, correctChoice} 
+}
+
+const checkRegion = () => {
+  for (let i = 0; i < ALL_COUNTRIES.length; i++) {
+    if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
+    activeStack.push(ALL_COUNTRIES[i]);
+    }
+  };
 }
 
 const hide = (state) => { 
@@ -97,6 +103,23 @@ const init = () => {
   activeStack = []
   currentCard = []
   correctChoice = []
+  applyStyles(playEl, customBtnStylesReset)
+}
+
+const playGame = () => {
+  if (activeRegion.length == 0){
+    errorMsgEl.style.display = 'block'
+  } else {
+  questionEl.innerHTML = `<span class="country-flag">${currentCard.countryDetails.flag}</span>&nbsp;  ${currentCard.question} &nbsp; <span class="country-flag">${currentCard.countryDetails.flag}</span>`;
+  answer1El.textContent = `${currentCard.answers[0].text}`;
+  answer2El.textContent = `${currentCard.answers[1].text}`;
+  answer3El.textContent = `${currentCard.answers[2].text}`;
+  answer4El.textContent = `${currentCard.answers[3].text}`;
+  render(card)
+}}
+
+  const rightAnswer = () => {
+  counter += 1
 }
 
 const seeMenu = () => { 
@@ -112,28 +135,7 @@ const seeMenu = () => {
     el.classList.remove('clicked');
     activeRegion = []
   });
-}
-
-const playGame = () => {
-  if (activeRegion.length == 0){
-    errorMsgEl.style.display = 'block'
-  } else {
-  questionEl.innerHTML = `<span class="country-flag">${currentCard.countryDetails.flag}</span>&nbsp;  ${currentCard.question} &nbsp; <span class="country-flag">${currentCard.countryDetails.flag}</span>`;
-
-  answer1El.textContent = `${currentCard.answers[0].text}`;
-  answer2El.textContent = `${currentCard.answers[1].text}`;
-  answer3El.textContent = `${currentCard.answers[2].text}`;
-  answer4El.textContent = `${currentCard.answers[3].text}`;
-  render(card)
-}}
-const answerBtnEls = document.querySelectorAll('.answers-grid button');
-const answer1El = document.querySelector('#btn1')
-const answer2El = document.querySelector('#btn2')
-const answer3El = document.querySelector('#btn3')
-const answer4El = document.querySelector('#btn4')
-
-const rightAnswer = () => {
-  counter += 1
+  applyStyles(customBtnStylesOff)
 }
 
 const changeColor =() =>{
@@ -167,13 +169,13 @@ const checkAnswer = (btn) => {
 
 const nextQuestion = () => {
  activeStack.shift()
- if (activeStack.length == 0) {
-  render(results)
-} else {
- currentCard = activeStack[0]
- findCorrect(currentCard)
-} } 
-const seeNext = () => {
+  if (activeStack.length == 0) {
+    render(results)
+  } else {
+  currentCard = activeStack[0]
+  findCorrect(currentCard)
+  } } 
+  const seeNext = () => {
   colorReset()
   nextQuestion()
   if (activeStack.length == 0) {   
@@ -184,11 +186,29 @@ const seeNext = () => {
     if (parseInt(percentageCorrectEl.innerHTML) > 60){
       winLoseEl.innerHTML = `🥳🥳🥳&nbsp;You Win!&nbsp; 🥳🥳🥳`}
     else {winLoseEl.innerHTML = `🌎 Try Again 🌎`}
-  } else {
-    playGame()
+  } else { playGame()
   }
 }
 
+function applyStyles(element, styles) {
+  for (const [property, value] of Object.entries(styles)) {
+    element.style[property] = value;
+  }
+}
+const customBtnStyles = {
+  border: '4px solid var(--off-black)',
+  borderRadius: '10px',
+  backgroundColor: 'var(--green-accent3)',
+  color: 'var(--greyscale)',
+  cursor: 'pointer',
+}
+
+const customBtnStylesReset = {
+  backgroundColor: 'var)--greyscale)',
+  color: 'var(--off-black)',
+}
+
+// Click Events
 playEl.addEventListener('click', playGame)
 playAgainEl.addEventListener('click', seeMenu)
 closeBtnEl.addEventListener('click', init)
@@ -202,19 +222,4 @@ regionBtnEls.forEach((btn) => {
   btn.addEventListener('click', () => clickRegion(btn));
 });
 
-function applyStyles(element, styles) {
-  for (const [property, value] of Object.entries(styles)) {
-    element.style[property] = value;
-  }
-}
-const customBtnStyles = {
-  border: '4px solid var(--green-accent3)',
-  borderRadius: '10px',
-  backgroundColor: 'var(--green-accent3)',
-  color: 'var(--greyscale)',
-  cursor: 'pointer',
-}
-
 init()
-
-
