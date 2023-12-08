@@ -29,8 +29,8 @@ export const ALL_COUNTRIES = [
     question: "Who is the leader of the United Kingdom?",
     answers: [
       { text: "Olaf Scholz", isCorrect: false },
-      { text: "Mark Rutte", isCorrect: false },
       { text: "Boris Johnson", isCorrect: true },
+      { text: "Mark Rutte", isCorrect: false },
       { text: "Mario Draghi", isCorrect: false }
     ],
     countryDetails: {
@@ -72,10 +72,10 @@ export const ALL_COUNTRIES = [
   {
     question: "Who is the leader of Spain?",
     answers: [
+      { text: "Pedro Sánchez", isCorrect: true },
       { text: "Guy Parmelin", isCorrect: false },
       { text: "Stefan Löfven", isCorrect: false },
       { text: "Angela Merkel", isCorrect: false },
-      { text: "Pedro Sánchez", isCorrect: true }
     ],
     countryDetails: {
       countryName: "Spain",
@@ -117,8 +117,8 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of the Netherlands?",
   answers: [
     { text: "Boris Johnson", isCorrect: false },
-    { text: "Angela Merkel", isCorrect: false },
     { text: "Mark Rutte", isCorrect: true },
+    { text: "Angela Merkel", isCorrect: false },
     { text: "Olaf Scholz", isCorrect: false }
   ],
   countryDetails: {
@@ -139,9 +139,9 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of Switzerland?",
   answers: [
     { text: "Mario Draghi", isCorrect: false },
+    { text: "Guy Parmelin", isCorrect: true },
     { text: "Boris Johnson", isCorrect: false },
     { text: "Emmanuel Macron", isCorrect: false },
-    { text: "Guy Parmelin", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Switzerland",
@@ -161,9 +161,9 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of Sweden?",
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
+    { text: "Stefan Löfven", isCorrect: true }
     { text: "Vladimir Putin", isCorrect: false },
     { text: "Guy Parmelin", isCorrect: false },
-    { text: "Stefan Löfven", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Sweden",
@@ -226,10 +226,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Portugal?",
   answers: [
+    { text: "António Costa", isCorrect: true },
     { text: "Boris Johnson", isCorrect: false },
     { text: "Guy Parmelin", isCorrect: false },
     { text: "Emmanuel Macron", isCorrect: false },
-    { text: "António Costa", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Portugal",
@@ -270,10 +270,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Denmark?",
   answers: [
-    { text: "Olaf Scholz", isCorrect: false },
     { text: "Mark Rutte", isCorrect: false },
+    { text: "Mette Frederiksen", isCorrect: true },
+    { text: "Olaf Scholz", isCorrect: false },
     { text: "Angela Merkel", isCorrect: false },
-    { text: "Mette Frederiksen", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Denmark",
@@ -314,10 +314,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Austria?",
   answers: [
+    { text: "Sebastian Kurz", isCorrect: true },
     { text: "Pedro Sánchez", isCorrect: false },
     { text: "Guy Parmelin", isCorrect: false },
     { text: "Stefan Löfven", isCorrect: false },
-    { text: "Sebastian Kurz", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Austria",
@@ -337,9 +337,9 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of Belgium?",
   answers: [
     { text: "Emmanuel Macron", isCorrect: false },
+    { text: "Alexander De Croo", isCorrect: true },
     { text: "Olaf Scholz", isCorrect: false },
     { text: "Mark Rutte", isCorrect: false },
-    { text: "Alexander De Croo", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Belgium",
@@ -534,10 +534,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Ukraine?",
   answers: [
-    { text: "Volodymyr Zelensky", isCorrect: true },
     { text: "Angela Merkel", isCorrect: false },
     { text: "Boris Johnson", isCorrect: false },
-    { text: "Emmanuel Macron", isCorrect: false }
+    { text: "Emmanuel Macron", isCorrect: false },
+    { text: "Volodymyr Zelensky", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Ukraine",
@@ -806,8 +806,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Canada?",
   answers: [
-    { text: "Justin Trudeau", isCorrect: true },
     { text: "Stephen Harper", isCorrect: false },
+    { text: "Justin Trudeau", isCorrect: true },
     { text: "Paul Martin", isCorrect: false },
     { text: "Jean Chrétien", isCorrect: false }
   ],
@@ -828,10 +828,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Mexico?",
   answers: [
-    { text: "Andrés Manuel López Obrador", isCorrect: true },
-    { text: "Enrique Peña Nieto", isCorrect: false },
+        { text: "Enrique Peña Nieto", isCorrect: false },
     { text: "Felipe Calderón", isCorrect: false },
-    { text: "Vicente Fox", isCorrect: false }
+    { text: "Vicente Fox", isCorrect: false },
+    { text: "Andrés Manuel López Obrador", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Mexico",
@@ -850,8 +850,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Guatemala?",
   answers: [
-    { text: "Alejandro Giammattei", isCorrect: true },
     { text: "Jimmy Morales", isCorrect: false },
+    { text: "Alejandro Giammattei", isCorrect: true },
     { text: "Otto Pérez Molina", isCorrect: false },
     { text: "Alvaro Colom", isCorrect: false }
   ],
@@ -894,9 +894,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of El Salvador?",
   answers: [
-    { text: "Nayib Bukele", isCorrect: true },
     { text: "Salvador Sánchez Cerén", isCorrect: false },
     { text: "Mauricio Funes", isCorrect: false },
+
+    { text: "Nayib Bukele", isCorrect: true },
     { text: "Elías Antonio Saca", isCorrect: false }
   ],
   countryDetails: {
@@ -916,9 +917,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Nicaragua?",
   answers: [
-    { text: "Daniel Ortega", isCorrect: true },
     { text: "Enrique Bolaños", isCorrect: false },
     { text: "Arnoldo Alemán", isCorrect: false },
+    { text: "Daniel Ortega", isCorrect: true },
     { text: "Violeta Chamorro", isCorrect: false }
   ],
   countryDetails: {
@@ -960,8 +961,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Panama?",
   answers: [
-    { text: "Laurentino Cortizo", isCorrect: true },
     { text: "Juan Carlos Varela", isCorrect: false },
+    { text: "Laurentino Cortizo", isCorrect: true },
     { text: "Ricardo Martinelli", isCorrect: false },
     { text: "Martín Torrijos", isCorrect: false }
   ],
@@ -1027,8 +1028,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Argentina?",
   answers: [
-    { text: "Alberto Fernández", isCorrect: true },
     { text: "Mauricio Macri", isCorrect: false },
+    { text: "Alberto Fernández", isCorrect: true },
     { text: "Cristina Fernández de Kirchner", isCorrect: false },
     { text: "Néstor Kirchner", isCorrect: false }
   ],
@@ -1049,8 +1050,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Colombia?",
   answers: [
-    { text: "Gustavo Petro", isCorrect: true },
     { text: "Iván Duque Márquez", isCorrect: false },
+    { text: "Gustavo Petro", isCorrect: true },
     { text: "Juan Manuel Santos", isCorrect: false },
     { text: "Álvaro Uribe Vélez", isCorrect: false }
   ],
@@ -1071,9 +1072,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Peru?",
   answers: [
-    { text: "Pedro Castillo", isCorrect: true },
     { text: "Francisco Sagasti", isCorrect: false },
     { text: "Manuel Merino", isCorrect: false },
+    { text: "Pedro Castillo", isCorrect: true },
     { text: "Martín Vizcarra", isCorrect: false }
   ],
   countryDetails: {
@@ -1093,10 +1094,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Venezuela?",
   answers: [
-    { text: "Nicolás Maduro", isCorrect: true },
     { text: "Juan Guaidó", isCorrect: false },
     { text: "Hugo Chávez", isCorrect: false },
-    { text: "Rafael Caldera", isCorrect: false }
+    { text: "Rafael Caldera", isCorrect: false},
+    { text: "Nicolás Maduro", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Venezuela",
@@ -1115,9 +1116,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Chile?",
   answers: [
-    { text: "Gabriel Boric", isCorrect: true },
-    { text: "Sebastián Piñera", isCorrect: false },
     { text: "Michelle Bachelet", isCorrect: false },
+    { text: "Gabriel Boric", isCorrect: true },
+    { text: "Sebastián Piñera", isCorrect: false},
     { text: "Ricardo Lagos", isCorrect: false }
   ],
   countryDetails: {
@@ -1137,9 +1138,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Ecuador?",
   answers: [
-    { text: "Guillermo Lasso", isCorrect: true },
     { text: "Lenín Moreno", isCorrect: false },
     { text: "Rafael Correa", isCorrect: false },
+    { text: "Guillermo Lasso", isCorrect: true },
     { text: "Lucio Gutiérrez", isCorrect: false }
   ],
   countryDetails: {
@@ -1159,9 +1160,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Bolivia?",
   answers: [
-    { text: "Luis Arce", isCorrect: true },
     { text: "Jeanine Áñez", isCorrect: false },
     { text: "Evo Morales", isCorrect: false },
+    { text: "Luis Arce", isCorrect: true },
     { text: "Carlos Mesa", isCorrect: false }
   ],
   countryDetails: {
@@ -1181,10 +1182,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Paraguay?",
   answers: [
-    { text: "Mario Abdo Benítez", isCorrect: true },
     { text: "Horacio Cartes", isCorrect: false },
     { text: "Fernando Lugo", isCorrect: false },
-    { text: "Nicanor Duarte Frutos", isCorrect: false }
+    { text: "Nicanor Duarte Frutos", isCorrect: false },
+    { text: "Mario Abdo Benítez", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Paraguay",
@@ -1203,9 +1204,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Uruguay?",
   answers: [
-    { text: "Luis Lacalle Pou", isCorrect: true },
     { text: "Tabaré Vázquez", isCorrect: false },
     { text: "José Mujica", isCorrect: false },
+    { text: "Luis Lacalle Pou", isCorrect: true },
     { text: "Luis Alberto Lacalle", isCorrect: false }
   ],
   countryDetails: {
@@ -1226,9 +1227,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Australia?",
   answers: [
-    { text: "Scott Morrison", isCorrect: true },
     { text: "Malcolm Turnbull", isCorrect: false },
     { text: "Tony Abbott", isCorrect: false },
+    { text: "Scott Morrison", isCorrect: true },
     { text: "Kevin Rudd", isCorrect: false }
   ],
   countryDetails: {
@@ -1270,9 +1271,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Papua New Guinea?",
   answers: [
-    { text: "James Marape", isCorrect: true },
     { text: "Peter O'Neill", isCorrect: false },
     { text: "Michael Somare", isCorrect: false },
+    { text: "James Marape", isCorrect: true },
     { text: "Julius Chan", isCorrect: false }
   ],
   countryDetails: {
@@ -1424,10 +1425,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Nauru?",
   answers: [
-    { text: "Lionel Aingimea", isCorrect: true },
     { text: "Baron Waqa", isCorrect: false },
     { text: "Sprent Dabwido", isCorrect: false },
-    { text: "Marcus Stephen", isCorrect: false }
+    { text: "Marcus Stephen", isCorrect: false },
+    { text: "Lionel Aingimea", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Nauru",
@@ -1492,9 +1493,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Iraq?",
   answers: [
-    { text: "Barham Salih", isCorrect: true },
     { text: "Nouri al-Maliki", isCorrect: false },
     { text: "Jalal Talabani", isCorrect: false },
+    { text: "Barham Salih", isCorrect: true },
     { text: "Saddam Hussein", isCorrect: false }
   ],
   countryDetails: {
@@ -1536,10 +1537,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Qatar?",
   answers: [
-    { text: "Tamim bin Hamad Al Thani", isCorrect: true },
     { text: "Hamad bin Khalifa Al Thani", isCorrect: false },
     { text: "Jassim bin Hamad Al Thani", isCorrect: false },
-    { text: "Hamad bin Jassim bin Jaber Al Thani", isCorrect: false }
+    { text: "Hamad bin Jassim bin Jaber Al Thani", isCorrect: false},
+    { text: "Tamim bin Hamad Al Thani", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Qatar",
@@ -1645,8 +1646,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Nigeria?",
   answers: [
-    { text: "Muhammadu Buhari", isCorrect: true },
     { text: "Goodluck Jonathan", isCorrect: false },
+    { text: "Muhammadu Buhari", isCorrect: true },
     { text: "Olusegun Obasanjo", isCorrect: false },
     { text: "Yakubu Gowon", isCorrect: false }
   ],
@@ -1778,9 +1779,9 @@ export const ALL_COUNTRIES = [
   question: "Who is the leader of Algeria?",
   answers: [
     { text: "Abdelaziz Bouteflika", isCorrect: false },
-    { text: "Abdelmadjid Tebboune", isCorrect: true },
     { text: "Liamine Zéroual", isCorrect: false },
-    { text: "Chadli Bendjedid", isCorrect: false }
+    { text: "Chadli Bendjedid", isCorrect: false },
+    { text: "Abdelmadjid Tebboune", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Algeria",
@@ -1799,10 +1800,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Uganda?",
   answers: [
-    { text: "Yoweri Museveni", isCorrect: true },
     { text: "Idi Amin", isCorrect: false },
     { text: "Milton Obote", isCorrect: false },
-    { text: "Apolo Milton Obote", isCorrect: false }
+    { text: "Apolo Milton Obote", isCorrect: false },
+    { text: "Yoweri Museveni", isCorrect: true },
   ],
   countryDetails: {
     countryName: "Uganda",
