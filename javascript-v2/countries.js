@@ -206,8 +206,8 @@ export const ALL_COUNTRIES = [
   answers: [
     { text: "Pedro Sánchez", isCorrect: false },
     { text: "Mario Draghi", isCorrect: false },
+    { text: "Kyriakos Mitsotakis", isCorrect: true },
     { text: "Stefan Löfven", isCorrect: false },
-    { text: "Kyriakos Mitsotakis", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Greece",
@@ -424,8 +424,7 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Belarus?",
   answers: [
-    { text: "Vladimir Putin", isCorrect: true },
-    // added a joke that marks this as a correct answer in addition to the real correct answer. This a nod to Lukashenko's cozy relationship with Putin.
+    { text: "Vladimir Putin", isCorrect: false },
     { text: "Angela Merkel", isCorrect: false },
     { text: "Alexander Lukashenko", isCorrect: true },
     { text: "Emmanuel Macron", isCorrect: false }
@@ -583,8 +582,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of India?",
   answers: [
-    { text: "Narendra Modi", isCorrect: true },
     { text: "Amit Shah", isCorrect: false },
+    { text: "Narendra Modi", isCorrect: true },
     { text: "Rajnath Singh", isCorrect: false },
     { text: "Ram Nath Kovind", isCorrect: false }
   ],
@@ -605,9 +604,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the current Prime Minister of Japan?",
   answers: [
-    { text: "Fumio Kishida", isCorrect: true },
     { text: "Yoshihide Suga", isCorrect: false },
     { text: "Shinzo Abe", isCorrect: false },
+    { text: "Fumio Kishida", isCorrect: true },
     { text: "Taro Kono", isCorrect: false }
   ],
   countryDetails: {
@@ -628,8 +627,8 @@ export const ALL_COUNTRIES = [
   {
     question: "Who is the leader of South Korea?",
     answers: [
-      { text: "Yoon Suk-yeol", isCorrect: true },
       { text: "Moon Jae-in", isCorrect: false },
+      { text: "Yoon Suk-yeol", isCorrect: true },
       { text: "Lee Nak-yon", isCorrect: false },
       { text: "Park Geun-hye", isCorrect: false }
     ],
@@ -650,9 +649,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Thailand?",
   answers: [
-    { text: "Prayuth Chan-o-cha", isCorrect: true },
     { text: "Somdet Phra Maha Vajiralongkorn", isCorrect: false },
     { text: "Anutin Charnvirakul", isCorrect: false },
+    { text: "Prayuth Chan-o-cha", isCorrect: true },
     { text: "Prawit Wongsuwan", isCorrect: false }
   ],
   countryDetails: {
@@ -694,9 +693,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Indonesia?",
   answers: [
-    { text: "Joko Widodo", isCorrect: true },
     { text: "Prabowo Subianto", isCorrect: false },
     { text: "Susilo Bambang Yudhoyono", isCorrect: false },
+    { text: "Joko Widodo", isCorrect: true },
     { text: "Megawati Sukarnoputri", isCorrect: false }
   ],
   countryDetails: {
@@ -716,8 +715,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Malaysia?",
   answers: [
-    { text: "Ismail Sabri Yaakob", isCorrect: true },
     { text: "Muhyiddin Yassin", isCorrect: false },
+    { text: "Ismail Sabri Yaakob", isCorrect: true },
     { text: "Mahathir Mohamad", isCorrect: false },
     { text: "Abdullah Ahmad Badawi", isCorrect: false }
   ],
@@ -738,10 +737,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Pakistan?",
   answers: [
-    { text: "Imran Khan", isCorrect: true },
     { text: "Asif Ali Zardari", isCorrect: false },
     { text: "Nawaz Sharif", isCorrect: false },
-    { text: "Pervez Musharraf", isCorrect: false }
+    { text: "Pervez Musharraf", isCorrect: false },
+    { text: "Imran Khan", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Pakistan",
@@ -1293,9 +1292,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Fiji?",
   answers: [
-    { text: "Frank Bainimarama", isCorrect: true },
     { text: "Laisenia Qarase", isCorrect: false },
     { text: "Mahendra Chaudhry", isCorrect: false },
+    { text: "Frank Bainimarama", isCorrect: true },
     { text: "Sitiveni Rabuka", isCorrect: false }
   ],
   countryDetails: {
@@ -1315,9 +1314,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Solomon Islands?",
   answers: [
+    { text: "Gordon Darcy Lilo", isCorrect: false },
     { text: "Manasseh Sogavare", isCorrect: true },
     { text: "Rick Houenipwela", isCorrect: false },
-    { text: "Gordon Darcy Lilo", isCorrect: false },
     { text: "Danny Philip", isCorrect: false }
   ],
   countryDetails: {
@@ -1337,9 +1336,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Vanuatu?",
   answers: [
-    { text: "Bob Loughman", isCorrect: true },
     { text: "Charlot Salwai", isCorrect: false },
     { text: "Joe Natuman", isCorrect: false },
+    { text: "Bob Loughman", isCorrect: true },
     { text: "Sato Kilman", isCorrect: false }
   ],
   countryDetails: {
@@ -1359,10 +1358,10 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Samoa?",
   answers: [
-    { text: "Fiame Naomi Mata'afa", isCorrect: true },
     { text: "Tuilaepa Sa'ilele Malielegaoi", isCorrect: false },
     { text: "Tofilau Eti Alesana", isCorrect: false },
-    { text: "Malietoa Tanumafili II", isCorrect: false }
+    { text: "Malietoa Tanumafili II", isCorrect: false },
+    { text: "Fiame Naomi Mata'afa", isCorrect: true }
   ],
   countryDetails: {
     countryName: "Samoa",
@@ -1381,9 +1380,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Tonga?",
   answers: [
+    { text: "Feleti Sevele", isCorrect: false },
     { text: "Pohiva Tu'i'onetoa", isCorrect: true },
     { text: "Akilisi Pohiva", isCorrect: false },
-    { text: "Feleti Sevele", isCorrect: false },
     { text: "Prince Tu'ipelehake", isCorrect: false }
   ],
   countryDetails: {
@@ -1449,9 +1448,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Saudi Arabia?",
   answers: [
-    { text: "Salman bin Abdulaziz Al Saud", isCorrect: true },
     { text: "Mohammed bin Salman", isCorrect: false },
     { text: "King Fahd", isCorrect: false },
+    { text: "Salman bin Abdulaziz Al Saud", isCorrect: true },
     { text: "King Abdullah", isCorrect: false }
   ],
   countryDetails: {
@@ -1559,8 +1558,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Jordan?",
   answers: [
-    { text: "Abdullah II of Jordan", isCorrect: true },
     { text: "Hussein bin Talal", isCorrect: false },
+    { text: "Abdullah II of Jordan", isCorrect: true },
     { text: "Abdullah I of Jordan", isCorrect: false },
     { text: "Talal of Jordan", isCorrect: false }
   ],
@@ -1603,9 +1602,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Turkey?",
   answers: [
-    { text: "Recep Tayyip Erdoğan", isCorrect: true },
     { text: "Abdullah Gül", isCorrect: false },
     { text: "Ahmet Davutoğlu", isCorrect: false },
+    { text: "Recep Tayyip Erdoğan", isCorrect: true },
     { text: "Ekrem İmamoğlu", isCorrect: false }
   ],
   countryDetails: {
@@ -1624,8 +1623,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of South Africa?",
   answers: [
-    { text: "Cyril Ramaphosa", isCorrect: true },
     { text: "Jacob Zuma", isCorrect: false },
+    { text: "Cyril Ramaphosa", isCorrect: true },
     { text: "Thabo Mbeki", isCorrect: false },
     { text: "Nelson Mandela", isCorrect: false }
   ],
@@ -1668,9 +1667,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Egypt?",
   answers: [
-    { text: "Abdel Fattah el-Sisi", isCorrect: true },
     { text: "Mohamed Morsi", isCorrect: false },
     { text: "Hosni Mubarak", isCorrect: false },
+    { text: "Abdel Fattah el-Sisi", isCorrect: true },
     { text: "Anwar Sadat", isCorrect: false }
   ],
   countryDetails: {
@@ -1690,9 +1689,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Kenya?",
   answers: [
-    { text: "Uhuru Kenyatta", isCorrect: true },
     { text: "Mwai Kibaki", isCorrect: false },
     { text: "Daniel arap Moi", isCorrect: false },
+    { text: "Uhuru Kenyatta", isCorrect: true },
     { text: "Jomo Kenyatta", isCorrect: false }
   ],
   countryDetails: {
@@ -1734,8 +1733,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Ethiopia?",
   answers: [
-    { text: "Abiy Ahmed", isCorrect: true },
     { text: "Hailemariam Desalegn", isCorrect: false },
+    { text: "Abiy Ahmed", isCorrect: true },
     { text: "Meles Zenawi", isCorrect: false },
     { text: "Mengistu Haile Mariam", isCorrect: false }
   ],
@@ -1756,8 +1755,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Tanzania?",
   answers: [
-    { text: "Samia Suluhu", isCorrect: true },
     { text: "John Magufuli", isCorrect: false },
+    { text: "Samia Suluhu", isCorrect: true },
     { text: "Jakaya Kikwete", isCorrect: false },
     { text: "Benjamin Mkapa", isCorrect: false }
   ],
@@ -1778,8 +1777,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Algeria?",
   answers: [
-    { text: "Abdelmadjid Tebboune", isCorrect: true },
     { text: "Abdelaziz Bouteflika", isCorrect: false },
+    { text: "Abdelmadjid Tebboune", isCorrect: true },
     { text: "Liamine Zéroual", isCorrect: false },
     { text: "Chadli Bendjedid", isCorrect: false }
   ],
@@ -1822,8 +1821,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Ghana?",
   answers: [
-    { text: "Nana Akufo-Addo", isCorrect: true },
     { text: "John Dramani Mahama", isCorrect: false },
+    { text: "Nana Akufo-Addo", isCorrect: true },
     { text: "John Agyekum Kufuor", isCorrect: false },
     { text: "Jerry John Rawlings", isCorrect: false }
   ],
@@ -1844,9 +1843,9 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Angola?",
   answers: [
-    { text: "João Lourenço", isCorrect: true },
     { text: "José Eduardo dos Santos", isCorrect: false },
     { text: "Eduardo dos Santos", isCorrect: false },
+    { text: "João Lourenço", isCorrect: true },
     { text: "Agostinho Neto", isCorrect: false }
   ],
   countryDetails: {
