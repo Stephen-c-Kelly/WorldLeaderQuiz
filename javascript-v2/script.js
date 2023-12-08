@@ -1,17 +1,7 @@
-// bug - when you restart game you see the last gameplay's region selection
-// task - connect more regions and test (reformat data)
-// task - styling
-// task - clean up code
-// task - optimize code
-// phase 2 - add shuffle functionality to the answers
-
 import { ALL_COUNTRIES } from './countries.js'
 console.log(ALL_COUNTRIES.length)
 
-
 // Event listeners
-const regionEl = document.querySelector('.region-btn');
-// dup of regionBtnEls, consider removing
 const playEl = document.querySelector('.play-btn');
 const playAgainEl = document.querySelector('.play-again')
 const closeBtnEl = document.querySelector('.close-btn')
@@ -24,53 +14,45 @@ const percentageCorrectEl = document.querySelector('#percentage-correct')
 const winLoseEl = document.querySelector('#win-lose')
 const regionBtnEls = document.querySelectorAll('.region-btn')
 const errorMsgEl = document.querySelector(`.error-message`)
-
-// Constant Variables
-
-// - Variable to track of the state of the board (menu, card, results)
-let board = null
-
-// - Variable to track the final number of correct answers
-let counter = 0
-// - Variable named 'winner' to track win/lose. Boolean.  true = win, false = lose.
-let winner = false
-
-// - Variable named 'activeRegion' to keep track of the selected region.  Waiting for user selection
-let activeRegion = []
-//Array named activeStack which will house a set of countries a user will see during the game.  generated in click region function
-
-let activeStack = []
-let currentCard = []
-let correctChoice = []
-
-//defines the 3 views of the game
 const menu = document.querySelector('.main-menu')
 const card = document.querySelector('.card-view')
 const results = document.querySelector('.results')
 
-// Cached element references
-let MaxQuestions = 10
-let numQuestions = 2
-// note numQuestions must be less or equal than the number of datapoints in that region.
 
-// function to shuffle the array of the imported region from Chat GPT.
+// Constant Variables
+let board = null
+let counter = 0
+let winner = false
+let activeRegion = []
+let activeStack = []
+let currentCard = []
+let correctChoice = []
+
+let numQuestions = 4
+
+// Cached element references
+
+
+
 const clickRegion = (btn) => {
   activeStack = []
   regionBtnEls.forEach((el) => {
     el.classList.remove('clicked');
     activeRegion = []
-    //console.log(`active region reset`)
   });
   btn.classList.add('clicked');
   applyStyles(playEl, customBtnStyles)
   activeRegion = [btn.textContent];
   console.log(`active region is ${activeRegion}`)
-  // console.log(`num questions is ${numQuestions}
-  // start buildActiveStack`)
   errorMsgEl.style.display = 'none'
   buildActiveStack()  
 };
 
+
+
+
+
+// function to shuffle the array of the imported region (from Chat GPT).
 const shuffleArray = (array) =>{
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -161,7 +143,7 @@ const playGame = () => {
   if (activeRegion.length == 0){
     errorMsgEl.style.display = 'block'
   } else {
-  questionEl.textContent = `${currentCard.countryDetails.flag} ${currentCard.question} ${currentCard.countryDetails.flag}`;
+  questionEl.innerHTML = `<span class="country-flag">${currentCard.countryDetails.flag}</span>&nbsp;  ${currentCard.question} &nbsp; <span class="country-flag">${currentCard.countryDetails.flag}</span>`;
   answer1El.textContent = `${currentCard.answers[0].text}`;
   answer2El.textContent = `${currentCard.answers[1].text}`;
   answer3El.textContent = `${currentCard.answers[2].text}`;

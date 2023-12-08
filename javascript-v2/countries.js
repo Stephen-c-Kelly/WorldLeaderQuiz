@@ -690,47 +690,48 @@ export const ALL_COUNTRIES = [
 
 // 3. Japan
 {
-  question: "Who is the leader of Japan?",
+  question: "Who is the current Prime Minister of Japan?",
   answers: [
-    { text: "Yoshihide Suga", isCorrect: true },
+    { text: "Fumio Kishida", isCorrect: true },
+    { text: "Yoshihide Suga", isCorrect: false },
     { text: "Shinzo Abe", isCorrect: false },
-    { text: "Taro Aso", isCorrect: false },
-    { text: "Fumio Kishida", isCorrect: false }
+    { text: "Taro Kono", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Japan",
-    leaderName: "Yoshihide Suga",
-    assumedOfficeDate: "September 16, 2020",
+    leaderName: "Fumio Kishida",
+    assumedOfficeDate: "October 4, 2021",
     flag: "🇯🇵",
     nationalBird: "Green Pheasant",
-    mostRecentAnnualGDP: "5.0 trillion USD",
-    globalRegion: "Asia",
+    mostRecentAnnualGDP: "4.9 trillion USD",
+    globalRegion: "East Asia",
     countryImage: "",
     pronunciationLink: ""
   }
 },
 
+
 // 4. South Korea
-{
-  question: "Who is the leader of South Korea?",
-  answers: [
-    { text: "Moon Jae-in", isCorrect: true },
-    { text: "Kim Jong-un", isCorrect: false },
-    { text: "Lee Nak-yeon", isCorrect: false },
-    { text: "Hwang Kyo-ahn", isCorrect: false }
-  ],
-  countryDetails: {
-    countryName: "South Korea",
-    leaderName: "Moon Jae-in",
-    assumedOfficeDate: "May 10, 2017",
-    flag: "🇰🇷",
-    nationalBird: "Korean Magpie",
-    mostRecentAnnualGDP: "1.6 trillion USD",
-    globalRegion: "Asia",
-    countryImage: "",
-    pronunciationLink: ""
-  }
-},
+  {
+    question: "Who is the leader of South Korea?",
+    answers: [
+      { text: "Yoon Suk-yeol", isCorrect: true },
+      { text: "Moon Jae-in", isCorrect: false },
+      { text: "Lee Nak-yon", isCorrect: false },
+      { text: "Park Geun-hye", isCorrect: false }
+    ],
+    countryDetails: {
+      countryName: "South Korea",
+      leaderName: "Yoon Suk-yeol",
+      assumedOfficeDate: "May 10, 2022",
+      flag: "🇰🇷",
+      nationalBird: "Korean Magpie",
+      mostRecentAnnualGDP: "1.8 trillion USD",
+      globalRegion: "Asia",
+      countryImage: "",
+      pronunciationLink: ""
+    }
+  },
 
 // 5. Thailand
 {
@@ -1025,18 +1026,18 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Costa Rica?",
   answers: [
-    { text: "Carlos Alvarado Quesada", isCorrect: true },
-    { text: "Luis Guillermo Solís", isCorrect: false },
+    { text: "Rodrigo Chaves Robles", isCorrect: true },
+    { text: "Carlos Alvarado Quesada", isCorrect: false },
     { text: "Laura Chinchilla", isCorrect: false },
-    { text: "Óscar Arias", isCorrect: false }
+    { text: "Oscar Arias Sanchez", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Costa Rica",
-    leaderName: "Carlos Alvarado Quesada",
-    assumedOfficeDate: "May 8, 2018",
+    leaderName: "Rodrigo Chaves Robles",
+    assumedOfficeDate: "May 8, 2022",
     flag: "🇨🇷",
-    nationalBird: "Clay-colored Thrush",
-    mostRecentAnnualGDP: "0.1 trillion USD",
+    nationalBird: "Clay-Colored Thrush",
+    mostRecentAnnualGDP: "58.8 billion USD",
     globalRegion: "North & Central America",
     countryImage: "",
     pronunciationLink: ""
@@ -1136,18 +1137,18 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Colombia?",
   answers: [
-    { text: "Iván Duque Márquez", isCorrect: true },
+    { text: "Gustavo Petro", isCorrect: true },
+    { text: "Iván Duque Márquez", isCorrect: false },
     { text: "Juan Manuel Santos", isCorrect: false },
-    { text: "Álvaro Uribe Vélez", isCorrect: false },
-    { text: "Andrés Pastrana Arango", isCorrect: false }
+    { text: "Álvaro Uribe Vélez", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Colombia",
-    leaderName: "Iván Duque Márquez",
-    assumedOfficeDate: "August 7, 2018",
+    leaderName: "Gustavo Petro",
+    assumedOfficeDate: "August 7, 2022",
     flag: "🇨🇴",
     nationalBird: "Andean Condor",
-    mostRecentAnnualGDP: "0.3 trillion USD",
+    mostRecentAnnualGDP: "371.4 billion USD",
     globalRegion: "South America",
     countryImage: "",
     pronunciationLink: ""
@@ -1202,18 +1203,18 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of Chile?",
   answers: [
-    { text: "Sebastián Piñera", isCorrect: true },
-    { text: "Michelle Bachelet", isCorrect: false },
+    { text: "Gabriel Boric", isCorrect: true },
     { text: "Sebastián Piñera", isCorrect: false },
+    { text: "Michelle Bachelet", isCorrect: false },
     { text: "Ricardo Lagos", isCorrect: false }
   ],
   countryDetails: {
     countryName: "Chile",
-    leaderName: "Sebastián Piñera",
-    assumedOfficeDate: "March 11, 2018",
+    leaderName: "Gabriel Boric",
+    assumedOfficeDate: "March 11, 2022",
     flag: "🇨🇱",
     nationalBird: "Andean Condor",
-    mostRecentAnnualGDP: "0.5 trillion USD",
+    mostRecentAnnualGDP: "283.9 billion USD",
     globalRegion: "South America",
     countryImage: "",
     pronunciationLink: ""
@@ -1335,15 +1336,15 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of New Zealand?",
   answers: [
-    { text: "Jacinda Ardern", isCorrect: true },
+    { text: "Christopher Luxon", isCorrect: true },
     { text: "Bill English", isCorrect: false },
     { text: "John Key", isCorrect: false },
     { text: "Helen Clark", isCorrect: false }
   ],
   countryDetails: {
     countryName: "New Zealand",
-    leaderName: "Jacinda Ardern",
-    assumedOfficeDate: "October 26, 2017",
+    leaderName: "Christopher Luxon",
+    assumedOfficeDate: "November 27, 2023",
     flag: "🇳🇿",
     nationalBird: "Kiwi",
     mostRecentAnnualGDP: "0.2 trillion USD",
