@@ -4,10 +4,15 @@
 
 "World Leaders" is an online quiz game built to help you memorize the names of world leaders and the countries where they lead. You will be able to pick a global region like Asia or Europe.  This game will initially have one region - Europe. During gameplay, you'll see a series of 20 cards (presented individually) representing countries in that region. Below the country title and the official flag, you will see a multiple-choice question with 4 options: the name of the correct world leader and 3 other leaders in the region. After you make a selection, you'll see if your choice was correct or incorrect (if incorrect, you'll also see the correct option).  Users win if they are above 60% correct for the region.
 
-The game is not timed; you can take as long as you want to choose your answers.  This game is built in HTML, CSS, and Javascript.
+The game is not timed; you can take as long as you want to choose your answers.  
 
-Developer notes:
-I'd like to leverage an API or a Google Sheet to more easily update the names of the leaders after elections or world events, and include vector outlines of each country. Additional stretch goals are below.
+This game is built in HTML, CSS, and Javascript.
+
+## Play Now
+
+Deployed Website: https://world-leader-quiz.netlify.app/
+
+GitHub Repo: https://github.com/Stephen-c-Kelly/WorldLeaderQuiz/blob/main/README.md
 
 ## Wire Frames
 
@@ -47,6 +52,10 @@ https://imgur.com/a/vM4LRJ1
 
 Find all Wireframes here - https://excalidraw.com/#json=MXWTkjL3lbrfMbya_BzEa,S0ZUIiUWM70UJSmmToyYNg 
 
+#### How to Play
+![Select a Region](images/Screenshots/main-menu.png)
+
+
 #### MVP Goals
 
 As a player...
@@ -69,6 +78,8 @@ As a player...
 - I'd like to integrate a 'countdown' option with a  countdown clock.
 - I'd like to integrate a 'hard' option to make the 3 incorrect choices more difficult (maybe they can be the names of the country's former leader, or they can be other notable figures from that country).
 - I'd like to include links to YouTube videos showing how to pronounce each leader's name.
+
+
 
 #### Pseudo Code
 
