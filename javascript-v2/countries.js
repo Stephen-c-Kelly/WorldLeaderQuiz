@@ -1442,7 +1442,7 @@ export const ALL_COUNTRIES = [
   }
 },
 
-// --------------Middle East & Africa -----------------
+// ---------------Middle East & Africa -----------------
 
 // 1. Saudi Arabia
 {
