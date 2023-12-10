@@ -65,15 +65,22 @@ const findCorrect = (card) => {
   return {correctChoice}
 }
 
-// const correctChoice = card.answers.find(answer => {
-//   return card.answers.isCorrect === true
-// })
+// the below is a bit more succinct but it breaks the code.  also it doesn't look more succint...
+
+// const findCorrect = (card) => {
+//   const correctAnswer = card.answer.find(answer => answer.isCorrect === true);
+//   if (correctAnswer) {
+//     correctChoice = correctAnswer.text
+//   }
+//   return correctChoice
+// }
+
 
 
 // const findCorrect = (card) => {
 //   const correctAnswer = card.answers.find(answer => answer.isCorrect === true);
 
-//   return { correctChoice: correctAnswer ? console.log(`Data error: ${card.question} is missing a true answer.`) };
+//   return { correctChoice: correctAnswer ? console.log(`Data error: ${card.countryName} is missing a true answer.`) };
 // }; 
 
 //  trying to refactor based on array iterator methods.  ...not fully successful so far.

@@ -28,14 +28,14 @@ export const ALL_COUNTRIES = [
     question: "Who is the leader of the United Kingdom?",
     answers: [
       { text: "Olaf Scholz", isCorrect: false },
-      { text: "Boris Johnson", isCorrect: true },
-      { text: "Mark Rutte", isCorrect: false },
+      { text: "Boris Johnson", isCorrect: false },
+      { text: "Rishi Sunak", isCorrect: true },
       { text: "Mario Draghi", isCorrect: false }
     ],
     countryDetails: {
       countryName: "United Kingdom",
-      leaderName: "Boris Johnson",
-      assumedOfficeDate: "July 24, 2019",
+      leaderName: "Rishi Sunak",
+      assumedOfficeDate: "October 25, 2022",
       flag: "🇬🇧",
       nationalBird: "European Robin",
       mostRecentAnnualGDP: "2.9 trillion USD",
