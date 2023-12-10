@@ -65,15 +65,24 @@ const findCorrect = (card) => {
   return {correctChoice}
 }
 
+// const correctChoice = card.answers.find(answer => {
+//   return card.answers.isCorrect === true
+// })
+
+
+// const findCorrect = (card) => {
+//   const correctAnswer = card.answers.find(answer => answer.isCorrect === true);
+
+//   return { correctChoice: correctAnswer ? console.log(`Data error: ${card.question} is missing a true answer.`) };
+// }; 
+
+//  trying to refactor based on array iterator methods.  ...not fully successful so far.
+
 
 
 const checkRegion = () => {
-  for (let i = 0; i < ALL_COUNTRIES.length; i++) {
-    if (ALL_COUNTRIES[i].countryDetails.globalRegion === activeRegion[0]) {
-    activeStack.push(ALL_COUNTRIES[i]);
-    }
-  };
-}
+  activeStack = ALL_COUNTRIES.filter(country => country.countryDetails.globalRegion === activeRegion[0]);
+};
 
 const hide = (state) => { 
   state.style.display = 'none'

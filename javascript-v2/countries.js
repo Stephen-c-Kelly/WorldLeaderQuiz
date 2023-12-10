@@ -757,8 +757,8 @@ export const ALL_COUNTRIES = [
 {
   question: "Who is the leader of the Philippines?",
   answers: [
-    { text: "Rodrigo Duterte", isCorrect: true },
-    { text: "Bongbong Marcos", isCorrect: false },
+    { text: "Rodrigo Duterte", isCorrect: false },
+    { text: "Bongbong Marcos", isCorrect: true },
     { text: "Gloria Macapagal-Arroyo", isCorrect: false },
     { text: "Joseph Estrada", isCorrect: false }
   ],
